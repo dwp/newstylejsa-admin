@@ -1,0 +1,178 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+$govuk-font-family: 'HelveticaNeue', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+
+// Import GOV.UK Frontend
+@import 'node_modules/govuk-frontend/all';
+
+// Patterns that aren't in Frontend
+@import 'patterns/check-your-answers';
+
+@page {
+  margin: 15mm 10mm 15mm 15mm;
+  size: A4 portrait;
+}
+
+.govuk-template {
+  background-color: govuk-colour('white');
+}
+
+// Header for print
+.dwp-print-header {
+  &__container {
+    @include govuk-clearfix;
+    border-bottom: 1mm solid $govuk-text-colour;
+  }
+
+  &__content {
+    width: 80%;
+    float: left;
+  }
+
+  &__logo {
+    float: right;
+    width: 20%;
+
+    img {
+      margin: 8.75mm 0 8.75mm 8.75mm;
+      float: right;
+      width: 35mm;
+    }
+  }
+}
+
+// Header claimant details
+.dwp-claimant-description {
+  @include govuk-clearfix;
+  margin: 0;
+  font-family: $govuk-font-family;
+
+  &__question,
+  &__answer {
+    margin: 0;
+    float: left;
+  }
+
+  &__question {
+    width: 46%;
+    clear: both;
+    color: $govuk-text-colour;
+  }
+
+  &__answer {
+    width: 54%;
+    @include govuk-font(14, $weight: bold);
+  }
+}
+
+.govuk-main-wrapper  {
+  padding-top: 0;
+}
+
+.dwp-print-hide,
+.dwp-header,
+.app-cookie-banner,
+.govuk-phase-banner,
+.govuk-header,
+.govuk-footer,
+.govuk-button,
+.govuk-back-link {
+  display: none;
+}
+
+.dwp-print-show,
+.dwp-print-block,
+.app-check-your-answers__contents,
+.app-check-your-answers__question,
+.app-check-your-answers__answer {
+  display: block;
+}
+
+.dwp-print-break-before {
+  page-break-before: always;
+}
+
+.dwp-print-no-break {
+  page-break-inside: avoid;
+}
+
+.dwp-print-h-spacer {
+  margin-left: 1.2cm;
+  margin-right: 1.2cm;
+}
+
+// Check answers list
+.app-check-your-answers--long,
+.app-check-your-answers--short {
+  @include govuk-clearfix;
+
+  .app-check-your-answers__contents {
+    @include govuk-clearfix;
+    border-bottom: 1pt solid $govuk-border-colour;
+  }
+
+  .app-check-your-answers__question,
+  .app-check-your-answers__answer {
+    margin: govuk-em(6, 19) 0;
+    float: left;
+    border: 0;
+  }
+
+  .app-check-your-answers__question,
+  .app-check-your-answers__answer,
+  .app-check-your-answers__contents {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  .app-check-your-answers__question {
+    clear: both;
+  }
+}
+
+.app-check-your-answers--long {
+  .app-check-your-answers__question {
+    width: 60%;
+  }
+
+  .app-check-your-answers__answer {
+    float: right;
+    width: 32%;
+    padding-left: 1.05263em;
+  }
+}
+
+.app-check-your-answers--short {
+  .app-check-your-answers__question {
+    width: 34%;
+  }
+
+  .app-check-your-answers__answer {
+    width: 60%;
+  }
+}
+
+// Declaration signature
+.dwp-print-note {
+  @include govuk-clearfix;
+  padding: govuk-em(14, 14);
+  border: 1pt solid $govuk-border-colour;
+
+  &__sig,
+  &__date {
+    float: left;
+  }
+
+  &__sig {
+    width: 60%;
+  }
+
+  &__date {
+    width: 40%;
+  }
+
+  p {
+    margin: 0;
+  }
+}

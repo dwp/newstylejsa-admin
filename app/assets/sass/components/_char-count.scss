@@ -1,0 +1,13 @@
+// Chatacter count hint text
+.js-char-count {
+  @include govuk-responsive-margin(2, 'bottom');
+
+  & + .char-count-info {
+    @extend .govuk-body;
+    @extend .govuk-hint;
+
+    &.error-message {
+      color: govuk-colour('red');
+    }
+  }
+}

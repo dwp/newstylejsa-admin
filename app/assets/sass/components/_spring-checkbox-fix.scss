@@ -1,0 +1,47 @@
+// Spring Styling Fix
+// Styling's to address a bug in Spring that places the hidden checkbox input in between the shown one and the label that stops the intended css rules from being applied.
+
+.govuk-checkboxes__input {
+  & + input + .govuk-checkboxes__label {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+    }
+
+    &::before {
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border: 2px solid currentColor;
+      background: transparent;
+    }
+
+    &::after {
+      top: 11px;
+      left: 9px;
+      width: 18px;
+      height: 7px;
+      transform: rotate(-45deg);
+      border: solid;
+      border-width: 0 0 5px 5px;
+      border-top-color: transparent;
+      opacity: 0;
+      background: transparent;
+    }
+  }
+
+  &:focus + input + .govuk-checkboxes__label {
+    &::before {
+      box-shadow: 0 0 0 3px govuk-colour('yellow');
+    }
+  }
+
+  &:checked + input + .govuk-checkboxes__label {
+    &::after {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{% macro checkAnswersItem(question, answer, link, href) %}
+  <div role="presentation" class="app-check-your-answers__contents">
+    <dt role="term" class="app-check-your-answers__question">
+      {{ question | safe }}
+    </dt>
+    <dd role="definition" class="app-check-your-answers__answer">
+      {{ answer | safe }}
+    </dd>
+    {% if link %}
+    <dd role="presentation" class="app-check-your-answers__change">
+      <a href="{{ href }}">
+        Change<span class="govuk-visually-hidden"> {{ question | safe }}</span>
+      </a>
+    </dd>
+    {% endif %}
+  </div>
+{% endmacro %}

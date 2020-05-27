@@ -1,0 +1,43 @@
+{% extends "layout/base-no-search-bar.html" %}
+
+{% block pageTitle %}
+DWP Agent Prototype - {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-!-margin-top-9">
+    <h1 class="govuk-heading-l">Sad scenarios</h1>
+
+    <h2 class="govuk-heading-m">NiNo search</h2>
+    <ul class="govuk-list">
+      <li><a href="common/nino-search?show=errors">NiNo not found</a></li>
+      <li><a href="common/nino-search?show=invalid">NiNo invalid</a></li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Contact centre</h2>
+    <ul class="govuk-list">
+      <li><a href="contact-centre/outbound-journey?show=cis">CIS unavailable</a></li>
+      <li><a href="contact-centre/outbound-journey?show=cis">LOS unavailable</a></li>
+      <li><a href="error/reassigned">Claim reassigned</a></li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Work Coach</h2>
+    <ul class="govuk-list">
+      <li><a href="common/claim?push=cisError">CIS unavailable</a></li>
+      <li><a href="common/claim?view=incompatible">Incompatible benefit</a></li>
+    </ul>
+
+    <h2 class="govuk-heading-m">System errors</h2>
+    <ul class="govuk-list">
+      <li><a href="error/page-not-found">Page not found 404</a></li>
+      <li><a href="error/forbidden">Access forbidden 403</a></li>
+      <li><a href="error/problem-with-the-service">Problem with the service</a></li>
+      <li><a href="error/session-timeout">Session timeout</a></li>
+      <li><a href="error/session-ended">Session ended</a></li>
+    </ul>
+  </div>
+
+{% endblock %}

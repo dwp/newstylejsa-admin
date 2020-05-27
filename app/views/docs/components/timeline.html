@@ -1,0 +1,30 @@
+{% extends "layout/base.html" %}
+
+{% block pageTitle %}
+DWP Components - Timeline
+{% endblock %}
+
+{% block content %}
+<div class="govuk-!-margin-top-9">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">Timeline component</h1>
+        
+        {{ dwpTimeline({
+          items: [{
+            "heading": "Claim disallowed",
+            "author": "John Smith",
+            "date": "1 January 2018 at 13:02",
+            "body": "Claimant over state pension age."
+          }, {
+            "heading": "Marriage verified",
+            "author": "John Smith",
+            "date": "1 January 2018 at 13:21",
+            "body": "Marriage certificate uploaded to DRS."
+          }]
+        }) }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

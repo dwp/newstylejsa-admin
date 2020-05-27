@@ -1,0 +1,32 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// Import GOV.UK Frontend
+@import 'node_modules/govuk-frontend/all';
+
+// DWP components
+@import 'dwp-header/dwp-header';
+@import 'dwp-timeline/dwp-timeline';
+@import 'dwp-key-details-bar/dwp-key-details-bar';
+@import 'dwp-search-box/dwp-search-box';
+@import 'dwp-secondary-navigation/dwp-secondary-navigation';
+
+// Patterns that aren't in Frontend
+@import 'patterns/check-your-answers';
+@import 'patterns/task-list';
+@import 'patterns/related-items';
+
+// Components that aren't in Frontend
+@import 'components/cookie-banner';
+@import 'components/input-overrides';
+@import 'components/info-box';
+@import 'components/spring-checkbox-fix';
+@import 'components/misc';
+@import 'components/char-count';
+@import 'components/currency-input';
+@import 'components/print';
+@import 'components/align';
+@import 'components/tile';
+@import 'components/bar';
+@import 'components/debug';
+@import 'components/tag';

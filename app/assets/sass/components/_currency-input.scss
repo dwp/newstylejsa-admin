@@ -1,0 +1,18 @@
+// Currency input
+.govuk-currency-input {
+  &__inner {
+    position: relative;
+
+    &__unit {
+      margin: 0;
+      position: absolute;
+      bottom: 5px;
+      left: 10px;
+      font-weight: bold;
+    }
+
+    &__input {
+      padding-left: 25px;
+    }
+  }
+}

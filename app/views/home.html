@@ -1,0 +1,216 @@
+{% extends "layout/base-no-search-bar.html" %}
+
+{% block pageTitle %}
+{{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl govuk-!-margin-top-9">
+    <span class="govuk-caption-xl">DWP Agent Prototypes</span>
+    {{ serviceName }}
+  </h1>
+
+  <div class="govuk-grid-row govuk-!-margin-top-5">
+    <div class="govuk-grid-column-one-third">
+      <span class="govuk-tag govuk-!-font-size-14">Latest</span>
+      <h2 class="govuk-heading-l">Work Coach</h2>
+      <p>HTML prototypes for work coach agents</p>
+      <a href="work-coach" class="govuk-button">Start</a>
+      <ul class="govuk-list">
+        <li><a href="/work-coach/claim?status=notPushed">View claim</a></li>
+        <li><a href="/work-coach/push?status=notPushed">View push</a></li>
+        <li><a href="/work-coach/push?status=pushed">View push success status</a></li>
+        <li><a href="/work-coach/push?status=push failed">View push failed status</a></li>
+        <li><a href="/work-coach/claim?status=clerical">View clerical status</a></li>
+        <li><a href="/work-coach/cancel?status=notPushed">View cancel claim</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <span class="govuk-tag govuk-!-font-size-14">Latest</span>
+      <h2 class="govuk-heading-l">Service Centre</h2>
+      <p>HTML prototypes for service centre agents</p>
+      <a href="service-centre" class="govuk-button">Start</a>
+      <ul class="govuk-list">
+        <li><a href="/service-centre/list">View claim list</a></li>
+        <li><a href="/service-centre/print-option-2?print=bc">View print claim option 2</a></li>
+        <!--
+        <li><a href="/service-centre/print-option-3?print=bc">View print claim option 3</a></li>
+        <li><a href="/service-centre/print-option-4?print=bc">View print claim option 4</a></li>
+        <li><a href="/service-centre/print-option-5?print=bc">View print claim option 5</a></li>
+        -->
+      </ul>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <span class="govuk-tag govuk-!-font-size-14">Latest</span>
+      <h2 class="govuk-heading-l">Contact Centre</h2>
+      <p>HTML prototypes for contact centre agents</p>
+      <a href="contact-centre/" class="govuk-button">Start</a>
+      <ul class="govuk-list">
+        <li><a href="/contact-centre/">View landing screen</a></li>
+        <li><a href="/contact-centre/outbound-journey/">View outbound</a></li>
+        <li><a href="/contact-centre/management-dashboard">View management dashboard</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  {{ govukDetails({
+    summaryText: "Work coach iterations",
+    open: false,
+    html: '
+  <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Iteration 1 – First pass</h3>
+  <div class="govuk-grid-row govuk-!-margin-top-9">
+    <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-m">Shortcuts</h3>
+      <ul class="govuk-list">
+      <li><a href="/work-coach/1/">View</a></li>
+      <li><a href="work-coach/1/nino-search?show=errors">View NINO not found</a></li>
+      <li><a href="work-coach/1/nino-search?show=invalid">View NINO invalid</a></li>
+      </ul>
+
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Iteration 2 – add cover sheet to print, update evidence list styles</h3>
+      <p><a href="/work-coach/2/">View</a></p>
+
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Iteration 3 - split cover sheet and statement, evidence and form list options</h3>
+      <ul class="govuk-list">
+        <li><a href="/work-coach/3/">View</a></li>
+        <li><a href="/work-coach/3/1">View option 1, definition lists</a></li>
+        <li><a href="/work-coach/3/2">View option 2, bullet lists</a></li>
+        <li><a href="/work-coach/3/3">View option 3, split bullet lists</a></li>
+        <li><a href="/work-coach/3/4">View option 4, tabbed lists</a></li>
+      </ul>
+
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Iteration 4 – Push to JSAPS</h3>
+      <ul class="govuk-list">
+        <li><a href="/work-coach/4/">View</a></li>
+        <li><a href="/work-coach/4/1?status=notPushed">View notPushed</a></li>
+        <li><a href="/work-coach/4/2?status=pushed">View pushed</a></li>
+        <li><a href="/work-coach/4/3?status=pushFailed">View push failed</a></li>
+      </ul>
+      
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Iteration 5 – Edit claim</h3>
+      <ul class="govuk-list">
+        <li><a href="/work-coach/5/">View</a></li>
+      </ul>'
+  }) }}
+
+  <div class="govuk-grid-row govuk-!-margin-top-2">
+    <div class="govuk-grid-column-full">
+      {{ govukDetails({
+        summaryText: "Component links",
+        open: false,
+        html: '
+          <h2>DWP Components</h2>
+          <ul class="govuk-list">
+            <li><a href="docs/components/header">Header</a></li>
+            <li><a href="docs/components/timeline">Timeline</a></li>
+            <li><a href="docs/components/key-details-bar">Key details bar</a></li>
+            <li><a href="docs/components/search-box">Search box</a></li>
+          </ul>
+          <h2>Useful links</h2>
+          <ul class="govuk-list">
+            <li><a href="https://dwp-design-examples-v2.herokuapp.com">DWP design examples</a></li>
+            <li><a href="https://design-system.service.gov.uk">Gov UK design system</a></li>
+            <li><a href="https://valtech-uk.atlassian.net/wiki/spaces/DWA/pages/635994130/Prototypes+Wireframes">Prototype confluence page</a></li>
+            <li><a href="https://govuk-prototype-kit.herokuapp.com/docs/tutorials-and-examples">Gov UK prototype kit</a></li>
+            <li><a href="https://github.com/valtech-uk/dwp-jsa-admin-prototype">Github repo</a></li>
+            <li><a href="https://dwp-jsa-admin.herokuapp.com/">Latest Heroku app</a></li>
+          </ul>'
+      }) }}
+
+    </div>
+  </div>
+
+<hr class="break">
+
+  <div class="govuk-grid-row govuk-!-margin-top-9">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Versions</h2>
+      <p>As we learn more about the <b>{{ serviceName }}</b> service and our user needs we are iterating the prototypes. Previous versions will be kept here as a historical record. The latest version can be accessed above.</p>
+      
+      {{ govukButton({
+        text: "Visit latest version",
+        href: "https://dwp-jsa-admin.herokuapp.com"
+      }) }}
+    </div>
+  </div>
+
+  <div class="govuk-!-margin-top-5">
+    {{ govukDetails({
+      summaryText: "See all previous versions",
+      html: '<dl class="app-check-your-answers app-check-your-answers--short">
+
+    <div class="app-check-your-answers__contents">
+      <dt class="app-check-your-answers__question" style="width: 15%;">
+        <span class="govuk-tag">Version 5</span> <br><small>24/10/2018</small>
+      </dt>
+      <dd class="app-check-your-answers__answer">
+        Better push to JSAPS user experience, added secondary navigation component. Also added edit claim function.
+      </dd>
+      <dd class="app-check-your-answers__change">
+        <a href="https://dwp-jsa-admin-prototype-v5.herokuapp.com/" title="Opens a new URL" class="govuk-button">
+          View <span class="govuk-visually-hidden">Version 5</span>
+        </a>
+      </dd>
+    </div>
+    <div class="app-check-your-answers__contents">
+      <dt class="app-check-your-answers__question" style="width: 15%;">
+        <span class="govuk-tag">Version 4</span> <br><small>22/10/2018</small>
+      </dt>
+      <dd class="app-check-your-answers__answer">
+        Abandoned version 4. This was going to be push to JSAPS. The work is merged into version 5 along with editing the claim.
+        See iteration 4 progress above.
+      </dd>
+    </div>
+
+    <div class="app-check-your-answers__contents">
+      <dt class="app-check-your-answers__question" style="width: 15%;">
+        <span class="govuk-tag">Version 3</span> <br><small>11/10/2018</small>
+      </dt>
+      <dd class="app-check-your-answers__answer">
+        Summary updates with feedback from business. The summary now has 4 options to test with work coaches. PV CIS marker 
+        dropped due to security concerns from business. Added conflicting claim marker.
+      </dd>
+      <dd class="app-check-your-answers__change">
+        <a href="https://dwp-jsa-admin-prototype-v3.herokuapp.com/" title="Opens a new URL" class="govuk-button">
+          View <span class="govuk-visually-hidden">Version 3</span>
+        </a>
+      </dd>
+    </div>
+    <div class="app-check-your-answers__contents">
+      <dt class="app-check-your-answers__question" style="width: 15%;">
+        <span class="govuk-tag">Version 2</span> <br><small>03/10/2018</small>
+      </dt>
+      <dd class="app-check-your-answers__answer">
+        Updated with feedback from Work Coaches. The summary is now printed as it was deemed useful by several Work Coaches. Added
+        a page for an invalid nino. Added complete list for evidence and forms to check. Updated key details with telephone and conflicting benefits.
+      </dd>
+      <dd class="app-check-your-answers__change">
+        <a href="https://dwp-jsa-admin-prototype-v2.herokuapp.com/" title="Opens a new URL" class="govuk-button">
+          View <span class="govuk-visually-hidden">Version 2</span>
+        </a>
+      </dd>
+    </div>
+    <div class="app-check-your-answers__contents">
+      <dt class="app-check-your-answers__question" style="width: 15%;">
+        <span class="govuk-tag">Version 1</span> <br><small>26/09/2018</small>
+      </dt>
+      <dd class="app-check-your-answers__answer">
+        Initial version based on the <a href="https://github.com/valtech-uk/jsa-prototype">citizen prototype repository</a>.
+      </dd>
+      <dd class="app-check-your-answers__change">
+        <a href="https://dwp-jsa-admin-prototype-v1.herokuapp.com/" title="Opens a new URL" class="govuk-button">
+          View <span class="govuk-visually-hidden">Version 1</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+  '
+  }) }}
+  </div>
+
+{% endblock %}

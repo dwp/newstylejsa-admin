@@ -1,0 +1,11 @@
+{% if params.items %}
+  <nav class="dwp-navigation-secondary dwp-print-hide">
+    <ul>
+    {% for item in params.items %}
+      <li>
+        <a href="{{ item.url }}" aria-current="section" class="{{ 'active' if item.active }}">{{ item.label }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

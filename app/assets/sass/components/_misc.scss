@@ -1,0 +1,75 @@
+// Misc classes
+.govuk-main-wrapper {
+  padding-top: 0;
+}
+
+.govuk-panel__title--centred {
+  margin-top: govuk-spacing(1);
+}
+
+.govuk-upcase {
+  text-transform: uppercase;
+}
+
+.govuk-align-right {
+  text-align: right;
+}
+
+.govuk-align-right-from-desktop {
+  @include govuk-media-query($from: desktop) {
+    text-align: right;
+  }
+}
+
+.govuk-align-right-from-tablet {
+  @include govuk-media-query($from: tablet) {
+    text-align: right;
+  }
+}
+
+.govuk-margin-bottom-8-until-tablet {
+  @include govuk-media-query($until: tablet) {
+    margin-bottom: govuk-spacing(8);
+  }
+}
+
+.govuk-margin-bottom-8-until-desktop {
+  @include govuk-media-query($until: 960px) {
+    margin-bottom: govuk-spacing(8);
+  }
+}
+
+.govuk-warning-text--large {
+  .govuk-warning-text__icon {
+    top: 50%;
+  }
+
+  .govuk-heading-m {
+    margin-bottom: 0;
+  }
+}
+
+.underlined {
+  padding-bottom: govuk-spacing(2);
+  border-bottom: 1px solid govuk-colour('grey-2');
+}
+
+.list {
+  @extend .govuk-body-m;
+
+  .list-item {
+    margin-bottom: 2ex;
+  }
+
+  .list-item__title {
+    font-weight: 700;
+
+    &::after {
+      display: inline-block;
+      content: '-';
+      position: relative;
+      margin-left: 5px;
+      font-weight: 400;
+    }
+  }
+}

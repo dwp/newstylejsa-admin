@@ -1,0 +1,21 @@
+// Info box
+
+.info-boxes {
+  .govuk-currency-input + .info-box {
+    @include govuk-responsive-margin(5, 'top');
+  }
+}
+
+.info-box__title {
+  @extend .govuk-heading-s;
+  @include govuk-responsive-margin(0, 'bottom');
+}
+
+.info-box__body {
+  @extend .govuk-body;
+}
+
+.info-box__hint {
+  @extend .govuk-hint;
+  @include govuk-responsive-margin(1, 'bottom');
+}

@@ -1,0 +1,12 @@
+// Debug
+.debug-tag {
+  @extend .govuk-body-s;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  padding: govuk-spacing(2);
+  pointer-events: none;
+  color: govuk-colour('white');
+  background-color: govuk-colour('brown');
+  font-size: 9px;
+}

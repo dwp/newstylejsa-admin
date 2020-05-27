@@ -1,0 +1,13 @@
+{
+  "paths": {
+    "public": "public/",
+    "assets" : "app/assets/",
+    "views": "app/views/",
+    "sass" : "app/assets/sass/",
+    "js" : "app/assets/javascripts/",
+    "tests": "app/tests/",
+    "docsAssets" : "docs/assets/",
+    "nodeModules": "node_modules/",
+    "lib": "lib/"
+  }
+}

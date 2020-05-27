@@ -1,0 +1,75 @@
+// Task list pattern
+
+// Override column width for tablet and up
+.app-column-minimum {
+  @include govuk-media-query($from: tablet) {
+    min-width: 600px;
+  }
+}
+
+// Spacing to the left of the task list
+$task-list-indent: 35px;
+
+.app-task-list {
+  list-style: none;
+  margin-top: $govuk-gutter;
+  padding: 0;
+
+  @include govuk-media-query($from: tablet) {
+    margin-top: ($govuk-gutter * 2);
+  }
+}
+
+.app-task-list__section {
+  display: table;
+  margin: 0;
+  padding-bottom: ($govuk-gutter / 6);
+
+  @include govuk-font(24, $weight: bold);
+}
+
+.app-task-list__section-number {
+  display: table-cell;
+  padding-right: ($govuk-gutter / 6);
+
+  @include govuk-media-query($from: tablet) {
+    min-width: $task-list-indent;
+    padding-right: 0;
+  }
+}
+
+
+.app-task-list__items {
+  list-style: none;
+  margin-bottom: $govuk-gutter;
+  padding: 0;
+
+  @include govuk-media-query($from: tablet) {
+    margin-bottom: ($govuk-gutter * 2);
+  }
+
+  @include govuk-media-query($from: tablet) {
+    padding-left: $task-list-indent;
+  }
+}
+
+.app-task-list__item {
+  border-bottom: 1px solid $govuk-border-colour;
+  padding-bottom: govuk-spacing(2);
+  padding-top: govuk-spacing(2);
+
+  @include govuk-clearfix;
+
+  &:first-child {
+    border-top: 1px solid $govuk-border-colour;
+  }
+}
+
+.app-task-list__task-name {
+  float: left;
+  width: 33.3%;
+}
+
+.app-task-list__task-completed {
+  float: right;
+}

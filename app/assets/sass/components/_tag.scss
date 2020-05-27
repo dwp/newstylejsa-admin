@@ -1,0 +1,33 @@
+// Tag
+@import 'node_modules/govuk-frontend/settings/all';
+@import 'node_modules/govuk-frontend/tools/all';
+@import 'node_modules/govuk-frontend/helpers/all';
+
+.tag {
+  display: inline-block;
+  background-color: govuk-colour('blue');
+  color: $govuk-body-background-colour;
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 14px !important; // sass-lint:disable-line no-important
+  padding: 4px 6px 2px !important; // sass-lint:disable-line no-important
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.tag--success {
+  background-color: govuk-colour('light-green');
+}
+
+.tag--warning {
+  background-color: govuk-colour('brown');
+}
+
+.tag--danger {
+  background-color: govuk-colour('bright-red');
+}
+
+.tag--invert {
+  background-color: govuk-colour('white');
+  color: govuk-colour('blue');
+}

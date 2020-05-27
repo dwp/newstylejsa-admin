@@ -1,0 +1,63 @@
+// Adding these from here:
+// https://github.com/alphagov/govuk-frontend/commit/d991687cc9cedfa0297f9d133360d1741c2603d6#diff-1ca4a00cdf9b966ae4f516f558397d2b
+
+.govuk-input--width-30 {
+  max-width: 56ex + 3ex;
+}
+
+.govuk-input--width-20 {
+  max-width: 38ex + 3ex;
+}
+
+.govuk-input--width-10 {
+  max-width: 20ex + 3ex;
+}
+
+.govuk-input--width-5 {
+  max-width: 10.8ex;
+}
+
+.govuk-input--width-4 {
+  max-width: 9ex;
+}
+
+.govuk-input--width-3 {
+  max-width: 7.2ex;
+}
+
+.govuk-input--width-2 {
+  max-width: 5.4ex;
+}
+
+.govuk-short-input {
+  clear: left;
+  float: left;
+
+  .govuk-form-group {
+    clear: none;
+    float: left;
+    margin-bottom: 0;
+    margin-right: 20px;
+    width: 50px;
+  }
+}
+
+.inline-form-group {
+  @include govuk-clearfix;
+
+  .govuk-form-group,
+  .input-label,
+  .inline-item {
+    float: left;
+  }
+
+  .input-label {
+    @extend .govuk-body;
+  }
+
+  .input-label,
+  .inline-link {
+    @include govuk-responsive-margin(2, 'top');
+    @include govuk-responsive-margin(3, 'left');
+  }
+}

@@ -1,0 +1,23 @@
+{% extends "layout/base.html" %}
+
+{% block pageTitle %}
+DWP Components - Header
+{% endblock %}
+
+{% block content %}
+<div class="govuk-!-margin-top-9">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">Header component</h1>
+        
+        {{ dwpHeader({
+          "homepageUrl": "/",
+          "serviceName": serviceName,
+          "serviceUrl": "/",
+          "containerClasses": "govuk-width-container"
+        }) }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
