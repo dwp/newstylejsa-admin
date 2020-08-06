@@ -52,7 +52,8 @@ module.exports = (app) => {
         // SERVICE_CENTRE_AGENT
         app.locals.loggedInAgent = app.locals.agents[3];
         app.locals.runDataSetup(config.summaryClaimantData);
-        res.redirect('/common/nino-search');
+        //res.redirect('/common/nino-search');
+        res.redirect('/service-centre');
       }
     }
   });
