@@ -6,7 +6,7 @@ Outbound journey - {{ serviceName }}
 
 {% block header %}
   {% include "includes/debug-logged-in-agent-type.html" %}
-  
+
   {{ dwpHeader({
     "homepageUrl": "/",
     "serviceName": serviceName,
@@ -48,38 +48,13 @@ Outbound journey - {{ serviceName }}
 
         {# LEFT HANDSIDE - CHECK YOUR ANSWERS #}
 
-        {% include "./cc-allocated-claim-detail.njk" %}
+        {% include "./cc-allocated-claim-detail.html" %}
 
       </div>
 
       {# RIGHT HANDSIDE #}
       <div class="govuk-grid-column-one-third">
         <aside class="app-related-items govuk-!-margin-top-0" role="complementary">
-
-          {# CLAIM ACTIONS
-          
-          <h3 class="govuk-heading-m" id="claim-actions-title">Claim actions</h3>
-
-          {{ govukCheckboxes({
-            idPrefix: "allocate",
-            name: "allocate",
-            classes: "govuk-checkboxes--small",
-            items: [
-              {
-                value: "allocate",
-                text: "Allocate"
-              }
-            ]
-          }) }}
-
-          {{ govukButton({
-            text: "Update claim status",
-            preventDoubleClick: true
-          }) }}
-
-          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-          #}
 
           {# CLAIM STATUS HISTORY #}
 
