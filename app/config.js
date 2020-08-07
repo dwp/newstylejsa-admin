@@ -77,6 +77,11 @@ const CLAIM_STATUSES = {
     label: 'Withdraw claim',
     value: 'withdrawn',
     cta: 'Withdraw claim'
+  },
+  ALLOCATED: {
+    label: 'Allocated',
+    value: 'allocated',
+    cta: 'Allocated'
   }
 };
 
