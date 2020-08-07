@@ -46,7 +46,7 @@ Outbound journey - {{ serviceName }}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        {# LEFT HANDSIDE - CHECK YOUR ANSWERS #}
+        {# LEFT HANDSIDE - CHECK CLAIM DETAILS #}
 
         {#
         Attempted to address this huge piece of code with an "include".
@@ -64,523 +64,337 @@ Outbound journey - {{ serviceName }}
           {% set startDateItems = data['claimStartDay'] + "/" + data['claimStartMonth'] + "/" + data['claimStartYear'] %}
         {% endif %}
 
-        {# CLAIM START DATE #}
+        {# CLAIM DETAIL HEADING #}
 
         <h1 class="govuk-heading-l">Claim detail heading TBC</h1>
 
-        <h2 class="govuk-heading-m">Claim start date</h2>
+        {# CLAIM START DATE #}
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              When do you want your claim to start?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              {{ startDateItems }}
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Claim start date</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">When do you want your claim to start?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">{{ startDateItems }}</td>
+            </tr>
+          </tbody>
+        </table>
 
         {# PERSONAL DETAILS #}
 
-        <h2 class="govuk-heading-m">Personal details</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              National Insurance number
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              QQ 12 34 56 C
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Name
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Sarah Phillips
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Date of birth
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              27/11/1972
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Home address
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              1 Sample Lane<br>
-              Sampletown<br>
-              SA4 7SH
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Do you want to add a different address for your post?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              No
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Telephone number
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              01234984123
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Do you have an email we can contact you on?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What’s your email address?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              sarah.phillips@example.com
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Personal details</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">National Insurance number</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">QQ 12 34 56 C</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Name</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Sarah Phillips</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Date of birth</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">27/11/1972</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Home address</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">1 Sample Lane<br>Sampletown<br>SA4 7SH</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Do you want to add a different address for your post?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">No</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Telephone number</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">01234984123</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Do you have an email we can contact you on?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What’s your email address?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">sarah.phillips@example.com</td>
+            </tr>
+          </tbody>
+        </table>
 
         {# BANK DETAILS #}
 
-        <h2 class="govuk-heading-m">Bank details</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Bank details
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              <strong>Account holder:</strong> John Smith<br>
-              <strong>Sort code:</strong> 15-00-11<br>
-              <strong>Account number:</strong> 1234567
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Bank details</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Bank details</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">
+                <strong>Account holder:</strong> John Smith<br>
+                <strong>Sort code:</strong> 15-00-11<br>
+                <strong>Account number:</strong> 1234567
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
         {# OTHER BENEFITS #}
 
-        <h2 class="govuk-heading-m">Other benefits</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Are you waiting to hear about any other benefits?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What other benefits are you waiting to hear about?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              ESA, Hardship fund, housing
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Other benefits</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Are you waiting to hear about any other benefits?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What other benefits are you waiting to hear about?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">ESA, Hardship fund, housing</td>
+            </tr>
+          </tbody>
+        </table>
 
         {# JURY SERVICE #}
 
-        <h2 class="govuk-heading-m">Jury service</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Have you been on jury service in the last 12 weeks?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              When was the jury service?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              25/08/2018 – 03/09/2018
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Jury service</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Have you been on jury service in the last 12 weeks?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">When was the jury service?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">25/08/2018 – 03/09/2018</td>
+            </tr>
+          </tbody>
+        </table>
 
         {# CURRENT EMPLOYMENT #}
 
-        <h2 class="govuk-heading-m">Current employment</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Are you in any form of work at the moment?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              No
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Current employment</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Are you in any form of work at the moment?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">No</td>
+            </tr>
+          </tbody>
+        </table>
 
         {# PREVIOUS EMPLOYMENT #}
 
-        <h2 class="govuk-heading-m">Previous employment</h2>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Previous employment</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Have you had a job that ended in the last 6 months?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Have you had a job that ended in the last 6 months?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-        </dl>
-
-        <h2 class="govuk-heading-m">First previous employer</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              When did you work for this employer?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              25/08/2018 – 3/9/2018
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Why did this job end?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Other
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Can you provide more detail?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              I was bullied out of the job
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What is the name of your previous employer?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Tesco
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What is the address of your previous employer?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              1 Sample Lane<br>Sampletown<br>SA4 7SH
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What is the telephone number of your previous employer (optional)?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              01234984123
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Were you self employed or a company director?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Do you expect to receive any payments because a job has ended in the last 6 months?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Who do you expect to make this payment?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Tesco
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">First previous employer</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">When did you work for this employer?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">25/08/2018 – 3/9/2018</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Why did this job end?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Other</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Can you provide more detail?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">I was bullied out of the job</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What is the name of your previous employer?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Tesco</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What is the address of your previous employer?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">1 Sample Lane<br>Sampletown<br>SA4 7SH</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What is the telephone number of your previous employer (optional)??</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">01234984123</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Were you self employed or a company director?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Do you expect to receive any payments because a job has ended in the last 6 months?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Who do you expect to make this payment?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Tesco</td>
+            </tr>
+          </tbody>
+        </table>
 
         {# WORKING OR CLAIMING BENEFITS OVERSEAS #}
 
-        <h2 class="govuk-heading-m">Working or claiming benefit overseas</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Have you worked or claimed benefit outside the United Kingdom in last 4 years?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              No
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Working or claiming benefit overseas</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Have you worked or claimed benefit outside the United Kingdom in last 4 years?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">No</td>
+            </tr>
+          </tbody>
+        </table>
 
         {# CURRENT PENSION #}
 
-        <h2 class="govuk-heading-m">Current pensions</h2>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Current pensions</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Are you getting money from a pension or annuity?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Are you getting money from a pension or annuity?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-        </dl>
-
-        <h2 class="govuk-heading-m">First deferred pension</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What’s the name of your pension or annuity provider?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Tesco
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What is the address of your pension or annuity provider?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              2 Sample Lane<br>Sampletown<br>SA4 7SH
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              How often is your pension or annuity paid?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Monthly
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What’s your gross pension?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              £238.00
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Does your pension increase in the next 6 months?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              When will it increase?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              February
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">First current pension</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What’s the name of your pension or annuity provider?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Tesco</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What is the address of your pension or annuity provider?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">2 Sample Lane<br>Sampletown<br>SA4 7SH</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">How often is your pension or annuity paid?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Monthly</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What’s your gross pension?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">£238.00</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Does your pension increase in the next 6 months?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">When will it increase?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">November</td>
+            </tr>
+          </tbody>
+        </table>
 
         {# DEFERRED PENSION #}
 
-        <h2 class="govuk-heading-m">Deferred pensions</h2>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Deferred pensions</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Do you have a pension or annuity that you could be paid now, but have decided not to take?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Do you have a pension or annuity that you could be paid now, but have decided not to take?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-        </dl>
-
-        <h2 class="govuk-heading-m">First deferred pension</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What is the name of your pension or annuity provider?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Tesco
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What is the address of your pension or annuity provider?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              2 Sample Lane<br>Sampletown<br>SA4 7SH
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              How often should your deferred pension or annuity be paid?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Monthly
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What’s your gross pension?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              £238.00
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">First deferred pension</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What is the name of your pension or annuity provider?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Tesco</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What is the address of your pension or annuity provider?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">2 Sample Lane<br>Sampletown<br>SA4 7SH</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">How often should your deferred pension or annuity be paid?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Monthly</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What’s your gross pension?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">£238.00</td>
+            </tr>
+          </tbody>
+        </table>
 
         {# FUTURE PENSION #}
 
-        <h2 class="govuk-heading-m">Future pensions</h2>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Future pensions</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Do you expect to start receiving a pension or annuity in the next 6 months?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Do you expect to start receiving a pension or annuity in the next 6 months?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-        </dl>
-
-        <h2 class="govuk-heading-m">First future pension</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What is the name of your pension or annuity provider?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Tesco
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What is the address of your pension or annuity provider?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              2 Sample Lane<br>Sampletown<br>SA4 7SH
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Do you know when this future pension or annuity starts?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              When does the future pension or annuity start?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              February
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Do you know how much you’ll be paid for this future pension or annuity?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              How often will your pension or annuity be paid?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Quarterly
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What’s your gross pension?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              £622.50
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">First future pension</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What is the name of your pension or annuity provider?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Tesco</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What is the address of your pension or annuity provider?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">2 Sample Lane<br>Sampletown<br>SA4 7SH</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Do you know when this future pension or annuity starts?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">When does the future pension or annuity start?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">February</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Do you know how much you’ll be paid for this future pension or annuity?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">How often will your pension or annuity be paid?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Quarterly</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What’s your gross pension?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">£622.50</td>
+            </tr>
+          </tbody>
+        </table>
 
         {# EDUCATION AND TRAINING #}
 
-        <h2 class="govuk-heading-m">Education and training</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              Have you been in education or training in the last 4 years?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Yes
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What was the name of your course or training programme?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              BTEC National Diploma General Illustration
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              What institution did this education or training happen?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              Mid-Cheshire College
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              How many hours per week did you attend this education or training?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              12
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key govuk-!-width-one-half">
-              When did you attend this training or education?
-            </dt>
-            <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              25/08/2017 – 3/9/2018
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <caption class="govuk-table__caption govuk-heading-m">Education and training</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">Have you been in education or training in the last 4 years?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Yes</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What was the name of your course or training programme?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">BTEC National Diploma General Illustration</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">What institution did this education or training happen?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">Mid-Cheshire College</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">How many hours per week did you attend this education or training?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">12</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-!-width-one-half">When did you attend this training or education?</th>
+              <td class="govuk-table__cell govuk-!-width-one-half">25/08/2017 – 3/9/2018</td>
+            </tr>
+          </tbody>
+        </table>
 
       </div>
 
