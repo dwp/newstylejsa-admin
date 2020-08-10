@@ -48,6 +48,8 @@ Outbound journey - {{ serviceName }}
 
         {# LEFT HANDSIDE - CHECK CLAIM DETAILS #}
 
+        {% include "../includes/sc-claim-details.html" %}
+
         {#
         Attempted to address this huge piece of code with an "include".
         It worked when running locally, but once on Heroku all of the style for the rows
