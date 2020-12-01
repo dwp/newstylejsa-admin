@@ -17,7 +17,7 @@
     "basic-auth": "^1.0.3",
     "basic-auth-connect": "^1.0.0",
     "body-parser": "^1.14.1",
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.26.9",
     "chai": "^4.1.2",
     "chalk": "^2.4.1",
     "cookie-parser": "^1.4.3",
