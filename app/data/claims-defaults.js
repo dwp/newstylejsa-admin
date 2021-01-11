@@ -6,7 +6,9 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
-      viewed: false
+      tagClass: "success",
+      viewed: false,
+      agent: "Wesley Snipes"
     },
     {
       name: "Xena Tucker",
@@ -14,7 +16,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Wesley Snipes"
     },
     {
       name: "Kai Barber",
@@ -22,7 +25,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "15/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Wesley Snipes"
     },
     {
       name: "Quinn Casey",
@@ -30,7 +34,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "17/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Wesley Snipes"
     },
     {
       name: "Mallory Guzman",
@@ -38,7 +43,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "16/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Wesley Snipes"
     },
     {
       name: "Rebekah Murray",
@@ -46,7 +52,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "15/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Julia Roberts"
     },
     {
       name: "Inga Beard",
@@ -54,7 +61,8 @@ module.exports = {
       submissionDate: "03/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Julia Roberts"
     },
     {
       name: "Hop Meyers",
@@ -62,7 +70,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "17/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Julia Roberts"
     },
     {
       name: "Reece Emerson",
@@ -70,7 +79,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "18/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Julia Roberts"
     },
     {
       name: "Urielle Calhoun",
@@ -78,7 +88,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Julia Roberts"
     },
     {
       name: "Serina Levine",
@@ -86,7 +97,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Julia Roberts"
     },
     {
       name: "Echo Browning",
@@ -94,7 +106,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Julia Roberts"
     },
     {
       name: "Charde Howard",
@@ -102,7 +115,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "15/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Julia Roberts"
     },
     {
       name: "Dominic Warner",
@@ -110,7 +124,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "16/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Julia Roberts"
     },
     {
       name: "Amethyst Parker",
@@ -118,7 +133,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Julia Roberts"
     },
     {
       name: "Fallon Palmer",
@@ -126,7 +142,8 @@ module.exports = {
       submissionDate: "04/11/2018",
       pushedDate: "14/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Janna England",
@@ -134,7 +151,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Akeem Lang",
@@ -142,7 +160,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Galena Collier",
@@ -150,7 +169,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "18/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Zelda Holman",
@@ -158,7 +178,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "20/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Evelyn Mann",
@@ -166,7 +187,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Haley Lowe",
@@ -174,7 +196,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "15/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Mufutau Chen",
@@ -182,7 +205,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "16/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Eaton Parsons",
@@ -190,7 +214,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Cullen Valentine",
@@ -198,7 +223,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Desirae Mckay",
@@ -206,7 +232,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Fiona Garrett",
@@ -214,7 +241,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "18/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Julie Rhodes",
@@ -222,7 +250,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Inez Hayes",
@@ -230,7 +259,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "16/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Carlos Cooper",
@@ -238,7 +268,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "18/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Flavia Bond",
@@ -246,7 +277,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "16/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Megan Ferguson",
@@ -254,7 +286,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "14/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Nichole Wynn",
@@ -262,7 +295,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "18/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Ruby Kelly",
@@ -270,7 +304,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Hannah Sosa",
@@ -278,7 +313,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Yael Solis",
@@ -286,7 +322,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "14/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Juliet James",
@@ -294,7 +331,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "20/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Connor Hernandez",
@@ -302,7 +340,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Ray Liotta"
     },
     {
       name: "Karleigh Dunn",
@@ -310,7 +349,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Maryam Stevenson",
@@ -318,7 +358,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Hamilton Whitley",
@@ -326,7 +367,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Laurel Valencia",
@@ -334,7 +376,8 @@ module.exports = {
       submissionDate: "04/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Brynn Morse",
@@ -342,7 +385,8 @@ module.exports = {
       submissionDate: "03/11/2018",
       pushedDate: "20/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Reese Hanson",
@@ -350,7 +394,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Gwendolyn Hayden",
@@ -358,7 +403,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "14/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Hayes Curry",
@@ -366,7 +412,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "15/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Celeste Chaney",
@@ -374,7 +421,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "20/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Ross Everett",
@@ -382,7 +430,8 @@ module.exports = {
       submissionDate: "04/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Raphael Rodriguez",
@@ -390,7 +439,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Illiana Love",
@@ -398,7 +448,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Herrod Peters",
@@ -406,7 +457,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Bradley Hayes",
@@ -414,7 +466,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Cleo Hutchinson",
@@ -422,7 +475,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Ori Stanton",
@@ -430,7 +484,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "15/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Nicole Mejia",
@@ -438,7 +493,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "17/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Ashton Bennett",
@@ -446,7 +502,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Daniel Velazquez",
@@ -454,7 +511,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "15/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Echo Mckenzie",
@@ -462,7 +520,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Wesley Bond",
@@ -470,7 +529,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "18/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Logan Rasmussen",
@@ -478,7 +538,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Jermaine Bridges",
@@ -486,7 +547,8 @@ module.exports = {
       submissionDate: "03/11/2018",
       pushedDate: "17/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Rebekah Carlson",
@@ -494,7 +556,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Wang Small",
@@ -502,7 +565,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Boris Kelley",
@@ -510,7 +574,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Eleanor Wells",
@@ -518,7 +583,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Kylee Black",
@@ -526,7 +592,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Hyatt Wood",
@@ -534,7 +601,8 @@ module.exports = {
       submissionDate: "03/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Amena Washington",
@@ -542,7 +610,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "15/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Vera Maynard",
@@ -550,7 +619,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "15/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Fay Jefferson",
@@ -558,7 +628,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Emerson Faulkner",
@@ -566,7 +637,8 @@ module.exports = {
       submissionDate: "04/11/2018",
       pushedDate: "16/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Omar Herman",
@@ -574,7 +646,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Tyrone Fuentes",
@@ -582,7 +655,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "14/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Vincent Owen",
@@ -590,7 +664,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "16/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Rylee Hogan",
@@ -598,7 +673,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Phelan Meyer",
@@ -606,7 +682,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "15/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Kylee Gay",
@@ -614,7 +691,8 @@ module.exports = {
       submissionDate: "03/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Veronica Brock",
@@ -622,7 +700,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Joelle Dejesus",
@@ -630,7 +709,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Kennedy Case",
@@ -638,7 +718,8 @@ module.exports = {
       submissionDate: "04/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Thomas Hays",
@@ -646,7 +727,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Keegan York",
@@ -654,7 +736,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "16/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Ingrid Ayers",
@@ -662,7 +745,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Kenneth Patel",
@@ -670,7 +754,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Oliver Blake",
@@ -678,7 +763,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Germaine Boyle",
@@ -686,7 +772,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "17/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Cara Cunningham",
@@ -694,7 +781,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "20/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Pascale Nunez",
@@ -702,7 +790,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Rhea Rojas",
@@ -710,7 +799,8 @@ module.exports = {
       submissionDate: "03/11/2018",
       pushedDate: "17/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Shannon Talley",
@@ -718,7 +808,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Chaney Odonnell",
@@ -726,7 +817,8 @@ module.exports = {
       submissionDate: "04/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Imani Warren",
@@ -734,7 +826,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "17/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Conan Bailey",
@@ -742,7 +835,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "15/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Hiroko Decker",
@@ -750,7 +844,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "16/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Branden Gonzalez",
@@ -758,7 +853,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "16/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Rowan Andrews",
@@ -766,7 +862,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Axel Puckett",
@@ -774,7 +871,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Emerson Webb",
@@ -782,7 +880,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Alyssa Villarreal",
@@ -790,7 +889,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Renee Mcfarland",
@@ -798,6 +898,7 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "18/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
   }]
 }
