@@ -1,0 +1,51 @@
+// Notification banner
+
+.govuk-notification-banner {
+  border: 5px solid govuk-colour('blue');
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-right: 20px;
+  margin-bottom: 50px;
+}
+
+.govuk-notification-banner__title {
+  font-family: 'GDS Transport', arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.1875rem;
+  line-height: 1.31579;
+  color: govuk-colour('white');
+  background-color: govuk-colour('blue');
+  padding-left: 20px;
+  padding-bottom: 4px;
+  padding-top: 8px;
+  margin-top: -35px;
+  margin-right: -40px;
+  margin-bottom: 15px;
+  margin-left: -40px;
+}
+
+.govuk-notification-banner__header {
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 2px;
+}
+
+.govuk-notification-banner__heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+}
+
+.govuk-notification__content {
+  background-color: govuk-colour('white');
+  padding: 20px;
+}
+
+
+
+
+

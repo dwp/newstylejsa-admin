@@ -12,6 +12,12 @@ module.exports = (app) => {
   // This moves `contact-centre` routing to `contact-centre` directory
   router.use('/contact-centre', require('./views/contact-centre/_routes')(app));
 
+  // routing for design ideas 1313 – manager
+  router.use('/design-ideas/1313-case-load-management-mvp/service-centre-manager', require('./views/design-ideas/1313-case-load-management-mvp/service-centre-manager/_routes')(app));
+
+  // routing for design ideas 1313 – agent
+  router.use('/design-ideas/1313-case-load-management-mvp/service-centre-agent', require('./views/design-ideas/1313-case-load-management-mvp/service-centre-agent/_routes')(app));
+
   // This moves work coach routing to work-coach directory
   router.use('/work-coach/', require('./views/work-coach/_routes')(app));
 

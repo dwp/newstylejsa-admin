@@ -1,0 +1,76 @@
+{% extends "layout/summary-with-user-1.html" %}
+
+{% block pageTitle %}
+Get next claim - {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+      text: "Back"
+    }) }}
+
+    <div class="govuk-!-margin-top-6">
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      This claim is currently allocated to a different service centre.
+      <a class="govuk-notification-banner__link" href="/design-ideas/1313-case-load-management-mvp/service-centre-agent/get-next-claim-1">Allocate to me</a>.
+    </p>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-!-margin-top-8">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {# LEFT HANDSIDE - CHECK CLAIM DETAILS #}
+        {# Following include is the claim 'check your answers' detail for ease of maintenance #}
+
+        {% include "../includes/sc-claim-details-new-1.html" %}
+
+      </div>
+
+      {# RIGHT HANDSIDE #}
+      <div class="govuk-grid-column-one-third">
+        <aside class="app-related-items govuk-!-margin-top-0" role="complementary">
+
+          {# CLAIM STATUS HISTORY #}
+
+          {% set items = [] %}
+          {% for claimStatus in selectedClaimStatuses %}
+            {% if claimStatus.label == "Success" or claimStatus.label == "Final fail" or claimStatus.label == "Cancelled" %}{% endif %}
+
+            {% set items = items | push({
+              heading: claimStatus.label,
+              subheading: claimStatus.reason or '',
+              author: loggedInAgent.firstName + " " + loggedInAgent.lastName,
+              date: claimStatus.date | momentFormat1
+            }) %}
+
+          {% endfor %}
+
+          {# Make the statuses date descending ordered #}
+          {% set items = items | reverse %}
+
+
+            <h3 class="govuk-heading-m" id="subsection-title">Claim status</h3>
+
+          {{ dwpTimeline({
+            items: items
+          }) }}
+
+        </aside>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

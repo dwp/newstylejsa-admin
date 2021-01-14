@@ -151,7 +151,7 @@ app.locals.runDataSetup = (data) => {
     fullName: `${data.claimant.title} ${data.claimant.firstName} ${data.claimant.lastName}`,
     nino: data.claimant.nino,
     details: [
-      {title: 'D.O.B', value: data.claimant.dob},
+      {title: 'DOB', value: data.claimant.dob},
       {title: 'Postcode', value: data.claimant.address.postcode},
       {title: 'Phone', value: data.claimant.telephone},
       {title: 'Claim submitted (IDOC)', value: data.date}

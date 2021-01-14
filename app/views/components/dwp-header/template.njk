@@ -2,6 +2,7 @@
 
 {% set showSearchBar = true if params.searchBar != false or false %}
 
+
 <header class="dwp-header {{ params.classes if params.classes }}" role="banner" data-module="dwp-header"
         {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
   <div class="dwp-header__container {{ params.containerClasses | default('govuk-width-container') }}">
@@ -25,6 +26,15 @@
               label: "Enter National Insurance number"
             }) }}
           </div>
+        {% endif %}
+        
+        {% if params.agentName %}
+<span>Signed in as Andrew Server <b>(2)</b></span>
+        {% endif %}
+      </div>
+
+        {% if params.managerName %}
+<span>Signed in as Tracey Leader</span>
         {% endif %}
       </div>
 

@@ -1,187 +1,104 @@
 {% extends "layout/base-no-search-bar.html" %}
 
 {% block pageTitle %}
-DWP Agent Prototype - {{ serviceName }}
+  {{ serviceName }}
 {% endblock %}
 
-{% block beforeContent %}
-{% endblock %}
+{% block beforeContent %}{% endblock %}
 
 {% block content %}
-  <div class="govuk-!-margin-top-9">
-    <form action="login" method="post">
-      {% set items = [] %}
-      {% for agentType in agentTypes %}
-        {% set items = items | push({ text: agentType.label, value: agentType.type}) %}
-      {% endfor %}
+  <h1 class="govuk-heading-xl govuk-!-margin-top-9">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Service centre prototypes</span>
+    Apply for New Style Jobseeker&rsquo;s Allowance
+  </h1>
 
-      {{ govukRadios({
-        idPrefix: "login",
-        name: "login",
-        fieldset: {
-          classes: "govuk-!-margin-top-6",
-          legend: {
-            text: "Use the service as",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
-          }
-        },
-        items: items
-      }) }}
+    <p>Worked on by: Neil Holroyd &ndash; January 2021</p>
 
-      {{ govukButton({
-        text: "Login"
-      }) }}
-    </form>
-    <!--<a href="error">Error pages</a>-->
-  </div>
+    <h3 class="govuk-heading-m">1313: Case load selection and management for processing teams</h3>
 
-  <!--
-  <hr class="break">
+    <p>Following on from work undertaken in 2018 these prototypes represent agreed MVP functionality. This requirement is to explore producing a list of cases that have been pushed through to processing with limited functionality.
+    </p>
 
-  <div class="govuk-grid-row govuk-!-margin-top-9">
-    <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-m">Versions</h2>
-      <p>As we learn more about the <b>{{ serviceName }}</b> service and our user needs we are iterating the prototypes. Previous versions will be kept here as a historical record. The latest version can be accessed above.</p>
-      
-      {{ govukButton({
-        text: "Visit latest version",
-        href: "https://dwp-jsa-admin.herokuapp.com"
-      }) }}
+    <ul class="govuk-list govuk-list--bullet">
+          <li><a href="https://jira.service.dwpcloud.uk/browse/BWADH-1313">Page on Jira</a></li>
+          <li><a href="https://app.mural.co/t/universalcredit7056/m/universalcredit7056/1608712475470/e71b7be30572d3d47b25742abdba8480eac8d9ac">Mural board</a></li>
+    </ul>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <div class="govuk-grid-row govuk-!-margin-top-5">
+      <div class="govuk-grid-column-one-half">
+      <span class="govuk-tag govuk-!-font-size-14">Latest</span>
+      <h2 class="govuk-heading-l">Service centre agent</h2>
+      <p>MVP prototypes for service centre agents</p>
+      <a href="design-ideas/1313-case-load-management-mvp/service-centre-agent" class="govuk-button">Start</a>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/nino-search">Find a claim</a></li>
+          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/all-claims-agent">View my claims</a></li>
+          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/get-next-claim-1">Get next claim</a></li>
+          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/get-next-claim-2">Get next claim with notification</a></li>
+          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-status">Update claim status</a></li>
+          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-brought-forward">&ndash; Claim brought forward</a></li>
+          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-outstanding">&ndash; Claim outstanding</a></li>
+          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-referred-to-dm">&ndash; Claim referred to dm</a></li>
+          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-transfer-to-clerical">&ndash; Claim transferred to clerical</a></li>
+          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-cleared">&ndash; Claim cleared</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <span class="govuk-tag govuk-!-font-size-14">Latest</span>
+      <h2 class="govuk-heading-l">Service centre manager</h2>
+      <p>MVP prototypes for service centre managers</p>
+      <a href="design-ideas/1313-case-load-management-mvp/service-centre-manager" class="govuk-button">Start</a>
+      <ul class="govuk-list">
+        <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/all-claims-manager">View all claims</a></li>
+        <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/nino-search">Find a claim</a></li>
+        <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/get-next-claim-2">View claim</a></li>
+        <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/get-next-claim-3-notification">View claim with notification</a></li>
+        <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/select-agent">Allocate an agent</a></li>
+        <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/agents/agent-update-andrew">Example of agent notification</a></li>
+        <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/select-service-centre">Change service centre</a></li>
+        <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/centres/centre-update-leeds">Example of centre notification</a></li>
+      </ul>
     </div>
   </div>
 
-  <div class="govuk-!-margin-top-5">
-    {{ govukDetails({
-      summaryText: "See all previous versions",
-      html: '<dl class="app-check-your-answers app-check-your-answers--short">
 
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question" style="width: 15%;">
-        <span class="govuk-tag">Version 9</span> <br><small>27/11/2018</small>
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        This version includes the options around the <a href="https://dwp-jsa-admin-prototype-v9.herokuapp.com/common/nino-search?show=scenarios">push to service centre</a>
-        with success and failure, discussed in design session with stakeholders.
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="https://dwp-jsa-admin-prototype-v9.herokuapp.com/" title="Opens a new URL" class="govuk-button">
-          View <span class="govuk-visually-hidden">Version 9</span>
-        </a>
-      </dd>
-    </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question" style="width: 15%;">
-        <span class="govuk-tag">Version 8</span> <br><small>20/11/2018</small>
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        Amend Service Centre we now only need to have NINO search, removed find a service centre 
-        and list of results. Also removed the ability to mark as viewed.
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="https://dwp-jsa-admin-prototype-v8.herokuapp.com/" title="Opens a new URL" class="govuk-button">
-          View <span class="govuk-visually-hidden">Version 8</span>
-        </a>
-      </dd>
-    </div>
+    <h2 class="govuk-heading-l">Previous versions</h2>
 
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question" style="width: 15%;">
-        <span class="govuk-tag">Version 7</span> <br><small>14/11/2018</small>
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        Introduce Service centre agent access and features; Allow existing user types to cancel a claim
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="https://dwp-jsa-admin-prototype-v7.herokuapp.com/" title="Opens a new URL" class="govuk-button">
-          View <span class="govuk-visually-hidden">Version 7</span>
-        </a>
-      </dd>
-    </div>
+    <!-- VERSION Summer 2020 -->
+    <h3 class="govuk-heading-m">
+      <a href="service-centre/get-next-claim">Get next claim</a>
+    </h3>
 
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question" style="width: 15%;">
-        <span class="govuk-tag">Version 6</span> <br><small>08/11/2018</small>
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        Added ability to login as different DWP agents. Added service centre screens (first stab). Added contact centre screens. Refactoring of claimant data and statuses.
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="https://dwp-jsa-admin-prototype-v6.herokuapp.com/" title="Opens a new URL" class="govuk-button">
-          View <span class="govuk-visually-hidden">Version 6</span>
-        </a>
-      </dd>
-    </div>
+    <p>Worked on by: Mark Bateman</p>
 
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question" style="width: 15%;">
-        <span class="govuk-tag">Version 5</span> <br><small>24/10/2018</small>
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        Better push to JSAPS user experience, added secondary navigation component. Also added edit claim function.
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="https://dwp-jsa-admin-prototype-v5.herokuapp.com/" title="Opens a new URL" class="govuk-button">
-          View <span class="govuk-visually-hidden">Version 5</span>
-        </a>
-      </dd>
-    </div>
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question" style="width: 15%;">
-        <span class="govuk-tag">Version 4</span> <br><small>22/10/2018</small>
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        Abandoned version 4. This was going to be push to JSAPS. The work is merged into version 5 along with editing the claim.
-        See iteration 4 progress above.
-      </dd>
-    </div>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>August 2020 &ndash; I am unsure of the extent of work on this prototype (comment by Neil Holroyd)</li>
+    </ul>
 
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question" style="width: 15%;">
-        <span class="govuk-tag">Version 3</span> <br><small>11/10/2018</small>
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        Summary updates with feedback from business. The summary now has 4 options to test with work coaches. PV CIS marker 
-        dropped due to security concerns from business. Added conflicting claim marker.
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="https://dwp-jsa-admin-prototype-v3.herokuapp.com/" title="Opens a new URL" class="govuk-button">
-          View <span class="govuk-visually-hidden">Version 3</span>
-        </a>
-      </dd>
-    </div>
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question" style="width: 15%;">
-        <span class="govuk-tag">Version 2</span> <br><small>03/10/2018</small>
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        Updated with feedback from Work Coaches. The summary is now printed as it was deemed useful by several Work Coaches. Added
-        a page for an invalid nino. Added complete list for evidence and forms to check. Updated key details with telephone and conflicting benefits.
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="https://dwp-jsa-admin-prototype-v2.herokuapp.com/" title="Opens a new URL" class="govuk-button">
-          View <span class="govuk-visually-hidden">Version 2</span>
-        </a>
-      </dd>
-    </div>
-    <div class="app-check-your-answers__contents">
-      <dt class="app-check-your-answers__question" style="width: 15%;">
-        <span class="govuk-tag">Version 1</span> <br><small>26/09/2018</small>
-      </dt>
-      <dd class="app-check-your-answers__answer">
-        Initial version based on the <a href="https://github.com/valtech-uk/jsa-prototype">citizen prototype repository</a>.
-      </dd>
-      <dd class="app-check-your-answers__change">
-        <a href="https://dwp-jsa-admin-prototype-v1.herokuapp.com/" title="Opens a new URL" class="govuk-button">
-          View <span class="govuk-visually-hidden">Version 1</span>
-        </a>
-      </dd>
-    </div>
-  </dl>
-  '
-  }) }}
-  </div>
-  -->
+
+    <!-- VERSION – previous complete journeys -->
+    <h3 class="govuk-heading-m">
+      <a href="index-previous">Complete previous journeys</a>
+    </h3>
+
+    <p>Worked on by: Gareth Joyce and Rob Pataki</p>
+
+
+    <!-- VERSION – previous home page with links to all previous work -->
+    <h3 class="govuk-heading-m">
+      <a href="home">All other versions and prototypes</a>
+    </h3>
+
+    <p>Worked on by: Gareth Joyce and Rob Pataki</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Links to all previous protoypes on this link</li>
+      <li>Note that there may be some broken links from this page due to previous work undertaken</li>
+    </ul>
 
 {% endblock %}

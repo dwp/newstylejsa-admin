@@ -1,0 +1,94 @@
+{% extends "layout/base-no-search-bar.html" %}
+
+{% block pageTitle %}
+Select an agent
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-main-wrapper">
+  <div class="govuk-!-margin-top-6">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+            <span class="govuk-caption-m">Leeds 100101 agents</span>
+            <h1 class="govuk-heading-l">Select an agent</h1>
+            <form action="select-agent" method="post">
+
+        <div class="govuk-form-group">
+
+            <fieldset class="govuk-fieldset">
+
+                {{ govukRadios({
+                    idPrefix: 'select-agent',
+                    name: 'selectAgent',
+                    items: [
+                        {
+                            value: "andrew-server",
+                            text: "Andrew Server"
+                        },
+                        {
+                            value: "ted-hughes",
+                            text: "Ted Hughes"
+                        },
+                        {
+                            value: "miguel-indurain",
+                            text: "Miguel Indurain"
+                        },
+                        {
+                            value: "neil-simons",
+                            text: "Neil Simons"
+                        },
+                        {
+                            value: "jane-macdonald",
+                            text: "Jane MacDonald"
+                        },
+                        {
+                            value: "bart-blokk",
+                            text: "Bart Blokk"
+                        },
+                        {
+                            value: "sylvia-plath",
+                            text: "Sylvia Plath"
+                        },
+                        {
+                            value: "gareth-thomas",
+                            text: "Gareth Thomas"
+                        },
+                        {
+                            value: "john-hardcastle",
+                            text: "John Hardcastle"
+                        },
+                        {
+                            value: "femi-johns",
+                            text: "Femi Johns"
+                        },
+                        {
+                            value: "nadia-khomani",
+                            text: "Nadia Khomani"
+                        },
+                        {
+                            value: "olivia-normal",
+                            text: "Olivia Normal"
+                        }
+                    ]
+                })
+                }}
+
+            </fieldset>
+            
+
+        </div>
+
+        {{ govukButton({
+            text: "Save and continue"
+        }) }}
+
+        
+
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

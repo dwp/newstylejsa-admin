@@ -1,0 +1,74 @@
+{% extends "layout/base-no-search-bar.html" %}
+
+{% block pageTitle %}
+Select a service centre
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-main-wrapper">
+  <div class="govuk-!-margin-top-6">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+            <span class="govuk-caption-m">All centres</span>
+            <h1 class="govuk-heading-l">Select an alternative centre</h1>
+            <form action="select-service-centre" method="post">
+
+        <div class="govuk-form-group">
+
+            <fieldset class="govuk-fieldset">
+
+                {{ govukRadios({
+                    idPrefix: 'alternative-centre',
+                    name: 'selectAlternativeCentre',
+                    items: [
+                        {
+                            value: "leeds-100101",
+                            text: "Leeds 100101"
+                        },
+                        {
+                            value: "preston-132141",
+                            text: "Preston 132141"
+                        },
+                        {
+                            value: "dumfries-456789",
+                            text: "Dumfries 456789"
+                        },
+                        {
+                            value: "liverpool-243654",
+                            text: "Liverpool 243654"
+                        },
+                        {
+                            value: "galashiels-987321",
+                            text: "Galashiels 987321"
+                        },
+                        {
+                            value: "cardiff-211201",
+                            text: "Cardiff 211201"
+                        },
+                        {
+                            value: "southampton-211201",
+                            text: "Southampton 211201"
+                        }
+                    ]
+                })
+                }}
+
+            </fieldset>
+            
+
+        </div>
+
+        {{ govukButton({
+            text: "Save and continue"
+        }) }}
+
+        
+
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
