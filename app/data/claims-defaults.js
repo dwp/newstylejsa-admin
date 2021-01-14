@@ -6,10 +6,16 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "New claim",
       tagClass: "new",
       viewed: false,
       agent: "Andrew Server"
+=======
+      tagClass: "success",
+      viewed: false,
+      agent: "Wesley Snipes"
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     },
     {
       name: "Xena Tucker",
@@ -17,10 +23,15 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Ted Hughes"
+=======
+      viewed: false,
+      agent: "Wesley Snipes"
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     },
     {
       name: "Kai Barber",
@@ -28,487 +39,776 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "15/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Miguel Indurain"    },
+=======
+      viewed: false,
+      agent: "Wesley Snipes"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Quinn Casey",
       nino: "WK 88 14 78 N",
       submissionDate: "09/11/2018",
       pushedDate: "17/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Neil Simons"    },
+=======
+      viewed: false,
+      agent: "Wesley Snipes"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Mallory Guzman",
       nino: "TV 11 90 27 Z",
       submissionDate: "02/11/2018",
       pushedDate: "16/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Jane MacDonald"    },
+=======
+      viewed: false,
+      agent: "Wesley Snipes"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Rebekah Murray",
       nino: "JF 96 34 64 H",
       submissionDate: "07/11/2018",
       pushedDate: "15/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Bart Blokk"    },
+=======
+      viewed: false,
+      agent: "Julia Roberts"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Inga Beard",
       nino: "CW 70 78 14 A",
       submissionDate: "03/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Brought forward",
       tagClass: "fail",
       viewed: false,
       agent: "Andrew Server"    },
+=======
+      viewed: false,
+      agent: "Julia Roberts"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Hop Meyers",
       nino: "XB 22 35 67 G",
       submissionDate: "09/11/2018",
       pushedDate: "17/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Gareth Thomas"    },
+=======
+      viewed: false,
+      agent: "Julia Roberts"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Reece Emerson",
       nino: "GD 66 84 29 U",
       submissionDate: "07/11/2018",
       pushedDate: "18/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Miguel Indurain"    },
+=======
+      viewed: false,
+      agent: "Julia Roberts"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Urielle Calhoun",
       nino: "VW 47 60 29 X",
       submissionDate: "05/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Brought forward",
       tagClass: "fail",
       viewed: false,
       agent: "Bart Blokk"    },
+=======
+      viewed: false,
+      agent: "Julia Roberts"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Serina Levine",
       nino: "PW 14 97 00 T",
       submissionDate: "01/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Brought forward",
       tagClass: "fail",
       viewed: false,
       agent: "Bart Blokk"    },
+=======
+      viewed: false,
+      agent: "Julia Roberts"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Echo Browning",
       nino: "QD 82 96 61 K",
       submissionDate: "06/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Sylvia Plath"    },
+=======
+      viewed: false,
+      agent: "Julia Roberts"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Charde Howard",
       nino: "NX 25 13 60 Q",
       submissionDate: "05/11/2018",
       pushedDate: "15/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Andrew Server"    },
+=======
+      viewed: false,
+      agent: "Julia Roberts"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Dominic Warner",
       nino: "PO 17 09 07 M",
       submissionDate: "06/11/2018",
       pushedDate: "16/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Brought forward",
       tagClass: "fail",
       viewed: false,
       agent: "Gareth Thomas"    },
+=======
+      viewed: false,
+      agent: "Julia Roberts"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Amethyst Parker",
       nino: "PR 32 10 02 V",
       submissionDate: "01/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Sylvia Plath"    },
+=======
+      viewed: false,
+      agent: "Julia Roberts"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Fallon Palmer",
       nino: "NG 56 43 44 Y",
       submissionDate: "04/11/2018",
       pushedDate: "14/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Claim outstanding",
       tagClass: "outstanding",
       viewed: false,
       agent: "Ted Hughes"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Janna England",
       nino: "GC 45 88 19 J",
       submissionDate: "05/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Brought forward",
       tagClass: "fail",
       viewed: false,
       agent: "Ted Hughes"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Akeem Lang",
       nino: "NP 18 49 56 I",
       submissionDate: "05/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Brought forward",
       tagClass: "fail",
       viewed: false,
       agent: "Jane MacDonald"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Galena Collier",
       nino: "GK 12 19 88 Y",
       submissionDate: "08/11/2018",
       pushedDate: "18/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Claim outstanding",
       tagClass: "outstanding",
       viewed: false,
       agent: "Jane MacDonald"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Zelda Holman",
       nino: "HJ 93 62 66 E",
       submissionDate: "09/11/2018",
       pushedDate: "20/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "John Hardcastle"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Evelyn Mann",
       nino: "YS 65 15 52 E",
       submissionDate: "06/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Nadia Khomani"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Haley Lowe",
       nino: "EK 19 15 02 Y",
       submissionDate: "02/11/2018",
       pushedDate: "15/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Nadia Khomani"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Mufutau Chen",
       nino: "WI 93 58 95 U",
       submissionDate: "07/11/2018",
       pushedDate: "16/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Olivia Normal"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Eaton Parsons",
       nino: "YW 17 15 68 Z",
       submissionDate: "08/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Olivia Normal"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Cullen Valentine",
       nino: "OW 80 31 41 R",
       submissionDate: "02/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Femi Johns"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Desirae Mckay",
       nino: "ZM 20 34 37 I",
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Brought forward",
       tagClass: "fail",
       viewed: false,
       agent: "Femi Johns"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Fiona Garrett",
       nino: "OQ 99 99 23 N",
       submissionDate: "07/11/2018",
       pushedDate: "18/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Brought forward",
       tagClass: "fail",
       viewed: false,
       agent: "Wesley Snipes"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Julie Rhodes",
       nino: "QR 54 11 48 J",
       submissionDate: "05/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "John Hardcastle"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Inez Hayes",
       nino: "ZN 36 10 94 A",
       submissionDate: "09/11/2018",
       pushedDate: "16/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Sylvia Plath"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Carlos Cooper",
       nino: "VD 78 06 22 H",
       submissionDate: "05/11/2018",
       pushedDate: "18/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Sylvia Plath"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Flavia Bond",
       nino: "OO 39 84 51 D",
       submissionDate: "02/11/2018",
       pushedDate: "16/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "John Hardcastle"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Megan Ferguson",
       nino: "QS 90 43 03 N",
       submissionDate: "06/11/2018",
       pushedDate: "14/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "John Hardcastle"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Nichole Wynn",
       nino: "YU 52 09 74 O",
       submissionDate: "02/11/2018",
       pushedDate: "18/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Femi Johns"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Ruby Kelly",
       nino: "BQ 89 68 79 B",
       submissionDate: "01/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Brought forward",
       tagClass: "fail",
       viewed: false,
       agent: "Bart Blokk"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Hannah Sosa",
       nino: "EE 66 46 47 C",
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Brought forward",
       tagClass: "fail",
       viewed: false,
       agent: "Andrew Server"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Yael Solis",
       nino: "OE 52 18 99 H",
       submissionDate: "09/11/2018",
       pushedDate: "14/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Andrew Server"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Juliet James",
       nino: "MB 92 41 87 U",
       submissionDate: "01/11/2018",
       pushedDate: "20/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Ted Hughes"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Connor Hernandez",
       nino: "VR 41 06 76 U",
       submissionDate: "01/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Ted Hughes"    },
+=======
+      viewed: false,
+      agent: "Ray Liotta"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Karleigh Dunn",
       nino: "KJ 38 63 02 J",
       submissionDate: "07/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Miguel Indurain"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Maryam Stevenson",
       nino: "QF 61 42 81 S",
       submissionDate: "02/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Neil Simons"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Hamilton Whitley",
       nino: "VS 57 10 06 T",
       submissionDate: "09/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Neil Simons"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Laurel Valencia",
       nino: "ZJ 14 79 56 M",
       submissionDate: "04/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Claim outstanding",
       tagClass: "outstanding",
       viewed: false,
       agent: "Nadia Khomani"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Brynn Morse",
       nino: "XT 57 73 06 S",
       submissionDate: "03/11/2018",
       pushedDate: "20/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Femi Johns"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Reese Hanson",
       nino: "JW 04 59 89 H",
       submissionDate: "06/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Claim outstanding",
       tagClass: "outstanding",
       viewed: false,
       agent: "Sylvia Plath"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Gwendolyn Hayden",
       nino: "MW 85 94 93 R",
       submissionDate: "01/11/2018",
       pushedDate: "14/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Claim outstanding",
       tagClass: "outstanding",
       viewed: false,
       agent: "Sylvia Plath"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Hayes Curry",
       nino: "KL 63 37 28 G",
       submissionDate: "08/11/2018",
       pushedDate: "15/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Claim outstanding",
       tagClass: "outstanding",
       viewed: false,
       agent: "Olivia Normal"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Celeste Chaney",
       nino: "FG 53 63 97 M",
       submissionDate: "06/11/2018",
       pushedDate: "20/11/2018",
       status: "Failed push",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Olivia Normal"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Ross Everett",
       nino: "VE 68 72 63 B",
       submissionDate: "04/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
+<<<<<<< HEAD
       statusNew: "Transferred to clerical",
       tagClass: "success",
       viewed: false,
       agent: "Gareth Thomas"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Raphael Rodriguez",
       nino: "EY 45 10 59 Z",
       submissionDate: "01/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "John Hardcastle"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Illiana Love",
       nino: "JU 63 06 57 K",
       submissionDate: "06/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
+<<<<<<< HEAD
       statusNew: "Referred to DM",
       tagClass: "fail",
       viewed: false,
       agent: "Ted Hughes"    },
+=======
+      viewed: false,
+      agent: "Tom Cruise"
+    },
+>>>>>>> d6b02ba1bc082bddefcd71b3c5f39ee3d701d675
     {
       name: "Herrod Peters",
       nino: "QN 71 75 58 A",
       submissionDate: "06/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Bradley Hayes",
@@ -516,7 +816,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Cleo Hutchinson",
@@ -524,7 +825,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Ori Stanton",
@@ -532,7 +834,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "15/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Nicole Mejia",
@@ -540,7 +843,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "17/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Ashton Bennett",
@@ -548,7 +852,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Daniel Velazquez",
@@ -556,7 +861,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "15/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Echo Mckenzie",
@@ -564,7 +870,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Wesley Bond",
@@ -572,7 +879,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "18/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Logan Rasmussen",
@@ -580,7 +888,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Jermaine Bridges",
@@ -588,7 +897,8 @@ module.exports = {
       submissionDate: "03/11/2018",
       pushedDate: "17/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Rebekah Carlson",
@@ -596,7 +906,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Wang Small",
@@ -604,7 +915,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Boris Kelley",
@@ -612,7 +924,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Eleanor Wells",
@@ -620,7 +933,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Kylee Black",
@@ -628,7 +942,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Hyatt Wood",
@@ -636,7 +951,8 @@ module.exports = {
       submissionDate: "03/11/2018",
       pushedDate: "19/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Amena Washington",
@@ -644,7 +960,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "15/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Vera Maynard",
@@ -652,7 +969,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "15/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Tom Cruise"
     },
     {
       name: "Fay Jefferson",
@@ -660,7 +978,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Emerson Faulkner",
@@ -668,7 +987,8 @@ module.exports = {
       submissionDate: "04/11/2018",
       pushedDate: "16/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Omar Herman",
@@ -676,7 +996,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Tyrone Fuentes",
@@ -684,7 +1005,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "14/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Vincent Owen",
@@ -692,7 +1014,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "16/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Rylee Hogan",
@@ -700,7 +1023,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Phelan Meyer",
@@ -708,7 +1032,8 @@ module.exports = {
       submissionDate: "09/11/2018",
       pushedDate: "15/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Kylee Gay",
@@ -716,7 +1041,8 @@ module.exports = {
       submissionDate: "03/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Veronica Brock",
@@ -724,7 +1050,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Joelle Dejesus",
@@ -732,7 +1059,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Kennedy Case",
@@ -740,7 +1068,8 @@ module.exports = {
       submissionDate: "04/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Thomas Hays",
@@ -748,7 +1077,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Keegan York",
@@ -756,7 +1086,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "16/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Ingrid Ayers",
@@ -764,7 +1095,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Kenneth Patel",
@@ -772,7 +1104,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Oliver Blake",
@@ -780,7 +1113,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "20/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Germaine Boyle",
@@ -788,7 +1122,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "17/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Cara Cunningham",
@@ -796,7 +1131,8 @@ module.exports = {
       submissionDate: "08/11/2018",
       pushedDate: "20/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Pascale Nunez",
@@ -804,7 +1140,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "19/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Rhea Rojas",
@@ -812,7 +1149,8 @@ module.exports = {
       submissionDate: "03/11/2018",
       pushedDate: "17/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Shannon Talley",
@@ -820,7 +1158,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "14/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Chaney Odonnell",
@@ -828,7 +1167,8 @@ module.exports = {
       submissionDate: "04/11/2018",
       pushedDate: "19/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Imani Warren",
@@ -836,7 +1176,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "17/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Conan Bailey",
@@ -844,7 +1185,8 @@ module.exports = {
       submissionDate: "07/11/2018",
       pushedDate: "15/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Hiroko Decker",
@@ -852,7 +1194,8 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "16/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Branden Gonzalez",
@@ -860,7 +1203,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "16/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Rowan Andrews",
@@ -868,7 +1212,8 @@ module.exports = {
       submissionDate: "01/11/2018",
       pushedDate: "17/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Axel Puckett",
@@ -876,7 +1221,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Emerson Webb",
@@ -884,7 +1230,8 @@ module.exports = {
       submissionDate: "02/11/2018",
       pushedDate: "20/11/2018",
       status: "Clerical",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Alyssa Villarreal",
@@ -892,7 +1239,8 @@ module.exports = {
       submissionDate: "06/11/2018",
       pushedDate: "18/11/2018",
       status: "Pushed",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
     },
     {
       name: "Renee Mcfarland",
@@ -900,6 +1248,7 @@ module.exports = {
       submissionDate: "05/11/2018",
       pushedDate: "18/11/2018",
       status: "Failed push",
-      viewed: false
+      viewed: false,
+      agent: "Whoopie Goldberg"
   }]
 }
