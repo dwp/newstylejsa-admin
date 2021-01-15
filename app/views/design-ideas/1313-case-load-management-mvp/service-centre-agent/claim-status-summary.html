@@ -1,0 +1,65 @@
+
+{% extends "layout/summary-with-user-1.html" %}
+
+{% block pageTitle %}
+  Select a status
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-margin-top-6">
+                  <span class="govuk-caption-m">Options</span>
+      <h1 class="govuk-heading-l">
+        Select a claim status
+      </h1>
+
+      <form action="claim-status" method="post">
+
+        <div class="govuk-form-group">
+
+            <fieldset class="govuk-fieldset" aria-describedby="claim-status-hint">
+
+                {{ govukRadios({
+                    idPrefix: 'status',
+                    name: 'claimStatus',
+                    items: [
+                        {
+                            value: "claim-status-brought-forward",
+                            text: "Brought forward"
+                        },
+                        {
+                            value: "claim-status-outstanding",
+                            text: "Claim outstanding"
+                        },
+                        {
+                            value: "claim-status-refer-to-dm",
+                            text: "Refer to DM"
+                        },
+                        {
+                            value: "claim-status-ttc",
+                            text: "Transferred to clerical"
+                        },
+                        {
+                            value: "claim-status-cleared",
+                            text: "Cleared"
+                        }
+                      
+                        
+                    ]
+                })
+                }}
+            </fieldset>
+
+        </div>
+
+        {{ govukButton({
+            text: "Continue"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
