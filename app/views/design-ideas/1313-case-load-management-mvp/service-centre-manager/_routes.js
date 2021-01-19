@@ -3,6 +3,26 @@ module.exports = (app) => {
   const router = express.Router();
   const config = require('../../../../config.js');
 
+    // routing for service centre manager – manager sign on
+    router.post('/select-service-centre', function (req, res) {
+      var answer = req.session.data['selectCentre']; 
+      if (answer === 'leeds-100101') {
+        res.redirect('index');
+      } else if (answer === 'preston-132141') {
+        res.redirect('index');
+      } else if (answer === 'dumfries-456789') {
+        res.redirect('index');
+      } else if (answer === 'liverpool-243654') {
+        res.redirect('index');
+      } else if (answer === 'galashiels-987321') {
+        res.redirect('index');
+      } else if (answer === 'cardiff-211201') {
+        res.redirect('index');
+      } else {
+        res.render('design-ideas/1313-case-load-management-mvp/service-centre-manager/index');
+      }
+    });
+
   // routing for service centre manager – alternative centre
   router.post('/select-service-centre', function (req, res) {
     var answer = req.session.data['selectAlternativeCentre']; 
