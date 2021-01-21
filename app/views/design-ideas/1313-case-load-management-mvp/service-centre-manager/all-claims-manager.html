@@ -7,11 +7,12 @@
 {% block content %}
 
   {% set items = claimListData %}
-  
+
   {# Only display the unviewed claims total #}
   {% set unviewedClaimsTotal = 0 %}
   {% for item in items %}
-    {% set unviewedClaimsTotal = unviewedClaimsTotal + 1 if not(item.viewed) else unviewedClaimsTotal %}
+    {% set unviewedClaimsTotal = unviewedClaimsTotal + 1 if not(item.viewed)else 
+      unviewedClaimsTotal %}
   {% endfor %}
 
   <div class="govuk-!-margin-top-6">
@@ -22,7 +23,8 @@
       </div>
       <div class="govuk-grid-column-one-half govuk-align-right-from-desktop">
         {% set time = now() %}
-        <div class="govuk-body-m govuk-!-margin-top-4">Total claims {{ time | momentFormat2 }}: <strong class="govuk-!-font-size-24">{{ unviewedClaimsTotal }}</strong></div>
+        <div class="govuk-body-m govuk-!-margin-top-4">Total claims {{ time | momentFormat2 }}: <strong class="govuk-!-font-size-24">{{ unviewedClaimsTotal }}</strong>
+        </div>
       </div>
     </div>
   </div>
@@ -51,24 +53,24 @@
   }) }}
 
   <div class="govuk-!-margin-top-6">
-  {% set rows = [] %}
-  {% set foundItems = 0 %}
-  {% for item in items %}
-    {% if not(item.viewed) %}
-      {% if foundItems < CLAIMS_PER_PAGE %}
-        {% set rows = rows | push([
+    {% set rows = [] %}
+    {% set foundItems = 0 %}
+    {% for item in items %}
+      {% if not(item.viewed) %}
+        {% if foundItems < CLAIMS_PER_PAGE %}
+          {% set rows = rows | push([
           { html: '<a href="/design-ideas/1313-case-load-management-mvp/service-centre-manager/get-next-claim-2">' + item.name + '</a>' },
           { text: item.nino },
           { text: item.submissionDate },
           { html: '<a href="/design-ideas/1313-case-load-management-mvp/service-centre-manager/all-claims-agent">' +  item.agent + '</a>' },
           { html: '<span class="tag tag--'+ item.tagClass +'">' + item.statusNew + '</span>' }
         ]) %}
-        {% set foundItems = foundItems + 1 %}
+          {% set foundItems = foundItems + 1 %}
+        {% endif %}
       {% endif %}
-    {% endif %}
-  {% endfor %}
+    {% endfor %}
 
-  {{ govukTable({
+    {{ govukTable({
     caption: "All claims for Preston service centre 100510",
     captionClasses: "govuk-visually-hidden",
     head: [{
@@ -86,4 +88,4 @@
     rows: rows
   }) }}
 
-{% endblock %}
+  {% endblock %}
