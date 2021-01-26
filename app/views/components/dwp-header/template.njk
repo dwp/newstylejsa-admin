@@ -2,59 +2,60 @@
 
 {% set showSearchBar = true if params.searchBar != false or false %}
 
-
 <header class="dwp-header {{ params.classes if params.classes }}" role="banner" data-module="dwp-header"
         {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
   <div class="dwp-header__container {{ params.containerClasses | default('govuk-width-container') }}">
-    {% if params.serviceName or params.navigation  %}
-    <div class="dwp-header__contents">
+    {% if params.serviceName or params.navigation %}
+      <div class="dwp-header__contents">
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          {% if params.serviceName %}
-          <a href="{{ params.serviceUrl }}" class="dwp-header__link dwp-header__link--service-name">
-            {{ params.serviceName }}
-          </a>
-          {% endif %}
-        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            {% if params.serviceName %}
+              <a href="{{ params.serviceUrl }}" class="dwp-header__link dwp-header__link--service-name">
+                {{ params.serviceName }}
+              </a>
+            {% endif %}
+          </div>
 
-        {% if showSearchBar %}
-          <div class="govuk-grid-column-one-third govuk-right-align-from-tablet">
-            {{ dwpSearchBox({
+          {% if showSearchBar %}
+            <div class="govuk-grid-column-one-third govuk-right-align-from-tablet">
+              {{ dwpSearchBox({
               query: data["query"],
               placeholder: "Find a claim",
               label: "Enter National Insurance number"
             }) }}
-          </div>
-        {% endif %}
-        
-        {% if params.agentName %}
-<span>Signed in as Andrew Server, <a href="/design-ideas/1313-case-load-management-mvp/service-centre-agent/agent-sign-on" style="color:White"> Preston</a> <b>&nbsp;(1)</b></span>
-        {% endif %}
-      </div>
+            </div>
+          {% endif %}
+
+          {% if params.agentName %}
+            <span>Signed in as Andrew Server, <a href="/design-ideas/1313-case-load-management-mvp/service-centre-agent/agent-sign-on" style="color:White"> Preston</a>
+              <b>&nbsp;(1)</b>
+            </span>
+          {% endif %}
+        </div>
 
         {% if params.managerName %}
-<span>Signed in as Tracey Leader</span>
+          <span>Signed in as Tracey Leader</span>
         {% endif %}
       </div>
 
       {% if params.navigation %}
-      <button role="button" class="dwp-header__menu-button js-dwp-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
-      <nav>
-        <ul id="navigation" class="dwp-header__navigation {{ params.navigationClasses if params.navigationClasses }}" aria-label="Top Level Navigation">
-          {% for item in params.navigation %}
-            {% if item.href and item.text %}
-              <li class="dwp-header__navigation-item{{ ' dwp-header__navigation-item--active' if item.active }}">
-                <a class="dwp-header__link" href="{{ item.href }}">
-                  {{ item.text }}
-                </a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </nav>
+        <button role="button" class="dwp-header__menu-button js-dwp-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+        <nav>
+          <ul id="navigation" class="dwp-header__navigation {{ params.navigationClasses if params.navigationClasses }}" aria-label="Top Level Navigation">
+            {% for item in params.navigation %}
+              {% if item.href and item.text %}
+                <li class="dwp-header__navigation-item{{ ' dwp-header__navigation-item--active' if item.active }}">
+                  <a class="dwp-header__link" href="{{ item.href }}">
+                    {{ item.text }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
       {% endif %}
     </div>
-    {% endif %}
-  </div>
+  {% endif %}
+</div>
 </header>

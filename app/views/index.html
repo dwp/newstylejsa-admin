@@ -21,19 +21,28 @@
     </p>
 
     <ul class="govuk-list govuk-list--bullet">
-          <li><a href="https://jira.service.dwpcloud.uk/browse/BWADH-1313">Page on Jira</a></li>
-          <li><a href="https://app.mural.co/t/universalcredit7056/m/universalcredit7056/1608712475470/e71b7be30572d3d47b25742abdba8480eac8d9ac">Mural board</a></li>
+      <li>
+        <a href="https://jira.service.dwpcloud.uk/browse/BWADH-1313">Page on Jira</a>
+      </li>
+      <li>
+        <a href="https://app.mural.co/t/universalcredit7056/m/universalcredit7056/1608712475470/e71b7be30572d3d47b25742abdba8480eac8d9ac">Mural board</a>
+      </li>
     </ul>
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     <div class="govuk-grid-row govuk-!-margin-top-5">
       <div class="govuk-grid-column-one-half">
-      <span class="govuk-tag govuk-!-font-size-14">Latest</span>
-      <h2 class="govuk-heading-l">Service centre agent</h2>
-      <p>MVP prototypes for service centre agents</p>
-      <a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/agent-sign-on" class="govuk-button">Start</a>
-        <ul class="govuk-list govuk-list--bullet">
+        <span class="govuk-tag govuk-!-font-size-14">Latest</span>
+        <h2 class="govuk-heading-l">Service centre agent</h2>
+        <p>MVP prototypes for service centre agents</p>
+        <a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/agent-sign-on" class="govuk-button">Start</a>
+
+        {{ govukDetails({
+    summaryText: "Service centre agent shortcut links",
+    html: '
+      <div class="govuk-clearfix">
+         <ul class="govuk-list govuk-list--bullet">
           <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent">Agent landing page</a></li>
           <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/agent-sign-on">Initial agent sign on</a></li>
           <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/nino-search">Find a claim</a></li>
@@ -47,22 +56,35 @@
           <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-transfer-to-clerical">&ndash; Claim transferred to clerical</a></li>
           <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-cleared">&ndash; Claim cleared</a></li>
       </ul>
+      </div>'
+  }) }}
 
-      <p>Other options</p>
-      <ul class="govuk-list govuk-list--bullet">
+        <p>Other options</p>
+        <ul class="govuk-list govuk-list--bullet">
 
-          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-cleared-button">Claim cleared with button link</a></li>
-          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-status-summary">Update claim status including summary</a></li>
-          <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/nav-get-next-claim">Secondary navigation route (3 pages)</a></li>
-      </ul>
-    </div>
+          <li>
+            <a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-cleared-button">Claim cleared with button link</a>
+          </li>
+          <li>
+            <a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-status-summary">Update claim status including summary</a>
+          </li>
+          <li>
+            <a href="design-ideas/1313-case-load-management-mvp/service-centre-agent/nav-get-next-claim">Secondary navigation route (3 pages)</a>
+          </li>
+        </ul>
+      </div>
 
-    <div class="govuk-grid-column-one-half">
-      <span class="govuk-tag govuk-!-font-size-14">Latest</span>
-      <h2 class="govuk-heading-l">Service centre manager</h2>
-      <p>MVP prototypes for service centre managers</p>
-      <a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/manager-sign-on" class="govuk-button">Start</a>
-      <ul class="govuk-list">
+      <div class="govuk-grid-column-one-half">
+        <span class="govuk-tag govuk-!-font-size-14">Latest</span>
+        <h2 class="govuk-heading-l">Service centre manager</h2>
+        <p>MVP prototypes for service centre managers</p>
+        <a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/manager-sign-on" class="govuk-button">Start</a>
+
+        {{ govukDetails({
+    summaryText: "Claim start date warning [22nd June 2020]",
+    html: '
+      <div class="govuk-clearfix">
+<ul class="govuk-list">
         <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager">Manager landing page</a></li>
         <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/manager-sign-on">Initial manager sign on</a></li>
         <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/all-claims-manager">View all claims</a></li>
@@ -74,9 +96,10 @@
         <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/select-service-centre">Change service centre</a></li>
         <li><a href="design-ideas/1313-case-load-management-mvp/service-centre-manager/centres/centre-update-leeds">Example of centre notification</a></li>
       </ul>
+      </div>'
+  }) }}
+      </div>
     </div>
-  </div>
-
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -93,14 +116,12 @@
       <li>August 2020 &ndash; I am unsure of the extent of work on this prototype (comment by Neil Holroyd)</li>
     </ul>
 
-
     <!-- VERSION – previous complete journeys -->
     <h3 class="govuk-heading-m">
       <a href="index-previous">Complete previous journeys</a>
     </h3>
 
     <p>Worked on by: Gareth Joyce and Rob Pataki</p>
-
 
     <!-- VERSION – previous home page with links to all previous work -->
     <h3 class="govuk-heading-m">
@@ -114,4 +135,4 @@
       <li>Note that there may be some broken links from this page due to previous work undertaken</li>
     </ul>
 
-{% endblock %}
+  {% endblock %}
