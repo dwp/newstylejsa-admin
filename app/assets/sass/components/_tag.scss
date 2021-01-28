@@ -13,30 +13,45 @@
   padding: 4px 6px 2px !important; // sass-lint:disable-line no-important
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .tag--success {
-  background-color: govuk-colour('light-green');
+  background-color: #f7d7e6;
+  color: #80224d;
 }
 
 .tag--warning {
-  background-color: govuk-colour('brown');
+  background-color: #bfe3e0;
+  color: #10403c;
 }
 
 .tag--danger {
-  background-color: govuk-colour('bright-red');
+  background-color: #dbd5e9;
+  color: #3d2375;
 }
 
 .tag--invert {
-  background-color: govuk-colour('white');
-  color: govuk-colour('blue');
+  background-color: #f6d7d2;
+  color: #942514;
 }
 
 .tag--new {
-  background-color: govuk-colour('orange');
+  background-color: #cce2d8;
+  color: #005a30;
 }
 
 .tag--outstanding {
-  background-color: govuk-colour('pink');
+  background-color: #fff7bf;
+  color: #594d00;
+}
+
+.tag--referred {
+  background-color: #dbd5e9;
+  color: #3d2375;
+}
+
+.tag--forward {
+  background-color: #eeefef;
+  color: #383f43;
 }

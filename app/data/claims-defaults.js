@@ -29,7 +29,7 @@ module.exports = {
       pushedDate: "15/11/2018",
       status: "Clerical",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Miguel Indurain"    },
     {
@@ -59,7 +59,7 @@ module.exports = {
       pushedDate: "15/11/2018",
       status: "Pushed",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Bart Blokk"    },
     {
@@ -69,7 +69,7 @@ module.exports = {
       pushedDate: "19/11/2018",
       status: "Failed push",
       statusNew: "Brought forward",
-      tagClass: "fail",
+      tagClass: "forward",
       viewed: false,
       agent: "Andrew Server"    },
     {
@@ -79,7 +79,7 @@ module.exports = {
       pushedDate: "17/11/2018",
       status: "Clerical",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Gareth Thomas"    },
     {
@@ -99,7 +99,7 @@ module.exports = {
       pushedDate: "19/11/2018",
       status: "Pushed",
       statusNew: "Brought forward",
-      tagClass: "fail",
+      tagClass: "forward",
       viewed: false,
       agent: "Bart Blokk"    },
     {
@@ -109,7 +109,7 @@ module.exports = {
       pushedDate: "14/11/2018",
       status: "Clerical",
       statusNew: "Brought forward",
-      tagClass: "fail",
+      tagClass: "forward",
       viewed: false,
       agent: "Bart Blokk"    },
     {
@@ -139,7 +139,7 @@ module.exports = {
       pushedDate: "16/11/2018",
       status: "Failed push",
       statusNew: "Brought forward",
-      tagClass: "fail",
+      tagClass: "forward",
       viewed: false,
       agent: "Gareth Thomas"    },
     {
@@ -149,7 +149,7 @@ module.exports = {
       pushedDate: "17/11/2018",
       status: "Failed push",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Sylvia Plath"    },
     {
@@ -169,7 +169,7 @@ module.exports = {
       pushedDate: "17/11/2018",
       status: "Failed push",
       statusNew: "Brought forward",
-      tagClass: "fail",
+      tagClass: "forward",
       viewed: false,
       agent: "Ted Hughes"    },
     {
@@ -179,7 +179,7 @@ module.exports = {
       pushedDate: "20/11/2018",
       status: "Clerical",
       statusNew: "Brought forward",
-      tagClass: "fail",
+      tagClass: "forward",
       viewed: false,
       agent: "Jane MacDonald"    },
     {
@@ -199,7 +199,7 @@ module.exports = {
       pushedDate: "20/11/2018",
       status: "Failed push",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "John Hardcastle"    },
     {
@@ -209,7 +209,7 @@ module.exports = {
       pushedDate: "14/11/2018",
       status: "Clerical",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Nadia Khomani"    },
     {
@@ -259,7 +259,7 @@ module.exports = {
       pushedDate: "18/11/2018",
       status: "Pushed",
       statusNew: "Brought forward",
-      tagClass: "fail",
+      tagClass: "forward",
       viewed: false,
       agent: "Femi Johns"    },
     {
@@ -269,7 +269,7 @@ module.exports = {
       pushedDate: "18/11/2018",
       status: "Pushed",
       statusNew: "Brought forward",
-      tagClass: "fail",
+      tagClass: "forward",
       viewed: false,
       agent: "Wesley Snipes"    },
     {
@@ -289,7 +289,7 @@ module.exports = {
       pushedDate: "16/11/2018",
       status: "Failed push",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Sylvia Plath"    },
     {
@@ -299,7 +299,7 @@ module.exports = {
       pushedDate: "18/11/2018",
       status: "Clerical",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Sylvia Plath"    },
     {
@@ -309,7 +309,7 @@ module.exports = {
       pushedDate: "16/11/2018",
       status: "Pushed",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "John Hardcastle"    },
     {
@@ -339,7 +339,7 @@ module.exports = {
       pushedDate: "14/11/2018",
       status: "Clerical",
       statusNew: "Brought forward",
-      tagClass: "fail",
+      tagClass: "forward",
       viewed: false,
       agent: "Bart Blokk"    },
     {
@@ -349,7 +349,7 @@ module.exports = {
       pushedDate: "18/11/2018",
       status: "Clerical",
       statusNew: "Brought forward",
-      tagClass: "fail",
+      tagClass: "forward",
       viewed: false,
       agent: "Andrew Server"    },
     {
@@ -369,7 +369,7 @@ module.exports = {
       pushedDate: "20/11/2018",
       status: "Failed push",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Ted Hughes"    },
     {
@@ -379,7 +379,7 @@ module.exports = {
       pushedDate: "17/11/2018",
       status: "Failed push",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Ted Hughes"    },
     {
@@ -409,7 +409,7 @@ module.exports = {
       pushedDate: "19/11/2018",
       status: "Failed push",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Neil Simons"    },
     {
@@ -429,7 +429,7 @@ module.exports = {
       pushedDate: "20/11/2018",
       status: "Failed push",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Femi Johns"    },
     {
@@ -489,7 +489,7 @@ module.exports = {
       pushedDate: "20/11/2018",
       status: "Clerical",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "John Hardcastle"    },
     {
@@ -499,7 +499,7 @@ module.exports = {
       pushedDate: "20/11/2018",
       status: "Clerical",
       statusNew: "Referred to DM",
-      tagClass: "fail",
+      tagClass: "referred",
       viewed: false,
       agent: "Ted Hughes"    },
     {
