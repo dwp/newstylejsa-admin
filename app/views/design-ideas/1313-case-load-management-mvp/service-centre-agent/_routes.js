@@ -33,8 +33,14 @@ module.exports = (app) => {
       res.redirect('claim-outstanding');
     } else if (answer === 'claim-status-refer-to-dm') {
       res.redirect('claim-referred-to-dm');
+    } else if (answer === 'claim-status-sent-for-cc') {
+      res.redirect('claim-sent-for-cc');  
     } else if (answer === 'claim-status-ttc') {
       res.redirect('claim-transfer-to-clerical');
+    } else if (answer === 'claim-status-cleared-nil') {
+      res.redirect('claim-cleared-nil'); 
+    } else if (answer === 'claim-status-cleared-award') {
+      res.redirect('claim-cleared-award');             
     } else {
       res.render('design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-cleared');
     }
