@@ -1,0 +1,82 @@
+{% extends "layout/base-no-search-bar-user-1.html" %}
+
+{% block pageTitle %}
+Select an agent
+{% endblock %}
+
+{% block content %}
+
+
+            <script type="text/javascript">
+                var element = document.querySelector('#tt-default')
+                var id = 'autocomplete-default'
+                accessibleAutocomplete({element: element, id: id, source: agents})
+            </script>
+
+
+    <div class="govuk-main-wrapper">
+        <div class="govuk-!-margin-top-6">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-half">
+
+                    <span class="govuk-caption-m">Leeds 100101 agents</span>
+                    <h1 class="govuk-heading-l">Select an agent</h1>
+                    <form action="select-agent" method="post">
+
+                        <div class="govuk-form-group">
+                            <div id="tt-default" class="autocomplete-wrapper"></div>
+
+                            <form role="search" method="post" action="/common/query" class="search-box {{ params.classes if params.classes }}" aria-label="{{ params.ariaLabel or 'Search' }}" id="search" title="Search">
+                                <div class="search-box__contents">
+                                    <div class="search-box__table-cell">
+                                        <label for="query" class="govuk-visually-hidden">{{ params.label or 'Search' }}</label>
+                                        <input type="text" name="query" id="query" class="search-box__input" placeholder="{{ params.placeholder or 'Search' }}" value="{{ params.value or '' }}" aria-label="{{ params.ariaLabel or 'Search' }}" autocomplete="on">
+                                    </div>
+                                    <div class="search-box__table-cell search-box__table-cell--button">
+                                        <button data-uipath="search.button" class="search-box__button" aria-label="Search">
+                                            <img src="/public/images/icon-search.png" alt="Magnifying glass"/>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    {% endblock %}
+
+    {% block page_scripts %}
+
+            <script type="text/javascript" src="/public/javascripts/autocomplete.js"></script>
+            <script type="text/javascript">
+                var agents = [
+                    'Joan Armatrading',
+                    'Bart Blokk',
+                    'Kate Bush',
+                    'Louise Craven',
+                    'Roberta Flack',
+                    'John Hardcastle',
+                    'Jimi Hendrix',
+                    'Ted Hughes',
+                    'Michele Hussain',
+                    'Natalie Imbruglia',
+                    'Femi Johns',
+                    'Nadia Khomani',
+                    'Jane MacDonald',
+                    'Stevie Nicks',
+                    'Olivia Normal',
+                    'Robert Plant',
+                    'Sylvia Plath',
+                    'Gordon Sumner',
+                    'Gareth Thomas',
+                    'Jim Tittle',
+                    'Alan Turing',
+                    'Kim Vermere',
+                    'George Weir',
+                    'Amy Whitehouse'                ]
+            </script>
+
+    {% endblock %}

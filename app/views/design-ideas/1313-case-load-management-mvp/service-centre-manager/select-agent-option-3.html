@@ -1,0 +1,61 @@
+{% extends "layout/base-no-search-bar-user-1.html" %}
+
+{% block pageTitle %}
+Select an agent
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-main-wrapper">
+    <div class="govuk-!-margin-top-6">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <span class="govuk-caption-m">Leeds 100101 agents</span>
+          <h1 class="govuk-heading-l">Select an agent</h1>
+          <form action="select-agent" method="post">
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="published" selected>Select name</option>
+                  <option value="comments">Joan Armatrading</option>
+                  <option value="updated">Bart Blokk</option>
+                  <option value="comments">Kate Bush</option>
+                  <option value="comments">Louise Craven</option>
+                  <option value="comments">Roberta Flack</option>
+                  <option value="comments">John Hardcastle</option>
+                  <option value="comments">Jimmy Hendrix</option>
+                  <option value="comments">Ted Hughes</option>
+                  <option value="comments">Michelle Hussain</option>
+                  <option value="comments">Natalie Imbruglia</option>
+                  <option value="comments">Etta James</option>
+                  <option value="comments">Femi Johns</option>
+                  <option value="comments">Nadia Khomani</option>
+                  <option value="comments">Jane MacDonald</option>
+                  <option value="comments">Stevie Nicks</option>
+                  <option value="comments">Olivia Normal</option>
+                  <option value="comments">Robert Plant</option>
+                  <option value="comments">Sylvia Plath</option>
+                  <option value="comments">Andrew Server</option>
+                  <option value="comments">Neil Simons</option>
+                  <option value="comments">Gordon Sumner</option>
+                  <option value="comments">Gareth Thomas</option>
+                  <option value="comments">George Weir</option>
+                  <option value="comments">Amy Winehouse</option>
+                </select>
+            </div>
+            
+
+          </form>
+
+                  {{ govukButton({
+            text: "Save and continue"
+        }) }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+    {% endblock %}

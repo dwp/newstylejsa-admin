@@ -19,7 +19,7 @@ gulp.task('generate-assets', function (done) {
 
 gulp.task('default', function (done) {  
   runSequence('lint-sass',
-                'lint-js',
+                // 'lint-js',
                 'test',
                 'generate-assets',
                 'watch',
