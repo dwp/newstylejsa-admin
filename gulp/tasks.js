@@ -18,18 +18,20 @@ gulp.task('generate-assets', function (done) {
 })
 
 gulp.task('default', function (done) {  
-  runSequence('lint-sass',
-                // 'lint-js',
-                'test',
-                'generate-assets',
-                'watch',
-                'server', done)
+  runSequence(
+    //'lint-sass',
+    // 'lint-js',
+    'test',
+    'generate-assets',
+    'watch',
+    'server', done)
 })
 
 gulp.task('build', function (done) {
-  runSequence('lint-js:strict',
-                'lint-sass:strict',
-                'generate-assets',
-                'rename',
-                done)
+  runSequence(
+    // 'lint-js:strict',
+    // 'lint-sass:strict',
+    'generate-assets',
+    'rename',
+    done)
 })

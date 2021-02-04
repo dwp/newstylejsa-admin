@@ -48,5 +48,8 @@ gulp.task('watch-test', function () {
 })
 
 gulp.task('watch-code-quality', function () {
-  return runSequence(['watch-lint-sass', 'watch-lint-js', 'watch-test'])
+  return runSequence([
+    // 'watch-lint-sass',
+    // 'watch-lint-js',
+    'watch-test'])
 })
