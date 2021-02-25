@@ -1,0 +1,175 @@
+{% extends "layout/summary.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}: Application for {{ data['service-short-name']}} Customer Statement
+{% endblock %}
+
+{% block header %}
+  
+  {# Set serviceName in config.js. #}
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container"
+  }) }}
+
+  {{ dwpKeyDetailsBar({
+    claimantName: "Rosalind Green",
+    claimantNINO: "JA416636C",
+    claimStatus: "Not pushed",
+    items: [
+        {
+            title: "DOB",
+            value: "27/04/1955"
+        },
+        {
+            title: "Postcode",
+            value: "FY4 4RR"
+        },
+        {
+            title: "Phone",
+            value: "01253 767036"
+        },
+        {
+            title: "Claim submitted",
+            value: "04/07/2020"
+        }
+    ],
+    showToggle: showToggle,
+    classes: "dwp-print-hide"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row govuk-!-margin-top-4 dwp-print-hide">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Customer statement</h1>
+  </div>
+
+</div>
+
+<!-- Claim start -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <h2 class="govuk-heading-m govuk-!-margin-top-4">Application start date</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Claim start date", "04/07/2020") }}
+  </dl>
+</section>
+
+<!-- About you -->
+<section class="dwp-claim-section">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Personal details</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("National Insurance number", "CX500326A") }}
+    {{ checkAnswersItem("Name", "Mrs Rosalind Green") }}
+    {{ checkAnswersItem("Date of birth", "27/04/1955") }}
+    {{ checkAnswersItem("Home address", "<span class='dwp-print-block'>21 Langdale Road</span> <span class='dwp-print-block'>Blackpool</span> <span class='dwp-print-block'>Lancashire</span> <span class='dwp-print-block'>FY4 4RR.</span>") }}
+    {{ checkAnswersItem("Do you want to add a different address for your post?", "No") }}
+    {{ checkAnswersItem("Telephone number", "01253 767036") }}
+    {{ checkAnswersItem("Email address", "r.green@example.com") }}
+  </dl>
+</section>
+
+<!-- Payment information -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Bank details</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Name of account holder", "Mrs R Green") }}
+    {{ checkAnswersItem("Sort code", "10 80 12") }}
+    {{ checkAnswersItem("Account number", "46778256") }}
+  </dl>
+</section>
+
+<!-- Other benefits -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Other benefits</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Have you applied for any other benefits in the last 12 weeks?", "No") }}
+  </dl>
+</section>
+
+<!-- Jury service -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Jury service</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Have you been on jury service in the last 12 weeks?", "No") }}
+  </dl>
+</section>
+
+<!-- Current employment -->  
+<section class="dwp-claim-section">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Current employment</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Are you in any form of work at the moment?", "No") }}
+  </dl>
+</section>
+
+<!-- Previous employment -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Previous employment</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Have you had a job that ended in the last 6 months?", "Yes") }}
+  </dl>
+  <section class="govuk-!-margin-top-6">
+    <h3 class="govuk-heading-s">First previous employer</h3>
+    <dl class="app-check-your-answers app-check-your-answers--long">
+      {{ checkAnswersItem("When did you work for this employer?", "03/07/2019 - 03/07/2020") }}
+      {{ checkAnswersItem("Why did this job end?", "End of contract") }}
+      {{ checkAnswersItem("What is the name of your previous employer?", "Smiths Electronics") }}
+      {{ checkAnswersItem("What is the address of your previous employer?", "<span class='dwp-print-block'>Unit 24 Yeadon Street</span> <span class='dwp-print-block'>Poulton Le Fylde,</span> <span class='dwp-print-block'>Lancashire</span>") }}
+      {{ checkAnswersItem("Do you expect to receive any more payments from this job?", "No") }}
+      {{ checkAnswersItem("Were you self employed or a company director?", "No") }}
+    </dl>
+  </section>
+</section>
+
+<!-- Working overseas -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Working or claiming benefits overseas</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Have you worked or claimed benefit outside the United Kingdom in the last 4 years?", "No") }}
+  </dl>
+</section>
+
+<!-- Current pensions -->
+<section class="dwp-claim-section">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Current pensions</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Are you getting money from a pension or annuity?", "Yes") }}
+  </dl>
+  <section class="govuk-!-margin-top-6">
+    <h3 class="govuk-heading-s">Current pension - first</h3>
+    <dl class="app-check-your-answers app-check-your-answers--long">
+      {{ checkAnswersItem("What is the name of your pension or annuity provider?", "BAE Systems") }}
+      {{ checkAnswersItem("What is the address of your pension or annuity provider?", "<span class='dwp-print-block'>Preston</span> <span class='dwp-print-block'>PR4 2FE</span>") }}
+      {{ checkAnswersItem("How often is your pension or annuity paid?", "Monthly") }}
+      {{ checkAnswersItem("What is your net pay?", "£169.52") }}
+      {{ checkAnswersItem("Does your pension increase in the next 6 months?", "No") }}
+    </dl>
+  </section>
+</section>
+
+<!-- Deferred pensions -->
+<section class="dwp-claim-section">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Deferred pensions</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Do you have a pension or annuity that you could be paid now, but have decided not to take?", "No") }}
+  </dl>
+</section>
+
+<!-- Education -->
+<section class="dwp-claim-section">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Education or training</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Have you been in education or training in the last 4 years?", "Yes") }}
+    {{ checkAnswersItem("What was the name of your course?", "Accounting Level 1 AAT") }}
+    {{ checkAnswersItem("What was the name of the education or training provider?", "Blackpool and The Fylde College") }}
+    {{ checkAnswersItem("How many hours per week did you spend on this course?", "4") }}
+    {{ checkAnswersItem("When did you attend this course?", "02/09/2018 – 27/06/2019") }}
+  </dl>
+</section>
+
+{% endblock %}
