@@ -1,0 +1,38 @@
+{% extends "layout/base-no-search-bar-no-back.html" %}
+
+{% block pageTitle %}
+{{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+<br>
+<p>Todays date 5/7/2020</p>
+<ol class="govuk-list govuk-list--number">
+    <li><a href="statements/ijohnson">I Johnson</a> – Previous work, Current work</li>
+    <li><a href="statements/sblack">S Black</a> – Previous work, Current pension</li>
+    <li><a href="statements/rgreen">R Green</a> – Previous work, Current pension, Education</li>
+    <li><a href="statements/shamilton">S Hamilton</a> – Back dating, Previous work</li>
+    <li><a href="statements/mjohnson">M Johnson</a> – CIS Mismatch, Previous work</li>
+    <li><a href="statements/pstankowski">P Stankowski</a> – CIS Other benefit, Previous work</li>
+    <li><a href="statements/kbhopal">K Bhopal</a> – Previous work</li> 
+</ol>
+
+<!--
+Required by Application
+title
+first name
+last name
+nino
+DOB
+address
+
+{% include "future-team/statements/tables/mjohnson.html" %}
+<p><a href='statements/mjohnson'>View M Johnson full customer statement</a>.</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
+
+{% include "future-team/statements/tables/kbhopal.html" %}
+<p><a href='statements/kbhopal'>View customer statement</a>.</p>
+-->
+{% endblock %}
