@@ -29,7 +29,7 @@
     "express-session": "^1.13.0",
     "express-writer": "0.0.4",
     "govuk-frontend": "^2.0.0",
-    "gulp": "3.9.1",
+    "gulp": "4.0.0",
     "gulp-clean": "^0.3.2",
     "gulp-eslint": "^5.0.0",
     "gulp-if": "^2.0.2",
