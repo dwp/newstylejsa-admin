@@ -40,7 +40,9 @@ module.exports = (app) => {
     } else if (answer === 'claim-status-cleared-nil') {
       res.redirect('claim-cleared-nil'); 
     } else if (answer === 'claim-status-cleared-award') {
-      res.redirect('claim-cleared-award');             
+      res.redirect('claim-cleared-award'); 
+    } else if (answer === 'claim-status-defective') {
+      res.redirect('claim-defective');                             
     } else {
       res.render('design-ideas/1313-case-load-management-mvp/service-centre-agent/claim-cleared');
     }

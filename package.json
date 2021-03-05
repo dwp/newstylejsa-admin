@@ -25,25 +25,24 @@
     "del": "^3.0.0",
     "dirty-chai": "^2.0.1",
     "dotenv": "^4.0.0",
-    "express": "4.15.2",
+    "express": "4.17.1",
     "express-session": "^1.13.0",
     "express-writer": "0.0.4",
     "govuk-frontend": "^2.0.0",
-    "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-eslint": "^5.0.0",
     "gulp-if": "^2.0.2",
-    "gulp-mocha": "^4.3.1",
+    "gulp-mocha": "8.0.0",
     "gulp-nodemon": "^2.4.1",
     "gulp-rename": "^1.4.0",
     "gulp-run": "^1.7.1",
-    "gulp-sass": "3.1.0",
+    "gulp-sass": "4.1.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify-es": "^1.0.4",
     "gulp-util": "^3.0.7",
-    "marked": "^0.3.6",
-    "minimist": "1.2.0",
+    "marked": "2.0.1",
+    "minimist": "1.2.5",
     "module-alias": "^2.1.0",
     "moment": "^2.22.2",
     "notifications-node-client": "^3.0.0",
@@ -53,7 +52,7 @@
     "prompt": "^1.0.0",
     "readdir": "0.0.13",
     "require-dir": "^0.3.0",
-    "run-sequence": "^1.2.2",
+    "run-sequence": "2.2.1",
     "sinon": "^6.1.4",
     "supertest": "^3.0.0",
     "sync-request": "^4.0.3",
@@ -75,5 +74,11 @@
   },
   "_moduleDirectories": [
     "lib/helpers"
-  ]
+  ],
+  "devDependencies": {
+    "bufferutil": "4.0.3",
+    "gulp": "3.9.1",
+    "utf-8-validate": "5.0.4",
+    "ws": "7.4.3"
+  }
 }
