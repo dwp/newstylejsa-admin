@@ -42,7 +42,7 @@
     "gulp-uglify-es": "^1.0.4",
     "gulp-util": "^3.0.7",
     "marked": "2.0.1",
-    "minimist": "1.2.5",
+    "minimist": "0.2.1",
     "module-alias": "^2.1.0",
     "moment": "^2.22.2",
     "notifications-node-client": "^3.0.0",
