@@ -1,0 +1,42 @@
+{% extends "layout/base-no-search-bar-user-1.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row govuk-!-margin-top-5">
+  <div class="govuk-grid-column-two-thirds">
+
+
+      {% if data['delete'] == "true" %}
+        <div class="moj-banner moj-banner--success">
+          <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25"><path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z"></path></svg>
+          <div class="moj-banner__message">
+            <span class="moj-banner__assistive">Success</span>File named {{ data['supporting-evidence-file-1'] }} has been deleted</div>
+        </div>{# /moj-banner #}
+      {% endif %}
+
+    <form action="uploading" method="post" novalidate>
+
+        <fieldset class="govuk-fieldset" role="group">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">Upload a file for bulk delete</h1>
+          </legend>
+
+          <p>File types accepted are csv and xls.</p>
+          <p>Files must be smaller than 10MB.</p>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="file-upload-1">Upload a file</label>
+            <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+          </div>
+        </fieldset>
+        <button class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}

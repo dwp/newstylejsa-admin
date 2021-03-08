@@ -1,0 +1,73 @@
+{% extends "layout/base-no-search-bar-user-1.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row govuk-!-margin-top-5">
+    <div class="govuk-grid-column-two-thirds">
+
+    <form action="check" method="post" novalidate>
+
+      {% if data['delete'] == "true" %}
+        <div class="moj-banner moj-banner--success">
+          <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25"><path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z"></path></svg>
+          <div class="moj-banner__message">
+            <span class="moj-banner__assistive">Success</span>File named {{ data['supporting-evidence-file-2'] }} has been deleted</div>
+        </div>{# /moj-banner #}
+      {% endif %}
+
+        <h1 class="govuk-heading-l">Check your file</h1>
+
+        <p>We will use this file to match to records in our database.</p>
+
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key"><a download href="/">{{ data['file-upload-1'] }}</a></dt>
+            <dd class="govuk-summary-list__value">Rows: 3244, Size: 2MB</dd>
+          </div>
+        </dl>
+
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset">
+
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Do you want to use this file for bulk delete?
+          </legend>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yes" name="sureUse" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="no" name="sureUse" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="no">
+                No, upload a different file
+              </label>
+            </div>
+          </div>
+
+          </fieldset>
+        </div>{# /govuk-form-group #}
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">Confirm</button>
+
+      </form>
+
+    </div>{# /govuk-grid-column-two-thirds #}
+
+  </div>{# /govuk-grid-row #}
+
+
+  {% endblock %}

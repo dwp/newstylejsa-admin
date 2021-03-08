@@ -12,6 +12,9 @@ module.exports = (app) => {
   // This moves `contact-centre` routing to `contact-centre` directory
   router.use('/contact-centre', require('./views/contact-centre/_routes')(app));
 
+  // routing for 1752-fraud
+  router.use('/design-ideas/1752-fraud', require('./views/design-ideas/1752-fraud/_routes')(app));
+
   // routing for design ideas 1313 – manager
   router.use('/design-ideas/1313-case-load-management-mvp/service-centre-manager', require('./views/design-ideas/1313-case-load-management-mvp/service-centre-manager/_routes')(app));
 

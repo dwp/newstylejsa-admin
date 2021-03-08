@@ -1,0 +1,43 @@
+{% extends "layout/base-no-search-bar-user-1.html" %}
+
+{% block pageTitle %}
+Service centre - {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-!-margin-top-6">
+
+    <h1 class="govuk-heading-l">Service centre manager</h1>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <a href="#" class="tile tile--blue">
+          <div class="tile__contents">
+            <h2 class="tile__title">View all claims</h2>
+          </div>
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <a href="#" class="tile tile--blue">
+          <div class="tile__contents">
+            <h2 class="tile__title">Find a claimant</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <a href="bulk-delete/upload" class="tile tile--blue">
+          <div class="tile__contents">
+            <h2 class="tile__title">Upload a file for bulk delete</h2>
+          </div>
+        </a>
+        </div>
+    </div>
+
+{% endblock %}

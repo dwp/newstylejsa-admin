@@ -1,0 +1,22 @@
+{% extends "layout/base-no-search-bar-user-1.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row govuk-!-margin-top-5">
+    <div class="govuk-grid-column-two-thirds">
+        {{ govukPanel({
+            titleText: "3244 records deleted"
+        }) }}
+        <p><a href="/design-ideas/1752-fraud/bulk-delete" class="govuk-link">Back to homepage</a></p>
+    </div>
+</div>
+
+{% endblock %}
