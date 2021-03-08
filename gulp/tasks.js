@@ -32,6 +32,6 @@ gulp.task('build', function (done) {
     // 'lint-js:strict',
     // 'lint-sass:strict',
     'generate-assets',
-    'rename',
+    // 'rename',
     done)
 })
