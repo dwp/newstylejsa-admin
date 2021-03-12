@@ -1,0 +1,26 @@
+{% extends "layout/base-no-search-bar.html" %}
+
+{% block pageTitle %}
+Select an agent –
+{{ serviceName }} | Updated
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-4">
+
+    {{ govukPanel({
+      titleText: "Claim deleted"
+    }) }}
+
+    <p><a href="../single-delete/" class="govuk-link">Find another claim</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

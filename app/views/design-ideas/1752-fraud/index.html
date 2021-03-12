@@ -9,10 +9,42 @@ Service centre - {{ serviceName }}
 
 {% block content %}
 
+ <div class="govuk-grid-row govuk-!-margin-top-5">
+      <div class="govuk-grid-column-two-thirds">
 
-1752 fraud
+    <h1 class="govuk-heading-l govuk-!-margin-top-5">
+        <span class="govuk-caption-l"><a href="https://jira.service.dwpcloud.uk/browse/BWADH-1752">Jira reference: 1752</a></span>
+        Application identified as fraudulent
+    </h1>
 
-<a href="1752-fraud/bulk-delete">Bulk delete</a>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">Versions</h2>
+
+    <ul class="govuk-list">
+        <li>
+            <span class="govuk-caption-m">1 March 2021</span>
+            <h2 class="govuk-heading-m">#1 Single delete</h2>
+            <p>Idea adds a delete link to the claim view page.</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li><a href="1752-fraud/single-delete-warning/">Iteration 3</a> - adds action cannot be reversed message</li>
+                <li><a href="1752-fraud/single-delete/">Iteration 2</a> - adds stop and think page</li>
+                <li><a href="https://www.sketch.com/s/f69c83da-8765-4fe8-be2a-f5fdb114feb9">Iteration 1</a> - Prototype in sketch</li>
+            </ul>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        </li>
+
+        <li>
+            <span class="govuk-caption-m">8 March 2021</span>
+            <h2 class="govuk-heading-m"><a href="1752-fraud/bulk-delete">#2 Bulk delete</a></h2>
+            <p>Idea to use existing spreadsheet to match against entries in our database. This was put together to trigger
+            conversations with the service delivery planning team and understand thier needs.</p>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        </li>
+    </ul>
+
+    </div>
+</div>
 
 
 {% endblock %}

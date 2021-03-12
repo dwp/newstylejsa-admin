@@ -1,0 +1,51 @@
+{% extends "layout/summary.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}: Application for {{ data['service-short-name']}} Customer Statement | {{ currentClaimantData.claimant.title }} {{ currentClaimantData.claimant.firstName }} {{ currentClaimantData.claimant.lastName }}: {{ currentClaimantData.claimant.nino }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row govuk-!-margin-top-4 dwp-print-hide">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Customer statement</h1>
+
+    {% include "includes/gather.html" %}
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    
+    <aside class="app-related-items govuk-!-margin-top-0" role="complementary">
+      <h3 class="govuk-heading-m" id="subsection-title">Claim actions</h3>
+
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list">
+          <li><a href="delete-warning">Delete this claim</a></li>
+        </ul>
+      </nav>
+
+      {{ govukButton({
+        text: "Print customer statement",
+        href: "javascript:window.print();"
+      }) }}
+
+
+    </aside>
+  </div>
+
+</div>
+
+{% include "includes/print-header.html" %}
+
+<div class="dwp-print-show">
+  {% include "includes/declaration.html" %}
+</div>
+
+<p class="govuk-!-margin-top-8"><a href="../single-delete/">Return to search</a></p>
+
+{% endblock %}
