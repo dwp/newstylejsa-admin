@@ -1,0 +1,148 @@
+{% if data['status'] == 'ttc' %}
+
+  {{ dwpKeyDetailsBar({
+    claimantName: "Marvin Gordon",
+    claimantNINO: "TT 12 34 56 C",
+    claimStatus: "Transferred to clerical",
+    items: [
+      {
+        title: "DOB",
+        value: "29/04/1972"
+      }, {
+        title: "Postcode",
+        value: "FY4 3HA"
+      }, {
+        title: "Phone",
+        value: "01253 233456"
+      }, {
+        title: "Date of claim",
+        value: time | momentNowShortSubtract5
+      }
+    ]
+  }) }}
+
+{% elif data['status'] == 'rdm' %}
+
+  {{ dwpKeyDetailsBar({
+    claimantName: "Helen Tomlins",
+    claimantNINO: "HH 12 34 56 T",
+    claimStatus: "Awaiting decision",
+    items: [
+      {
+        title: "DOB",
+        value: "05/06/1969"
+      }, {
+        title: "Postcode",
+        value: "FY8 1PL"
+      }, {
+        title: "Phone",
+        value: "01253 768542"
+      }, {
+        title: "Claim submitted (IDOC)",
+        value: time | momentNowShortSubtract10
+      }
+    ]
+  }) }}
+
+{% elif data['status'] == 'bf' %}
+
+  {% if data['updated'] == '1' %}
+    {% set claimStatus = data['claimStatus'] | replace("-", " ") | capitalize %}
+  {% else %}
+    {% set claimStatus = 'Brought forward' %}
+  {% endif %}
+
+  {{ dwpKeyDetailsBar({
+    claimantName: "Al Kruchner",
+    claimantNINO: "AA 12 34 56 K",
+    claimStatus: claimStatus,
+    items: [
+      {
+        title: "DOB",
+        value: "07/02/1968"
+      }, {
+        title: "Postcode",
+        value: "FY4 4RR"
+      }, {
+        title: "Phone",
+        value: "01253 767036"
+      }, {
+        title: "Claim submitted (IDOC)",
+        value: time | momentNowShortSubtract3
+      }
+    ]
+  }) }}
+
+{% elif data['status'] == 'new' %}
+
+  {{ dwpKeyDetailsBar({
+    claimantName: "Nancy Newlove",
+    claimantNINO: "NN 12 34 56 N",
+    claimStatus: "New claim",
+    items: [
+      {
+        title: "DOB",
+        value: "24/03/1992"
+      }, {
+        title: "Postcode",
+        value: "FY4 1SF"
+      }, {
+        title: "Phone",
+        value: "01253 752057"
+      }, {
+        title: "Claim submitted (IDOC)",
+        value: time | momentNowShort
+      }
+    ]
+  }) }}
+
+{% elif data['status'] == 'ip' %}
+
+  {{ dwpKeyDetailsBar({
+    claimantName: "Maud Flanders",
+    claimantNINO: "II 12 34 56 P",
+    claimStatus: "In progress",
+    items: [
+      {
+        title: "DOB",
+        value: "07/02/1968"
+      }, {
+        title: "Postcode",
+        value: "FY4 2PF"
+      }, {
+        title: "Phone",
+        value: "01253 237876"
+      }, {
+        title: "Claim submitted (IDOC)",
+        value: time | momentNowShort
+      }
+    ]
+  }) }}
+
+{% else %}
+
+<!-- Used in self allocation -->
+
+  {{ dwpKeyDetailsBar({
+    claimantName: "Chris Southall",
+    claimantNINO: "CH 12 34 56 S",
+    claimStatus: "Brought forward",
+    items: [
+      {
+        title: "DOB",
+        value: "27/04/1955"
+      }, {
+        title: "Postcode",
+        value: "FY4 4RR"
+      }, {
+        title: "Phone",
+        value: "01253 767036"
+      }, {
+        title: "Claim submitted (IDOC)",
+        value: time | momentNowShortSubtract3
+      }
+    ]
+  }) }}
+
+{% endif %}
+

@@ -1,0 +1,97 @@
+{% extends "layout/base-no-search-bar-user-1.html" %}
+
+{% block pageTitle %}
+Service centre agent - {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-main-wrapper">
+  <div class="govuk-!-margin-top-6">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-l">
+                Andrew Server
+                <span class="govuk-caption-l">{{ data['selectCentre'] | capitalize }}</span>
+            </h1>
+            <form action="change-service-centre" method="post">
+
+        <div class="govuk-form-group">
+
+            <fieldset class="govuk-fieldset">
+
+                {{ govukRadios({
+                    idPrefix: 'select-centre',
+                    name: 'selectCentre',
+                    fieldset: {
+                        legend: {
+                        text: "Change service centre",
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--m"
+                        }
+                    },
+                    items: [
+                        {
+                            value: "leeds",
+                            text: "Leeds 100101"
+                        },
+                        {
+                            value: "preston",
+                            text: "Preston 132141"
+                        },
+                        {
+                            value: "greenock",
+                            text: "Greenock 123456"
+                        },
+                        {
+                            value: "dumfries",
+                            text: "Dumfries 456789"
+                        },
+                        {
+                            value: "liverpool",
+                            text: "Liverpool 243654"
+                        },
+                        {
+                            value: "galashiels",
+                            text: "Galashiels 987321"
+                        },
+                        {
+                            value: "cardiff",
+                            text: "Cardiff 211201"
+                        },
+                        {
+                            value: "southampton",
+                            text: "Southampton 211201"
+                        },
+                        {
+                            value: "torquay",
+                            text: "Torquay 323445"
+                        },
+                        {
+                            value: "not-sure",
+                            text: "Not sure"
+                        }
+                    ]
+                })
+                }}
+
+            </fieldset>
+            
+
+        </div>
+
+        {{ govukButton({
+            text: "Save and continue"
+        }) }}
+
+        
+
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

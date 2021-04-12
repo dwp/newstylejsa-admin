@@ -1,0 +1,145 @@
+{% extends "layout/base-no-search-bar-user-1.html" %}
+
+{% block pageTitle %} My claims – 
+{{ serviceName }}: DWP Agent – Service centre
+{% endblock %}
+
+{% block content %}
+
+  {% set items = claimListData %}
+  
+  {# Only display the unviewed claims total #}
+  {% set unviewedClaimsTotal = 0 %}
+  {% for item in items %}
+    {% set unviewedClaimsTotal = unviewedClaimsTotal + 1 if not(item.viewed) else unviewedClaimsTotal %}
+  {% endfor %}
+
+  <div class="govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <span class="govuk-caption-m">Claims allocated to</span>
+        <h1 class="govuk-heading-l">Andrew Server</h1>
+      </div>
+      <div class="govuk-grid-column-one-half govuk-align-right-from-desktop">
+        {% set time = now() %}
+        <div class="govuk-body-m govuk-!-margin-top-4">Total claims {{ time | momentFormat2 }}: <strong class="govuk-!-font-size-24">17</strong></div>
+      </div>
+    </div>
+  </div>
+
+  {{ dwpSecondaryNavigation({
+    items: [{
+      label: "All (17)",
+      url: "/design-ideas/1313-case-load-management/v1/service-centre-agent/all-claims-agent"
+    }, {
+      label: "Brought forward (4)",
+      url: "/design-ideas/1313-case-load-management/v1/service-centre-agent/all-claims-agent-bf"
+    }, {
+      label: "Outstanding (1) ",
+      url: "/design-ideas/1313-case-load-management/v1/service-centre-agent/all-claims-agent-outstanding"
+    }, {
+      label: "Refer to DM (5) ",
+      url: "/design-ideas/1313-case-load-management/v1/service-centre-agent/all-claims-agent-refer-to-dm",
+      active: true
+    }, {
+      label: "Transfer to clerical (6) ",
+      url: "/design-ideas/1313-case-load-management/v1/service-centre-agent/all-claims-agent-ttc"
+    }, {
+      label: "New (1) ",
+      url: "/design-ideas/1313-case-load-management/v1/service-centre-agent/all-claims-agent-new"
+    }]
+  }) }}
+
+  {% set referToDmItems = [
+    { 
+    name: "Laurel Valencia",
+      nino: "	ZJ 14 79 56 M",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to DM",
+      tagClass: "referred",
+      viewed: false,
+      agent: "Nadia Khomani"
+  },
+  {
+      name: "Al Kruchner",
+      nino: "WM 12 34 56 C",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to DM",
+      tagClass: "referred",
+      viewed: false,
+      agent: "Ted Hughes"
+  },
+  {
+      name: "Dave Wales",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to DM",
+      tagClass: "referred",
+      viewed: false,
+      agent: "John Hardcastle"
+  },
+  {
+      name: "Doug Ireland",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to DM",
+      tagClass: "referred",
+      viewed: false,
+      agent: "John Hardcastle"
+  },
+  {
+      name: "Urielle Calhoun",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to DM",
+      tagClass: "referred",
+      viewed: false,
+      agent: "John Hardcastle"
+  }
+]
+%}
+
+  <div class="govuk-!-margin-top-6">
+  {% set rows = [] %}
+  {% set foundItems = 0 %}
+  {% for item in referToDmItems %}
+    {% if not(item.viewed) %}
+      {% if foundItems < CLAIMS_PER_PAGE %}
+        {% set rows = rows | push([
+          { html: '<a href="/design-ideas/1313-case-load-management/v1/service-centre-agent/get-next-claim-1">' + item.name + '</a>' },
+          { text: item.nino },
+          { text: item.submissionDate },
+          { html: '<span class="tag tag--'+ item.tagClass +'">' + item.statusNew + '</span>' }
+        ]) %}
+        {% set foundItems = foundItems + 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {{ govukTable({
+    caption: "All claims for Preston service centre 100510",
+    captionClasses: "govuk-visually-hidden",
+    head: [{
+        text: "Claimant"
+      }, {
+        text: "NINO"
+      }, {
+        html: "IDOC <img src='/public/images/arrow-down.svg' alt='down arrow' />"
+      }, {
+        html: "Claim status <img src='/public/images/arrow-down.svg' alt='down arrow' />"
+      }
+    ],
+    rows: rows
+  }) }}
+
+{% endblock %}

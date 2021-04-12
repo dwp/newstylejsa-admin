@@ -1,0 +1,300 @@
+{% extends "layout/base-no-search-bar-user-1.html" %}
+
+{% block pageTitle %} All claims – 
+{{ serviceName }}: DWP Agent – Service centre
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block header %}
+  
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false,
+    "agentName": 'Andrew Server',
+    "claims": 17
+  }) }}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    classes: "govuk-width-container",
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% set items = claimListData %}
+  
+  {# Only display the unviewed claims total #}
+  {% set unviewedClaimsTotal = 0 %}
+  {% for item in items %}
+    {% set unviewedClaimsTotal = unviewedClaimsTotal + 1 if not(item.viewed) else unviewedClaimsTotal %}
+  {% endfor %}
+
+  <div class="govuk-!-margin-top-6">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h1 class="govuk-heading-l">Your outstanding claims
+        <span class="govuk-caption-m">You have <strong>14 claims</strong> {{ time | momentFormat3 }}</span></h1>
+      </div>
+      <div class="govuk-grid-column-one-half govuk-align-right-from-desktop">
+        {{ govukButton({
+            text: "Get a new claim",
+            href: "view-claim?updated=0&status=ip"
+        }) }}
+
+        {% if data['how'] == '1' %}
+          <p>This button:</p>
+          <ul>
+            <li>pulls next oldest claim from application queue</li>
+            <li>assigns it to the processor
+            <li>assigns it into the service centre</li>
+            <li>opens the claim view</li>
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+
+    {% set findHTML %}
+      <form action="nino-search" method="post">
+        {{ govukInput({
+          errorMessage: errorMessage,
+          label: {
+            text: "Enter the claimant's National Insurance number"
+          },
+          hint: {
+            text: "For example, ‘QQ 12 34 56 C’."
+          },
+          classes: "govuk-input--width-20",
+          id: "nino",
+          name: "nino",
+          attributes: {
+            "autocomplete": "off"
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Find claim"
+        }) }}
+      </form>
+      {% if data['how'] == '1' %}
+          <p>Enter 'allocated' for when claim is allocated to someone else</p>
+        {% endif %}
+    {% endset %}
+
+    {{ govukDetails({
+      summaryText: "Find a claim by National Insurance number",
+      html: findHTML
+    }) }}
+
+  </div>
+
+{% set agentItems = [
+
+      {
+        name: "Maud Flanders",
+        nino: "II 12 34 56 P",
+        submissionDate: time | momentNow,
+        pushedDate: "20/11/2018",
+        status: "ip",
+        statusNew: "In progress",
+        tagClass: "red",
+        viewed: false,
+        agent: "Andrew Server"
+    },
+
+    {
+      name: "Marvin Gordon",
+      nino: "TT 12 34 56 C",
+      submissionDate: time | momentNowSubtract5,
+      pushedDate: "20/11/2018",
+      status: "ttc",
+      statusNew: "Transferred to clerical",
+      tagClass: "orange",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+
+    {
+      name: "Gwendolyn Hayden",
+      nino: "GC 45 88 19 J",
+      submissionDate: time | momentNowSubtract3,
+      pushedDate: "20/11/2018",
+      status: "ttc",
+      statusNew: "Transferred to clerical",
+      tagClass: "orange",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+
+
+  {
+      name: "Al Kruchner",
+      nino: "AA 12 34 56 K",
+      submissionDate: time | momentNowSubtract3,
+      pushedDate: "20/11/2018",
+      status: "bf",
+      statusNew: "Brought forward",
+      tagClass: "blue",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+    { 
+   name: "Galena Collier",
+      nino: "GK 12 19 88 Y",
+      submissionDate: time | momentNowSubtract2,
+      pushedDate: "20/11/2018",
+      status: "bf",
+      statusNew: "Brought forward",
+      tagClass: "blue",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+
+    {
+      name: "Reese Hanson",
+      nino: "	JW 04 59 89 H",
+      submissionDate: time | momentNowSubtract2,
+      pushedDate: "20/11/2018",
+      status: "bf",
+      statusNew: "Brought forward",
+      tagClass: "blue",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+
+    {
+      name: "Mark Watkins",
+      nino: "	JJ 04 59 89 J",
+      submissionDate: time | momentNowSubtract1,
+      pushedDate: "20/11/2018",
+      status: "ttc",
+      statusNew: "Brought forward",
+      tagClass: "blue",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+
+  {
+      name: "Dana Margaretson",
+      nino: "	JR 04 59 89 D",
+      submissionDate: time | momentNowSubtract1,
+      pushedDate: "20/11/2018",
+      status: "bf",
+      statusNew: "Brought forward",
+      tagClass: "blue",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+
+  { 
+   name: "Helen Tomlins",
+      nino: "HH 12 34 56 T",
+      submissionDate: time | momentNow,
+      pushedDate: "20/11/2018",
+      status: "rdm",
+      statusNew: "Awaiting decision",
+      tagClass: "purple",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  { 
+    name: "Laurel Valencia",
+      nino: "	ZJ 14 79 56 M",
+      submissionDate: time | momentNow,
+      pushedDate: "20/11/2018",
+      status: "rdm",
+      statusNew: "Awaiting decision",
+      tagClass: "purple",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Heather Troy",
+      nino: "	JW 04 59 89 H",
+      submissionDate: time | momentNow,
+      pushedDate: "20/11/2018",
+      status: "ttc",
+      statusNew: "Transferred to clerical",
+      tagClass: "orange",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Sarah Philips",
+      nino: "GC 45 88 19 J",
+      submissionDate: time | momentNow,
+      pushedDate: "20/11/2018",
+      status: "ttc",
+      statusNew: "Transferred to clerical",
+      tagClass: "orange",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Bert Higgins",
+      nino: "WM 12 34 56 C",
+      submissionDate: time | momentNow,
+      pushedDate: "20/11/2018",
+      status: "bf",
+      statusNew: "Brought forward",
+      tagClass: "blue",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Dave Wales",
+      nino: "GC 45 88 19 J",
+      submissionDate: time | momentNow,
+      pushedDate: "20/11/2018",
+      status: "rdm",
+      statusNew: "Awaiting decision",
+      tagClass: "purple",
+      viewed: false,
+      agent: "Andrew Server"
+  }
+]
+%}
+
+  {% set rows = [] %}
+  {% set foundItems = 0 %}
+  {% for item in agentItems %}
+    {% if not(item.viewed) %}
+      {% if foundItems < CLAIMS_PER_PAGE %}
+        {% set rows = rows | push([
+          { html: '<a href="view-claim?updated=0&status='+ item.status +'">' + item.name + '</a>' },
+          { text: item.nino },
+          { text: item.submissionDate },
+          { html: '<span class="tag govuk-tag--'+ item.tagClass +'">' + item.statusNew + '</span>' }
+        ]) %}
+        {% set foundItems = foundItems + 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {{ govukTable({
+    caption: "All claims for Preston service centre 100510",
+    captionClasses: "govuk-visually-hidden",
+    head: [{
+        text: "Claimant"
+      }, {
+        text: "National Insurance number"
+      }, {
+        html: "Date of claim"
+      }, {
+        html: "Claim status"
+      }
+    ],
+    rows: rows
+  }) }}
+  
+
+{% endblock %}

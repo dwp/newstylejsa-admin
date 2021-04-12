@@ -1,0 +1,138 @@
+{% extends "layout/summary-with-user-1.html" %}
+
+{% block pageTitle %}
+  Select a status
+{% endblock %}
+
+{% block header %}
+  
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false,
+    "agentName": "Andrew Server",
+    "claims": 17
+  }) }}
+
+  {% include "../processor/includes/key-details.html" %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    classes: "govuk-width-container",
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-margin-top-6">
+          
+      <h1 class="govuk-heading-l">
+        Update claim status
+      </h1>
+
+      <form action="claim-status" method="post">
+
+        <div class="govuk-form-group">
+
+            <fieldset class="govuk-fieldset" aria-describedby="claim-status-hint">
+
+                {{ govukRadios({
+                    idPrefix: 'status',
+                    name: 'claimStatus',
+                    items: [
+
+                        {
+                            value: "brought-forward",
+                            text: "Brought forward",
+                            hint: {
+                              text: "You need more information from the claimant."
+                            }
+                        },
+
+                        {
+                            value: "awaiting-decision",
+                            text: "Awaiting decision",
+                            hint: {
+                              text: "You are waiting for a decision maker to review."
+                            }
+                        },
+                        {
+                            value: "transfer-to-clerical",
+                            text: "Transfer to clerical",
+                            hint: {
+                              text: "You can't build this claim on JSAPs."
+                            }
+                        },
+
+                        {
+                            value: "in-progress",
+                            text: "In progress",
+                            hint: {
+                              text: "You have started to process this claim but not finished."
+                            }
+                        },
+
+                        {
+                            value: "defective",
+                            text: "Defective",
+                            hint: {
+                              text: "There has been no response from the claimant for 30 days."
+                            }
+                        },
+                        {
+                            value: "awaiting-scolar",
+                            text: "Awaiting scolar",
+                            hint: {
+                              text: "You are waiting for the SCOLAR team to review."
+                            }
+                        },
+                        {
+                            value: "sent-for-claimant-commitment",
+                            text: "Sent for claimant commitment",
+                            hint: {
+                              text: "You have made all checks and need a claimant commitment."
+                            }
+                        },
+                        {
+                            value: "not-entitled",
+                            text: "Not entitled",
+                            hint: {
+                              text: "You found the claimant not entitled to New Style JSA."
+                            }
+                        },
+                        {
+                            value: "awarded",
+                            text: "Awarded",
+                            hint: {
+                              text: "You found the claimant entitled to New Style JSA."
+                            }
+                        }                       
+                    ]
+                })
+                }}
+            </fieldset>
+
+        </div>
+
+        {{ govukButton({
+            text: "Confirm"
+        }) }}
+
+      </form>
+
+      <p>or <a href="view-claim">Cancel</a></p>
+    </div>
+  </div>
+
+{% endblock %}

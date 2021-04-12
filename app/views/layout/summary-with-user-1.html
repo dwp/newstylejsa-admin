@@ -31,6 +31,7 @@
 {% from "components/dwp-key-details-bar/macro.njk"          import  dwpKeyDetailsBar %}
 {% from "components/dwp-search-box/macro.njk"               import  dwpSearchBox %}
 {% from "components/dwp-secondary-navigation/macro.njk"     import  dwpSecondaryNavigation %}
+{% from "components/govuk-notification-banner/macro.njk"    import  govukNotificationBanner %}
 
 {% block head %}
   {% include "includes/head.html" %}
@@ -39,7 +40,6 @@
 {% set currentClaimStatus = selectedClaimStatuses | last %}
 
 {% block header %}
-  {% include "includes/debug-logged-in-agent-type.html" %}
   
   {{ dwpHeader({
     "homepageUrl": "/",
@@ -47,7 +47,7 @@
     "serviceUrl": "/",
     "containerClasses": "govuk-width-container",
     "searchBar": false,
-    "agentName": true
+    "agentName": "Nadia Khomani"
   }) }}
 
   {{ dwpKeyDetailsBar({

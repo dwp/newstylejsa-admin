@@ -1,0 +1,279 @@
+{% extends "layout/summary-with-user-1.html" %}
+
+{% block pageTitle %}
+Get next claim - {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false,
+    "agentName": "Nadia Khomani",
+    "claims": 12
+  }) }}
+  
+  {% include "../allocator/includes/key-details.html" %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    classes: "govuk-width-container",
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+      text: "View all claims",
+      href: "list-claims?agent=all"
+    }) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-!-margin-top-5">
+
+    {% if data['allocated'] === 'true' %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+          {% set html %}
+            <p class="govuk-notification-banner__heading">
+              This claim is allocated to another agent<br>
+              <a class="govuk-notification-banner__link" href="view-claim?allocated=changed">Re-allocate to me</a>
+            </p>
+          {% endset %}
+
+          {{ govukNotificationBanner({
+            html: html
+          }) }}
+      </div>
+    </div>
+    {% elif data['allocated'] === 'changed' %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+          {% set updateHtml %}
+            <p class="govuk-notification-banner__heading">
+              This claim was reallocated to you.
+            </p>
+          {% endset %}
+
+          {{ govukNotificationBanner({
+            html: updateHtml
+          }) }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if data['updated'] == 'true' %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+          {% set updateHtml %}
+            <p class="govuk-notification-banner__heading">
+              This claim was updated to {{ data['claimStatus'] | replace("-", " ") | capitalize }}. <a class="govuk-notification-banner__link" href="list-claims?agent=nadia-khomani">View my claims</a>
+            </p>
+          {% endset %}
+
+          {{ govukNotificationBanner({
+            html: updateHtml
+          }) }}
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Claim information</h1>
+
+        <section class="dwp-print-hide">
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              <span class="govuk-!-margin-bottom-0">These details don't match the Searchlight record</span>
+            </strong>
+          </div>
+        </section>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible dwp-print-hide">
+        
+        
+        {% if data['status'] == 'ttc' %}
+          {% include "../includes/claim-data/mgordon.html" %}
+        {% elif data['status'] == 'rdm' %}
+          {% include "../includes/claim-data/htomlins.html" %}
+        {% elif data['status'] == 'bf' %}
+          {% include "../includes/claim-data/akruchner.html" %}
+        {% elif data['status'] == 'ip' %}
+          {% include "../includes/claim-data/mflanders.html" %}
+        {% elif data['status'] == 'new' %}
+          {% include "../includes/claim-data/nnewlove.html" %}
+        {% elif data['status'] == 'allocated' or data['status'] == 'reallocated' %}
+          {% include "../includes/claim-data/csouthall.html" %}
+        {% else %}
+          {% include "../includes/claim-data/mgordon.html" %}
+        {% endif %}
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <aside class="app-related-items govuk-!-margin-top-0" role="complementary">
+
+          <h3 class="govuk-heading-m">Claim actions</h3>
+          {% if data['allocated'] != 'true' %}
+            {{ govukButton({
+              text: "Update claim status",
+              href: "claim-status"
+            }) }}
+          {% endif %}
+
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li><a href="select-agent">Re-allocate to another agent</a></li>
+            <li><a href="select-service-centre">Re-allocate to another service centre</a></li>
+          </ul>
+
+          {% if data['status'] != 'new' %}
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            <h3 class="govuk-heading-m">Claim history</h3>
+          {% endif %}
+
+          {% if data['status'] == 'ttc' %}
+          {{ dwpTimeline({
+            items: [
+              {
+                heading: "Transferred to clerical",
+                label: "label",
+                author: "by Andrew Server",
+                date: "on " + time | momentNowSubtract5
+              },
+              {
+                heading: "Initial date of claim",
+                date: "" + time | momentNowSubtract5,
+                classes: "dwp-timeline-entry--closing"
+              }
+            ]
+          }) }}
+
+          {% elif data['status'] == 'rdm' %}
+
+          {{ dwpTimeline({
+            items: [
+              {
+                heading: "Awaiting decision",
+                label: "label",
+                author: "by Tracy Chapman",
+                date: "on " + time | momentNowSubtract5
+              },
+              {
+                heading: "Brought forward",
+                label: "label",
+                author: "by Andrew Server",
+                date: "on " + time | momentNowSubtract5
+              },
+              {
+                heading: "Initial date of claim",
+                date: "" + time | momentNowSubtract5
+              },
+              {
+                heading: "Backdated claim",
+                date: "" + time | momentNowSubtract10,
+                classes: "dwp-timeline-entry--closing"
+              }
+            ]
+          }) }}
+
+          {% elif data['status'] == 'bf' %}
+
+            {% if data['updated'] == 'true' %}
+
+              {{ dwpTimeline({
+                items: [
+                  {
+                    heading: data['claimStatus'] | replace("-", " ") | capitalize,
+                    label: "label",
+                    author: "by Andrew Server",
+                    date: "on " + time | momentNow
+                  },
+                  {
+                    heading: "Brought forward",
+                    label: "label",
+                    author: "by Andrew Server",
+                    date: "on " + time | momentNowSubtract3
+                  },
+                  {
+                    heading: "Initial date of claim",
+                    date: "" + time | momentNowSubtract3,
+                    classes: "dwp-timeline-entry--closing"
+                  }
+                ]
+              }) }}
+            
+            {% else %}
+
+              {{ dwpTimeline({
+                items: [
+                  {
+                    heading: "Brought forward",
+                    label: "label",
+                    author: "by Andrew Server",
+                    date: "on " + time | momentNowSubtract3
+                  },
+                  {
+                    heading: "Initial date of claim",
+                    date: "" + time | momentNowSubtract3,
+                    classes: "dwp-timeline-entry--closing"
+                  }
+                ]
+              }) }}
+
+            {% endif %}
+
+          {% elif data['status'] == 'ip' %}
+
+            {{ dwpTimeline({
+              items: [
+                {
+                  heading: "In progress",
+                  label: "label",
+                  author: "by Andrew Server",
+                  date: "on " + time | momentNow
+                },
+                {
+                  heading: "Initial date of claim",
+                  date: "" + time | momentNow,
+                  classes: "dwp-timeline-entry--closing"
+                }
+              ]
+            }) }}
+
+          {% elif data['status'] == 'allocated' or data['status'] == 'reallocated' %}
+
+            {{ dwpTimeline({
+              items: [
+                {
+                  heading: "Brought forward",
+                  label: "label",
+                  author: "by Eric Hughes",
+                  date: "on " + time | momentNowSubtract3
+                },
+                {
+                  heading: "Initial date of claim",
+                  date: "" + time | momentNowSubtract3,
+                  classes: "dwp-timeline-entry--closing"
+                }
+              ]
+            }) }}
+
+          {% endif %}
+
+        </aside>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

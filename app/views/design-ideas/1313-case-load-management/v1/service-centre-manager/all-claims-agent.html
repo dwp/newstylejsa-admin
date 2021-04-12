@@ -1,0 +1,237 @@
+{% extends "layout/base-no-search-bar-user-1.html" %}
+
+{% block pageTitle %} All claims – 
+{{ serviceName }}: DWP Agent – Service centre
+{% endblock %}
+
+{% block content %}
+
+  {% set items = claimListData %}
+  
+  {# Only display the unviewed claims total #}
+  {% set unviewedClaimsTotal = 0 %}
+  {% for item in items %}
+    {% set unviewedClaimsTotal = unviewedClaimsTotal + 1 if not(item.viewed) else unviewedClaimsTotal %}
+  {% endfor %}
+
+  <div class="govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <span class="govuk-caption-m">Claims allocated to</span>
+        <h1 class="govuk-heading-l">Andrew Server</h1>
+      </div>
+      <div class="govuk-grid-column-one-half govuk-align-right-from-desktop">
+        {% set time = now() %}
+        <div class="govuk-body-m govuk-!-margin-top-4">Total claims {{ time | momentFormat2 }}: <strong class="govuk-!-font-size-24">55</strong></div>
+      </div>
+    </div>
+  </div>
+
+  {{ dwpSecondaryNavigation({
+    items: [{
+      label: "All (55)",
+      url: "#",
+      active: true
+    }, {
+      label: "Brought forward (5)",
+      url: "#"
+    }, {
+      label: "Outstanding (7) ",
+      url: "#/work-coach/6/push?status=notPushed"
+    }, {
+      label: "Refer to DM (13) ",
+      url: "#"
+    }, {
+      label: "Transfer to clerical (27) ",
+      url: "#"
+    }, {
+      label: "New (3) ",
+      url: "#"
+    }]
+  }) }}
+
+{% set agentItems = [
+  { 
+    name: "Kai Barber",
+      nino: "NG 56 43 44 Y",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "New claim",
+      tagClass: "new",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  { 
+   name: "Galena Collier",
+      nino: "GK 12 19 88 Y",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Brought forward",
+      tagClass: "forward",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  { 
+    name: "Laurel Valencia",
+      nino: "	ZJ 14 79 56 M",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Transferred to clerical",
+      tagClass: "success",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Reese Hanson",
+      nino: "	JW 04 59 89 H",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Brought forward",
+      tagClass: "forward",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Gwendolyn Hayden",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Transferred to clerical",
+      tagClass: "success",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Al Kruchner",
+      nino: "WM 12 34 56 C",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Claim outstanding",
+      tagClass: "outstanding",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Dave Wales",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Claim outstanding",
+      tagClass: "outstanding",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  { 
+   name: "Galena Collier",
+      nino: "GK 12 19 88 Y",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to DM",
+      tagClass: "referred",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  { 
+    name: "Laurel Valencia",
+      nino: "	ZJ 14 79 56 M",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to DM",
+      tagClass: "referred",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Reese Hanson",
+      nino: "	JW 04 59 89 H",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Transferred to clerical",
+      tagClass: "success",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Gwendolyn Hayden",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Transferred to clerical",
+      tagClass: "success",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Al Kruchner",
+      nino: "WM 12 34 56 C",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Brought forward",
+      tagClass: "forward",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Dave Wales",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to DM",
+      tagClass: "referred",
+      viewed: false,
+      agent: "Andrew Server"
+  }
+]
+%}
+
+  <div class="govuk-!-margin-top-6">
+  {% set rows = [] %}
+  {% set foundItems = 0 %}
+  {% for item in agentItems %}
+    {% if not(item.viewed) %}
+      {% if foundItems < CLAIMS_PER_PAGE %}
+        {% set rows = rows | push([
+          { html: '<a href="/design-ideas/1313-case-load-management/v1/service-centre-manager/get-next-claim-2">' + item.name + '</a>' },
+          { text: item.nino },
+          { text: item.submissionDate },
+          { html: '<a href="/design-ideas/1313-case-load-management/v1/service-centre-manager/all-claims-agent">' +  item.agent + '</a>' },
+          { html: '<span class="tag tag--'+ item.tagClass +'">' + item.statusNew + '</span>' }
+        ]) %}
+        {% set foundItems = foundItems + 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {{ govukTable({
+    caption: "All claims for Preston service centre 100510",
+    captionClasses: "govuk-visually-hidden",
+    head: [{
+        text: "Claimant"
+      }, {
+        text: "NINO"
+      }, {
+        html: "IDOC <img src='/public/images/arrow-down.svg' alt='down arrow' />"
+      }, {
+        html: "Agent <img src='/public/images/arrow-down.svg' alt='down arrow' />"
+      }, {
+        html: "Claim status <img src='/public/images/arrow-down.svg' alt='down arrow' />"
+      }
+    ],
+    rows: rows
+  }) }}
+  
+
+{% endblock %}

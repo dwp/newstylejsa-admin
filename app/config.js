@@ -265,5 +265,5 @@ module.exports = {
 
   CLAIM_STATUSES,
 
-  CLAIMS_PER_PAGE: 50
+  CLAIMS_PER_PAGE: 100
 }

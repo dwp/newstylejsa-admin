@@ -44,7 +44,6 @@
 {% endblock %}
 
 {% block header %}
-  {% include "includes/debug-logged-in-agent-type.html" %}
   
   {{ dwpHeader({
     "homepageUrl": "/",
@@ -52,13 +51,12 @@
     "serviceUrl": "/",
     "containerClasses": "govuk-width-container",
     "searchBar": false,
-    "agentName": true,
-    "managerName": false
+    "agentName": 'Andrew Server'
   }) }}
 
   {{ govukPhaseBanner({
     tag: {
-      text: "alpha"
+      text: "beta"
     },
     classes: "govuk-width-container",
     html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'

@@ -27,16 +27,20 @@
             </div>
           {% endif %}
 
-          {% if params.agentName %}
-            <span>Signed in as Andrew Server, <a href="/design-ideas/1313-case-load-management-mvp/service-centre-agent/agent-sign-on" style="color:White"> Preston</a>
-              <b>&nbsp;(1)</b>
-            </span>
+          {% if params.claims %}
+            {% set claims = params.claims %}
+          {% else %}
+            {% set claims = '0' %}
           {% endif %}
-        </div>
+          {% if params.agentName %}
+            <div class="govuk-grid-column-one-third govuk-right-align-from-tablet">
+              <span>Signed in as <a href="change-service-centre" style="color:White">{{ params.agentName }}</a>,
+              <a href="list-claims?agent={{ params.agentName | replace(" ", "-") | lower }}" style="color:White">({{ claims }} claims)</a>
+              </span>
+            </div>
+          {% endif %}
 
-        {% if params.managerName %}
-          <span>Signed in as Tracey Leader</span>
-        {% endif %}
+        </div>
       </div>
 
       {% if params.navigation %}

@@ -1,0 +1,97 @@
+{% extends "layout/summary-with-user-1.html" %}
+
+{% block pageTitle %}
+  Select a status
+{% endblock %}
+
+{% block header %}
+  
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false,
+    "agentName": "Nadia Khomani",
+    "claims": 12
+  }) }}
+
+  {% include "../processor/includes/key-details.html" %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    classes: "govuk-width-container",
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-margin-top-6">
+          
+      <h1 class="govuk-heading-l">
+        Update claim status
+      </h1>
+
+      <form action="claim-status" method="post">
+
+        <div class="govuk-form-group">
+
+            <fieldset class="govuk-fieldset" aria-describedby="claim-status-hint">
+
+                {{ govukRadios({
+                    idPrefix: 'status',
+                    name: 'claimStatus',
+                    items: [
+                        {
+                            value: "brought-forward",
+                            text: "Brought forward"
+                        },
+                        {
+                            value: "outstanding",
+                            text: "Claim outstanding"
+                        },
+                        {
+                            value: "refer-to-decision-maker",
+                            text: "Refer to decision maker"
+                        },
+                        {
+                            value: "sent-for-claimant-commitment",
+                            text: "Sent for claimant commitment"
+                        },
+                        {
+                            value: "transfer-to-clerical",
+                            text: "Transfer to clerical"
+                        },
+                        {
+                            value: "cleared-nil-entitled",
+                            text: "Cleared – nil entitlement"
+                        },
+                        {
+                            value: "cleared-awarded",
+                            text: "Cleared – awarded"
+                        },
+                        {
+                            value: "defective",
+                            text: "Claim defective"
+                        }                        
+                    ]
+                })
+                }}
+            </fieldset>
+
+        </div>
+
+        {{ govukButton({
+            text: "Confirm"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

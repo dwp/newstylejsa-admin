@@ -1,0 +1,303 @@
+{% extends "layout/sidebar.html" %}
+
+{% block pageTitle %}
+All claims – {{ serviceName }}: DWP Agent – Service centre
+{% endblock %}
+
+{% block header %}
+  
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false,
+    "agentName": "Nadia Khomani",
+    "claims": 12
+  }) }}
+{% endblock %}
+
+{% set dataSet = allCaseloadData %}
+{% set context = 'Torquay' %}
+{% set numberTotal = '77' %}
+
+{% if data['agent'] == 'all' %}
+  {% set dataSet = allCaseloadData %}
+  {% set activeNav = "nav-all" %}
+  {% set context = 'Torquay' %}
+{% elif data['agent'] == 'andrew-server' %}
+  {% set dataSet = andrewCaseloadData %}
+  {% set activeNav = "nav-andrew" %}
+  {% set context = data['agent'] | replace("-", " ") | title %}
+  {% set numberTotal = '17' %}
+{% elif data['agent'] == 'bart-blokk' %}
+  {% set dataSet = bartCaseloadData %}
+  {% set activeNav = "nav-bart" %}
+  {% set context = data['agent'] | replace("-", " ") | title %}
+  {% set numberTotal = '10' %}
+{% elif data['agent'] == 'gareth-thomas' %}
+  {% set dataSet = garethCaseloadData %}
+  {% set activeNav = "nav-gareth" %}
+  {% set context = data['agent'] | replace("-", " ") | title %}
+  {% set numberTotal = '10' %}
+{% elif data['agent'] == 'ted-hughes' %}
+  {% set dataSet = tedCaseloadData %}
+  {% set activeNav = "nav-ted" %}
+  {% set context = data['agent'] | replace("-", " ") | title %}
+  {% set numberTotal = '9' %}
+{% elif data['agent'] == 'jane-macdonald' %}
+  {% set dataSet = janeCaseloadData %}
+  {% set activeNav = "nav-jane" %}
+  {% set context = data['agent'] | replace("-", " ") | title %}
+  {% set numberTotal = '11' %}
+{% elif data['agent'] == 'femi-johns' %}
+  {% set dataSet = femiCaseloadData %}
+  {% set activeNav = "nav-femi" %}
+  {% set context = data['agent'] | replace("-", " ") | title %}
+  {% set numberTotal = '8' %}
+{% elif data['agent'] == 'nadia-khomani' %}
+  {% set dataSet = nadiaCaseloadData %}
+  {% set activeNav = "nav-nadia" %}
+  {% set context = data['agent'] | replace("-", " ") | title %}
+  {% set numberTotal = '12' %}
+{% endif %}
+
+{% block beforeContent %}
+
+  <div class="govuk-!-padding-top-6 govuk-!-padding-left-6 govuk-!-padding-right-6">
+      <form action="nino-search" method="post">
+      {{ govukInput({
+        errorMessage: errorMessage,
+        label: {
+          text: "Find a claim by NI number",
+          classes: "govuk-!-margin-bottom-2"
+        },
+        classes: "govuk-input--width-20 govuk-!-margin-0",
+        formGroup: {
+          classes: "govuk-!-margin-bottom-4"
+        },
+        id: "nino",
+        name: "nino",
+        attributes: {
+          "autocomplete": "off"
+        }
+      }) }}
+
+      {{ govukButton({
+        text: "Find claim",
+        classes: "govuk-!-margin-0"
+      }) }}
+    </form>
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  <nav class="side-nav govuk-!-font-size-16">
+    <div class="govuk-!-padding-left-6">
+      <h3 class="govuk-heading-s">Filter claims by agent</h3>
+    </div>
+    <ul class="side-nav__items">
+      <li class="side-nav__item {% if activeNav == 'nav-all' %}active{% endif %}">
+        <a href="?agent=all">All claims (77)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-andrew' %}active{% endif %}">
+        <a href="?agent=andrew-server">Andrew Server (17)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-bart' %}active{% endif %}">
+        <a href="?agent=bart-blokk">Bart Blokk (10)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-gareth' %}active{% endif %}">
+        <a href="?agent=gareth-thomas">Gareth Thomas (10)</a>
+      </li> 
+      <li class="side-nav__item {% if activeNav == 'nav-ted' %}active{% endif %}">
+        <a href="?agent=ted-hughes">Ted Hughes (9)</a>
+      </li>
+          <li class="side-nav__item {% if activeNav == 'nav-jane' %}active{% endif %}">
+        <a href="?agent=jane-macdonald">Jane MacDonald (11)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-femi' %}active{% endif %}">
+        <a href="?agent=femi-johns">Femi Johns (8)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-nadia' %}active{% endif %}">
+        <a href="?agent=nadia-khomani">Nadia Khomani (12)</a>
+      </li> 
+    </ul>
+  </nav>
+
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  <nav class="side-nav govuk-!-font-size-16">
+    <div class="govuk-!-padding-left-6">
+      <h3 class="govuk-heading-s">Filter claims by target due</h3>
+    </div>
+    <ul class="side-nav__items">
+      <li class="side-nav__item {% if activeNav == 'nav-10ago' %}active{% endif %}">
+        <a href="?agent=all">10 days ago (5)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-9ago' %}active{% endif %}">
+        <a href="?agent=andrew">9 days ago (1)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-8ago' %}active{% endif %}">
+        <a href="?agent=bart">8 days ago (1)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-today' %}active{% endif %}">
+        <a href="?agent=gareth">Today (55)</a>
+      </li> 
+      <li class="side-nav__item {% if activeNav == 'nav-3' %}active{% endif %}">
+        <a href="?agent=ted">In 3 days (42)</a>
+      </li>
+          <li class="side-nav__item {% if activeNav == 'nav-in4' %}active{% endif %}">
+        <a href="?agent=jane">In 4 days (27)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-in5' %}active{% endif %}">
+        <a href="?agent=femi">In 5 days (3)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-in6' %}active{% endif %}">
+        <a href="?agent=nadia">In 6 days (3)</a>
+      </li> 
+    </ul>
+  </nav>
+{% endblock %}
+
+{% block content %}
+  
+  {# Only display the unviewed claims total #}
+  {% set unviewedClaimsTotal = 0 %}
+  {% for item in items %}
+    {% set unviewedClaimsTotal = unviewedClaimsTotal + 1 if not(item.viewed) else unviewedClaimsTotal %}
+  {% endfor %}
+
+  <div class="govuk-!-margin-top-6">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">{{ numberTotal }} Claims for {{ context }}
+        <span class="govuk-caption-m">{{ time | momentFormat3 }}</span></h1>
+      </div>
+      {# <div class="govuk-grid-column-one-half govuk-align-right-from-desktop">
+        {{ govukButton({
+            text: "Find a claim",
+            href: "nino-search"
+        }) }}
+      </div> #}
+    </div>
+
+    {% set findHTML %}
+      <form action="nino-search" method="post">
+        {{ govukInput({
+          errorMessage: errorMessage,
+          label: {
+            text: "Enter the claimant's National Insurance number"
+          },
+          hint: {
+            text: "For example, ‘QQ 12 34 56 C’."
+          },
+          classes: "govuk-input--width-20",
+          id: "nino",
+          name: "nino",
+          attributes: {
+            "autocomplete": "off"
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Find claim"
+        }) }}
+      </form>
+      {% if data['how'] == '1' %}
+          <p>Enter 'allocated' for when claim is allocated to someone else</p>
+        {% endif %}
+    {% endset %}
+
+    {# {{ govukDetails({
+      summaryText: "Find a claim by National Insurance number",
+      html: findHTML
+    }) }} #}
+
+  </div>
+
+  {% if data['agent'] == 'all' %}
+
+    {% set rows = [] %}
+    {% set foundItems = 0 %}
+    {% for item in dataSet %}
+      {% if not(item.viewed) %}
+        {% if foundItems < CLAIMS_PER_PAGE %}
+          {% set rows = rows | push(
+            [
+              {
+                html: '<a href="view-claim?allocated=true&updated=false&status='+ item.status +'">' + item.name + '</a>',
+                classes: 'agent-' + item.agent | replace(" ", "-") | lower
+              },
+              { text: item.nino },
+              { text: item.agent },
+              { html: '<span class="tag govuk-tag--'+ item.targetClass +'">' + item.target + '</span>' },
+              { html: '<span class="tag govuk-tag--'+ item.tagClass +'">' + item.statusNew + '</span>' }
+            ]
+          ) %}
+          {% set foundItems = foundItems + 1 %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {{ govukTable({
+      caption: "All claims for Torquay service centre",
+      captionClasses: "govuk-visually-hidden",
+      head: [{
+          text: "Claimant"
+        }, {
+          text: "National Insurance number"
+        }, {
+          text: "Agent"
+        }, {
+          text: "Due"
+        }, {
+          html: "Claim status"
+        }
+      ],
+      rows: rows
+    }) }}
+    
+  {% else %}
+
+    {% set rows = [] %}
+    {% set foundItems = 0 %}
+    {% for item in dataSet %}
+      {% if not(item.viewed) %}
+        {% if foundItems < CLAIMS_PER_PAGE %}
+          {% set rows = rows | push(
+            [
+              {
+                html: '<a href="view-claim?allocated=true&updated=false&status='+ item.status +'">' + item.name + '</a>',
+                classes: 'agent-' + item.agent | replace(" ", "-") | lower
+              },
+              { text: item.nino },
+              { html: '<span class="tag govuk-tag--'+ item.targetClass +'">' + item.target + '</span>' },
+              { html: '<span class="tag govuk-tag--'+ item.tagClass +'">' + item.statusNew + '</span>' }
+            ]
+          ) %}
+          {% set foundItems = foundItems + 1 %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {{ govukTable({
+      caption: "All claims for Torquay service centre",
+      captionClasses: "govuk-visually-hidden",
+      head: [{
+          text: "Claimant"
+        }, {
+          text: "National Insurance number"
+        }, {
+          text: "Due"
+        }, {
+          html: "Claim status"
+        }
+      ],
+      rows: rows
+    }) }}
+
+  {% endif %}
+
+
+  
+
+{% endblock %}

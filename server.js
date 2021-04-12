@@ -21,6 +21,16 @@ const packageJson = require('./package.json')
 const app = express()
 const utils = require('./lib/utils.js')
 
+// Agent claims for case load
+const allCaseload = require('./app/data/agents/all-claims.js')
+const andrewCaseload = require('./app/data/agents/andrew-claims.js')
+const bartCaseload = require('./app/data/agents/bart-claims.js')
+const garethCaseload = require('./app/data/agents/gareth-claims.js')
+const tedCaseload = require('./app/data/agents/ted-claims.js')
+const janeCaseload = require('./app/data/agents/jane-claims.js')
+const nadiaCaseload = require('./app/data/agents/nadia-claims.js')
+const femiCaseload = require('./app/data/agents/femi-claims.js')
+
 const documentationApp = express()
 dotenv.config()
 
@@ -175,6 +185,15 @@ app.locals.clearData = () => {
   // CRAZY but this doesn't work! app.locals.claimListData = claimsConfig.data.slice(0, claimsConfig.data.slice.length);
   // READ UP : https://stackoverflow.com/questions/6089058/nodejs-how-to-clone-a-object
   app.locals.claimListData = JSON.parse(JSON.stringify(claimsConfig.data));
+  
+  app.locals.allCaseloadData = JSON.parse(JSON.stringify(allCaseload.data));
+  app.locals.andrewCaseloadData = JSON.parse(JSON.stringify(andrewCaseload.data));
+  app.locals.bartCaseloadData = JSON.parse(JSON.stringify(bartCaseload.data));
+  app.locals.tedCaseloadData = JSON.parse(JSON.stringify(tedCaseload.data));
+  app.locals.garethCaseloadData = JSON.parse(JSON.stringify(garethCaseload.data));
+  app.locals.janeCaseloadData = JSON.parse(JSON.stringify(janeCaseload.data));
+  app.locals.nadiaCaseloadData = JSON.parse(JSON.stringify(nadiaCaseload.data));
+  app.locals.femiCaseloadData = JSON.parse(JSON.stringify(femiCaseload.data));
 
   // Reset the agent details if not already 'logged in'
   if (!app.locals.loggedInAgent) {

@@ -116,6 +116,96 @@ module.exports = function (env) {
     return moment(myDate).format(format);
   }
 
+  filters.momentFormat3 = function (date) {
+    const format = '[at] h:mm a [on] D' + ' ' + 'MMMM' + ' ' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).format(format);
+  }
+
+  filters.momentNow = function (date) {
+    const format = 'D' + ' ' + 'MMMM' + ' ' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).format(format);
+  }
+
+  filters.momentNowShort = function (date) {
+    const format = 'DD' + '/' + 'MM' + '/' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).format(format);
+  }
+
+  filters.momentNowSubtract1 = function (date) {
+    const format = 'D' + ' ' + 'MMMM' + ' ' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(1, 'days').format(format);
+  }
+
+  filters.momentNowShortSubtract1 = function (date) {
+    const format = 'DD' + '/' + 'MM' + '/' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(1, 'days').format(format);
+  }
+
+  filters.momentNowSubtract2 = function (date) {
+    const format = 'D' + ' ' + 'MMMM' + ' ' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(2, 'days').format(format);
+  }
+
+  filters.momentNowShortSubtract2 = function (date) {
+    const format = 'DD' + '/' + 'MM' + '/' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(2, 'days').format(format);
+  }
+
+  filters.momentNowSubtract3 = function (date) {
+    const format = 'D' + ' ' + 'MMMM' + ' ' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(3, 'days').format(format);
+  }
+
+  filters.momentNowShortSubtract3 = function (date) {
+    const format = 'DD' + '/' + 'MM' + '/' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(3, 'days').format(format);
+  }
+
+  filters.momentNowSubtract4 = function (date) {
+    const format = 'D' + ' ' + 'MMMM' + ' ' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(4, 'days').format(format);
+  }
+
+  filters.momentNowShortSubtract4 = function (date) {
+    const format = 'DD' + '/' + 'MM' + '/' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(4, 'days').format(format);
+  }
+
+  filters.momentNowSubtract5 = function (date) {
+    const format = 'D' + ' ' + 'MMMM' + ' ' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(5, 'days').format(format);
+  }
+
+  filters.momentNowShortSubtract5 = function (date) {
+    const format = 'DD' + '/' + 'MM' + '/' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(5, 'days').format(format);
+  }
+
+  filters.momentNowSubtract10 = function (date) {
+    const format = 'D' + ' ' + 'MMMM' + ' ' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(10, 'days').format(format);
+  }
+
+  filters.momentNowShortSubtract10 = function (date) {
+    const format = 'DD' + '/' + 'MM' + '/' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(10, 'days').format(format);
+  }
+
 // Array methods
 
   filters.randomise = (array, limit) => {

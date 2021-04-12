@@ -1,0 +1,35 @@
+{% extends "layout/base-no-search-bar-user-1.html" %}
+
+{% block pageTitle %}
+Service centre agent - {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-!-margin-top-6">
+
+    <h1 class="govuk-heading-l">Service centre processing</h1>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <a href="view-claim?status=new" class="tile tile--blue">
+          <div class="tile__contents">
+            <h2 class="tile__title">Get a new claim</h2>
+          </div>
+        </a>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <a href="list-claims?status=ttc" class="tile tile--blue">
+          <div class="tile__contents">
+            <h2 class="tile__title">View your outstanding claims (14)</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    
+  </div>
+
+{% endblock %}

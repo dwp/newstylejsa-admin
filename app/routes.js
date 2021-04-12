@@ -16,10 +16,15 @@ module.exports = (app) => {
   router.use('/design-ideas/1752-fraud', require('./views/design-ideas/1752-fraud/_routes')(app));
 
   // routing for design ideas 1313 – manager
-  router.use('/design-ideas/1313-case-load-management-mvp/service-centre-manager', require('./views/design-ideas/1313-case-load-management-mvp/service-centre-manager/_routes')(app));
+  router.use('/design-ideas/1313-case-load-management/v1/service-centre-manager', require('./views/design-ideas/1313-case-load-management/v1/service-centre-manager/_routes')(app));
 
   // routing for design ideas 1313 – agent
-  router.use('/design-ideas/1313-case-load-management-mvp/service-centre-agent', require('./views/design-ideas/1313-case-load-management-mvp/service-centre-agent/_routes')(app));
+  router.use('/design-ideas/1313-case-load-management/v1/service-centre-agent', require('./views/design-ideas/1313-case-load-management/v1/service-centre-agent/_routes')(app));
+  router.use('/design-ideas/1313-case-load-management/v2/service-centre-agent', require('./views/design-ideas/1313-case-load-management/v2/service-centre-agent/_routes')(app));
+
+  router.use('/design-ideas/1313-case-load-management/v2/processor', require('./views/design-ideas/1313-case-load-management/v2/processor/_routes')(app));
+  router.use('/design-ideas/1313-case-load-management/v2/allocator', require('./views/design-ideas/1313-case-load-management/v2/allocator/_routes')(app));
+
 
   // This moves work coach routing to work-coach directory
   router.use('/work-coach/', require('./views/work-coach/_routes')(app));

@@ -2,7 +2,7 @@
 
 /* BackButton */
 const BackButton = function () {
-  const $backButton = document.querySelector('.govuk-back-link, .js-still-apply');
+  const $backButton = document.querySelectorAll('.govuk-back-link, .js-still-apply');
 
   if ($backButton !== null) {
     $backButton.addEventListener('click', function (event) {

@@ -1,0 +1,330 @@
+{% extends "layout/sidebar.html" %}
+
+{% block pageTitle %} All claims – 
+{{ serviceName }}: DWP Agent – Service centre
+{% endblock %}
+
+{% set items = claimListData %}
+
+{% set agentItems = [
+  { 
+    name: "Kai Barber",
+    nino: "NG 56 43 44 Y",
+    submissionDate: "7 November 2018",
+    pushedDate: "20/11/2018",
+    status: "Clerical",
+    statusNew: "New claim",
+    tagClass: "new",
+    viewed: false,
+    agent: "Andrew Server"
+  },
+  { 
+   name: "Galena Collier",
+      nino: "GK 12 19 88 Y",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Brought forward",
+      tagClass: "forward",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  { 
+    name: "Laurel Valencia",
+      nino: "	ZJ 14 79 56 M",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Transferred to clerical",
+      tagClass: "success",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Reese Hanson",
+      nino: "	JW 04 59 89 H",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Brought forward",
+      tagClass: "forward",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Gwendolyn Hayden",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Transferred to clerical",
+      tagClass: "success",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Al Kruchner",
+      nino: "WM 12 34 56 C",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Claim outstanding",
+      tagClass: "outstanding",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Dave Wales",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Claim outstanding",
+      tagClass: "outstanding",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  { 
+   name: "Galena Collier",
+      nino: "GK 12 19 88 Y",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to decision maker",
+      tagClass: "referred",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  { 
+    name: "Laurel Valencia",
+      nino: "	ZJ 14 79 56 M",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to decision maker",
+      tagClass: "referred",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Reese Hanson",
+      nino: "	JW 04 59 89 H",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Transferred to clerical",
+      tagClass: "success",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Gwendolyn Hayden",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Transferred to clerical",
+      tagClass: "success",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Al Kruchner",
+      nino: "WM 12 34 56 C",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Brought forward",
+      tagClass: "forward",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Dave Wales",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to decision maker",
+      tagClass: "referred",
+      viewed: false,
+      agent: "Andrew Server"
+  }
+]
+%}
+
+
+{% set itemsView = items %}
+
+
+{% set bfItems = [
+  { 
+    name: "Kai Barber",
+    nino: "NG 56 43 44 Y",
+    submissionDate: "7 November 2018",
+    pushedDate: "20 November 2018",
+    status: "Clerical",
+    statusNew: "New claim",
+    tagClass: "new",
+    viewed: false,
+    agent: "Andrew Server"
+  },
+  { 
+   name: "Galena Collier",
+      nino: "GK 12 19 88 Y",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Brought forward",
+      tagClass: "forward",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  { 
+    name: "Laurel Valencia",
+      nino: "	ZJ 14 79 56 M",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Transferred to clerical",
+      tagClass: "success",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Al Kruchner",
+      nino: "WM 12 34 56 C",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Brought forward",
+      tagClass: "forward",
+      viewed: false,
+      agent: "Andrew Server"
+  },
+  {
+      name: "Dave Wales",
+      nino: "GC 45 88 19 J",
+      submissionDate: "07/11/2018",
+      pushedDate: "20/11/2018",
+      status: "Clerical",
+      statusNew: "Referred to decision maker",
+      tagClass: "referred",
+      viewed: false,
+      agent: "Andrew Server"
+  }
+]
+%}
+
+{% if data['view'] == 'all' %}
+  {% set activeNav = "nav-all" %}
+  {% set itemsView = items %}
+{% elif data['view'] == 'bf' %}
+  {% set activeNav = "nav-bf" %}
+  {% set itemsView = bfItems %}
+{% elif data['view'] == 'outstanding' %}
+  {% set activeNav = "nav-outstanding" %}
+{% elif data['view'] == 'referred' %}
+  {% set activeNav = "nav-referred" %}
+{% elif data['view'] == 'clerical' %}
+  {% set activeNav = "nav-clerical" %}
+{% elif data['view'] == 'commitment' %}
+  {% set activeNav = "nav-commitment" %}
+{% elif data['view'] == 'defective' %}
+  {% set activeNav = "nav-defective" %}
+{% elif data['view'] == 'new' %}
+  {% set activeNav = "nav-new" %}
+{% endif %}
+
+  {% block beforeContent %}
+  <nav class="side-nav">
+    <ul>
+      <li class="side-nav__item {% if activeNav == 'nav-all' %}active{% endif %}">
+        <a href="?view=all">All claims (100)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-bf' %}active{% endif %}">
+        <a href="?view=bf">Brought forward (5)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-outstanding' %}active{% endif %}">
+        <a href="?view=outstanding">Outstanding (7)</a>
+      </li> 
+      <li class="side-nav__item {% if activeNav == 'nav-referred' %}active{% endif %}">
+        <a href="?view=referred">Referred (13)</a>
+      </li>
+          <li class="side-nav__item {% if activeNav == 'nav-clerical' %}active{% endif %}">
+        <a href="?view=clerical">Clerical (27)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-new' %}active{% endif %}">
+        <a href="?view=new">New (3)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-commitment' %}active{% endif %}">
+        <a href="?view=commitment">Sent for commitment (3)</a>
+      </li>
+      <li class="side-nav__item {% if activeNav == 'nav-defective' %}active{% endif %}">
+        <a href="?view=defective">Defective (3)</a>
+      </li> 
+    </ul>
+  </nav>
+  {% endblock %}
+
+{% block content %}
+
+  
+  
+  {# Only display the unviewed claims total #}
+  {% set unviewedClaimsTotal = 0 %}
+  {% for item in items %}
+    {% set unviewedClaimsTotal = unviewedClaimsTotal + 1 if not(item.viewed) else unviewedClaimsTotal %}
+  {% endfor %}
+
+  <div class="govuk-!-margin-top-6">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          Preston 100510
+          <span class="govuk-caption-m">There are a total of <strong>100 claims</strong> {{ time | momentFormat3 }}</span>
+        </h1>
+        
+        {# {% set time = now() %} #}
+      </div>
+    </div>
+  </div>
+
+
+  <div class="govuk-!-margin-top-6">
+  {% set rows = [] %}
+  {% set foundItems = 0 %}
+  {% for item in itemsView %}
+    {% if not(item.viewed) %}
+      {% if foundItems < CLAIMS_PER_PAGE %}
+        {% set rows = rows | push([
+          { html: '<a href="/design-ideas/1313-case-load-management/v1/service-centre-manager/get-next-claim-2">' + item.name + '</a>' },
+          { text: item.nino },
+          { text: item.submissionDate },
+          { html: '<a href="/design-ideas/1313-case-load-management/v1/service-centre-manager/all-claims-agent">' +  item.agent + '</a>' },
+          { html: '<span class="tag tag--">' + item.statusNew + '</span>' }
+        ]) %}
+        {% set foundItems = foundItems + 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {{ govukTable({
+    caption: "All claims for Preston service centre 100510",
+    captionClasses: "govuk-visually-hidden",
+    head: [{
+        text: "Claimant"
+      }, {
+        text: "NINO"
+      }, {
+        html: "IDOC <img src='/public/images/arrow-down.svg' alt='down arrow' />"
+      }, {
+        html: "Agent <img src='/public/images/arrow-down.svg' alt='down arrow' />"
+      }, {
+        html: "Claim status <img src='/public/images/arrow-down.svg' alt='down arrow' />"
+      }
+    ],
+    rows: rows
+  }) }}
+
+{% endblock %}
