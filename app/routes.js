@@ -25,6 +25,9 @@ module.exports = (app) => {
   router.use('/design-ideas/1313-case-load-management/v2/processor', require('./views/design-ideas/1313-case-load-management/v2/processor/_routes')(app));
   router.use('/design-ideas/1313-case-load-management/v2/allocator', require('./views/design-ideas/1313-case-load-management/v2/allocator/_routes')(app));
 
+  router.use('/future-team/exceptions/backdating/', require('./views/future-team/exceptions/backdating/_routes')(app));
+  router.use('/future-team/exceptions/current-work/', require('./views/future-team/exceptions/current-work/_routes')(app));
+
 
   // This moves work coach routing to work-coach directory
   router.use('/work-coach/', require('./views/work-coach/_routes')(app));
