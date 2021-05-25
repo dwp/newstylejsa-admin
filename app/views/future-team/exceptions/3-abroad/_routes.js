@@ -4,7 +4,7 @@ module.exports = (app) => {
   const config = require('../../../../config.js');
 
   // routing for service centre agent – claim status
-  router.post('/claim-status', function (req, res) {
+  router.post('3-abroad/claim-status', function (req, res) {
     res.redirect('done');
   });
 
