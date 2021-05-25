@@ -47,7 +47,7 @@
 
 {% set item2Html %}
 <!-- About you -->
-<section class="dwp-claim-section">
+<section class="dwp-claim-section dwp-print-no-break">
   <dl class="app-check-your-answers app-check-your-answers--long">
     {{ checkAnswersItem("National Insurance number", "NH110171C") }}
     {{ checkAnswersItem("Name", "Mr Makenzie Burnett") }}
@@ -155,7 +155,9 @@
       {{ checkAnswersItem("What is the address of your pension or annuity provider?", "<span class='dwp-print-block'>Preston</span> <span class='dwp-print-block'>PR4 2FE</span>") }}
       {{ checkAnswersItem("How often is your pension or annuity paid?", "Monthly") }}
       {{ checkAnswersItem("What is your net pay?", "£169.52") }}
-      {{ checkAnswersItem("Does your pension increase in the next 6 months?", "No") }}
+      {{ checkAnswersItem("Does your pension increase in the next 6 months?", "Yes") }}
+      {{ checkAnswersItem("When will it increase?", "August") }}
+      {{ checkAnswersItem("Do you have another pension or annuity you currently receive?", "No") }}
     </dl>
   </section>
 </section>
@@ -193,7 +195,8 @@
       },
       content: {
         html: item2Html
-      }
+      },
+      expanded: false
     },
       {
       heading: {
