@@ -15,7 +15,7 @@
     "searchBar": false
   }) }}
 
-  {% include "../current-work/key-details.html" %}
+  {% include "key-details.html" %}
 
 {% endblock %}
 
@@ -211,7 +211,7 @@
     },
         {
       heading: {
-        html: "Current employment " + checkTag
+        html: "Current employment "
       },
       content: {
         html: item6Html
@@ -228,12 +228,12 @@
     },
         {
       heading: {
-        text: "Working or claiming benefits overseas"
+        text: "Working or claiming benefits overseas" + checkTag
       },
       content: {
         html: item8Html
       },
-      expanded: false
+      expanded: true
     },
         {
       heading: {
