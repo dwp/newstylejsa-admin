@@ -29,8 +29,8 @@
   <h2 class="govuk-heading-m">NI Contributions</h2>
   <section class="dwp-claim-section dwp-print-no-break">
     <dl class="app-check-your-answers app-check-your-answers--long">
-      {{ checkAnswersItem("First contribution condition", "Satisfied") }}
-      {{ checkAnswersItem("Second contribution condition", "Satisfied") }}
+      {{ checkAnswersItem("First contribution condition", "Yes") }}
+      {{ checkAnswersItem("Second contribution condition", "No") }}
     </dl>
   </section>
 
@@ -275,6 +275,12 @@
 
           {{ dwpTimeline({
             items: [
+              {
+                heading: "Brought forward",
+                label: "label",
+                author: "by Andrew Server",
+                date: "on " + time | momentNowSubtract2
+              },
               {
                 heading: "Main benefit replied",
                 label: "label",
