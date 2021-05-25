@@ -1,0 +1,25 @@
+  {{ dwpKeyDetailsBar({
+    claimantName: "Makenzie Burnett",
+    claimantNINO: "NH110171C",
+    claimStatus: data['claimStatus'] | replace("-", " ") | capitalize,
+    items: [
+        {
+            title: "DOB",
+            value: "25/04/1978"
+        },
+        {
+            title: "Postcode",
+            value: "CW10 0NL"
+        },
+        {
+            title: "Phone",
+            value: "07888 478812"
+        },
+        {
+            title: "Claim submitted",
+            value: "15/05/2021"
+        }
+    ],
+    showToggle: showToggle,
+    classes: "dwp-print-hide"
+  }) }}
