@@ -1,0 +1,304 @@
+{% extends "layout/summary.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}: Application for {{ data['service-short-name']}} Customer Statement | {{ currentClaimantData.claimant.title }} {{ currentClaimantData.claimant.firstName }} {{ currentClaimantData.claimant.lastName }}: {{ currentClaimantData.claimant.nino }}
+{% endblock %}
+
+{% block header %}
+  
+  {# Set serviceName in config.js. #}
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false
+  }) }}
+
+  {% include "../backdating/key-details.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row govuk-!-margin-top-4 dwp-print-hide">
+  <div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-l govuk-visually-hidden">Processing a claim</h1>
+
+  <h2 class="govuk-heading-m">NI Contributions</h2>
+  <section class="dwp-claim-section dwp-print-no-break">
+    <dl class="app-check-your-answers app-check-your-answers--long">
+      {{ checkAnswersItem("First contribution condition", "Satisfied") }}
+      {{ checkAnswersItem("Second contribution condition", "Satisfied") }}
+    </dl>
+  </section>
+
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Customer statement</h2>
+
+
+{% set item1Html %}
+<!-- Claim start -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Claim start date", "18/06/2020") }}
+    {{ checkAnswersItem("Were you available for work from 18/06/2020?", "Yes") }}
+    {{ checkAnswersItem("Were you searching for work from 18/06/2020?", "Yes") }}
+    {{ checkAnswersItem("Why did you not apply before today?", "I didn't realise I could claim straight after losing job") }}
+    {{ checkAnswersItem("Have you been in paid work since 18/06/2020?", "No") }}
+    {{ checkAnswersItem("Have you been unable to work because of illness since 18/06/2020?", "No") }}
+    {{ checkAnswersItem("Have you travelled outside of England, Wales or Scotland since 18/06/2020?", "10/08/2020 to 17/08/2020") }}
+    {{ checkAnswersItem("Have you been in full-time education since 18/06/2020?", "No") }}
+    {{ checkAnswersItem("Have you asked for advice about applying for NSJSA since 18/06/2020?", "No") }}
+  </dl>
+</section>
+{% endset %}
+
+{% set item2Html %}
+<!-- About you -->
+<section class="dwp-claim-section">
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("National Insurance number", "CX400126A") }}
+    {{ checkAnswersItem("Name", "Mr Simon Hamilton") }}
+    {{ checkAnswersItem("Date of birth", "05/06/1969") }}
+    {{ checkAnswersItem("Home address", "<span class='dwp-print-block'>31 All Saints Road</span> <span class='dwp-print-block'>Lytham St. Annes</span> <span class='dwp-print-block'>Lancashire</span> <span class='dwp-print-block'>FY8 1PL.</span>") }}
+    {{ checkAnswersItem("Do you want to add a different address for your post?", "No") }}
+    {{ checkAnswersItem("Telephone number", "01253 768542") }}
+    {{ checkAnswersItem("Email address", "r.green@example.com") }}
+  </dl>
+</section>
+{% endset %}
+
+{% set item3Html %}
+<!-- Payment information -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Name of account holder", "Mr SJ Hamilton") }}
+    {{ checkAnswersItem("Sort code", "30 46 70") }}
+    {{ checkAnswersItem("Account number", "33757000") }}
+  </dl>
+</section>
+{% endset %}
+
+{% set item4Html %}
+<!-- Other benefits -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Have you applied for any other benefits in the last 12 weeks?", "No") }}
+  </dl>
+</section>
+{% endset %}
+
+{% set item5Html %}
+<!-- Jury service -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Have you been on jury service in the last 12 weeks?", "No") }}
+  </dl>
+</section>
+{% endset %}
+
+{% set item6Html %}
+<!-- Current employment -->  
+<section class="dwp-claim-section">
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Are you in any form of work at the moment?", "No") }}
+  </dl>
+</section>
+{% endset %}
+
+{% set item7Html %}
+<!-- Previous employment -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Have you had a job that ended in the last 6 months?", "Yes") }}
+  </dl>
+  <section class="govuk-!-margin-top-6">
+    <h3 class="govuk-heading-s">First previous employer</h3>
+    <dl class="app-check-your-answers app-check-your-answers--long">
+      {{ checkAnswersItem("When did you work for this employer?", "03/07/2016 - 17/06/2020") }}
+      {{ checkAnswersItem("Why did this job end?", "Sacked") }}
+      {{ checkAnswersItem("What is the name of your previous employer?", "Counrtney Haulage Ltd.") }}
+      {{ checkAnswersItem("What is the address of your previous employer?", "<span class='dwp-print-block'>Unit 18 Quarry Lane</span> <span class='dwp-print-block'>Blackpool,</span> <span class='dwp-print-block'>Lancashire</span> FY8 7BW") }}
+      {{ checkAnswersItem("Do you expect to receive any more payments from this job?", "No") }}
+      {{ checkAnswersItem("Were you self employed or a company director?", "No") }}
+    </dl>
+  </section>
+</section>
+{% endset %}
+
+
+{% set item8Html %}
+
+<!-- Working overseas -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Have you worked or claimed benefit outside the United Kingdom in the last 4 years?", "No") }}
+  </dl>
+</section>
+{% endset %}
+
+{% set item9Html %}
+<!-- Current pensions -->
+<section class="dwp-claim-section">
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Are you getting money from a pension or annuity?", "No") }}
+  </dl>
+</section>
+{% endset %}
+
+{% set item10Html %}
+<!-- Education -->
+<section class="dwp-claim-section">
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Have you been in education or training in the last 4 years?", "No") }}
+  </dl>
+</section>
+{% endset %}
+
+{% set checkTag %}
+  {{ govukTag({
+    text: "check"
+  }) }}
+{% endset %}
+
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        html: "Application start date " + checkTag
+      },
+      content: {
+        html: item1Html
+      },
+      expanded: true
+    },
+    {
+      heading: {
+        text: "Personal details"
+      },
+      content: {
+        html: item2Html
+      }
+    },
+      {
+      heading: {
+        text: "Bank details"
+      },
+      content: {
+        html: item3Html
+      }
+    },
+      {
+      heading: {
+        text: "Other benefits"
+      },
+      content: {
+        html: item4Html
+      }
+    },
+    {
+      heading: {
+        text: "Jury service"
+      },
+      content: {
+        html: item5Html
+      }
+    },
+        {
+      heading: {
+        text: "Current employment"
+      },
+      content: {
+        html: item6Html
+      }
+    },
+        {
+      heading: {
+        text: "Previous employment"
+      },
+      content: {
+        html: item7Html
+      }
+    },
+        {
+      heading: {
+        text: "Working or claiming benefits overseas"
+      },
+      content: {
+        html: item8Html
+      }
+    },
+        {
+      heading: {
+        text: "Current pensions"
+      },
+      content: {
+        html: item9Html
+      }
+    },
+        {
+      heading: {
+        text: "Education or training"
+      },
+      content: {
+        html: item10Html
+      }
+    }
+  ]
+}) }}
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    
+    <aside class="app-related-items govuk-!-margin-top-0" role="complementary">
+
+            <h3 class="govuk-heading-m">Claim actions</h3>
+            {{ govukButton({
+              text: "Update claim status",
+              href: "backdating/claim-status"
+            }) }}
+            
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+            <h3 class="govuk-heading-m">Claim history</h3>
+
+            {# {% more-detail %} #}
+
+          {{ dwpTimeline({
+            items: [
+              {
+                heading: "Main benefit replied",
+                label: "label",
+                date: "on " + time | momentNowSubtract2
+              },
+              {
+                heading: "Pushed to JSAPS",
+                label: "label",
+                author: "by Andrew Server",
+                date: "on " + time | momentNowSubtract4
+              },
+              {
+                  heading: "ID Verified",
+                  date: "on " + time | momentNowSubtract4,
+                  author: "by Andrew Server"
+              },
+              {
+                heading: "Application submitted",
+                date: "by claimant on " + time | momentNowSubtract5,
+                classes: "dwp-timeline-entry--closing"
+              }
+            ]
+          }) }}
+
+          </aside>
+
+  </div>
+
+</div>
+
+
+{% endblock %}

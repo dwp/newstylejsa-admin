@@ -1,0 +1,33 @@
+{% extends "layout/base-no-search-bar.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-top-9">
+      <span class="govuk-caption-l">Automation alpha</span>
+      Handling exceptions
+    </h1>
+
+    <ol class="govuk-list govuk-list--number">
+      <li><a href="../future-team/ur2/1-prior-employment?claimStatus=MBR received">Previous employment overlap with IDOC</a></li>
+
+      <li><a href="../future-team/ur2/backdating?claimStatus=main benefit replied">Check Backdating A</a></li>
+      <li><a href="../future-team/ur2/current-work?claimStatus=main benefit replied">Check current work</a></li>
+      <li><a href="../future-team/ur2/3-abroad?claimStatus=main benefit replied">Working or claiming benefit abroad</a></li>
+      <li><a href="../future-team/ur2/4-backdating-b?claimStatus=main benefit replied">Check Backdating B</a></li>
+      <li><a href="../future-team/ur2/5-nic+pension?claimStatus=main benefit replied">Check NIC + pension</a></li>
+      <li><a href="../future-team/ur2/6-esa?claimStatus=push failed">Push failed - ESA claim</a></li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}
