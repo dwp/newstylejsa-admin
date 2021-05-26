@@ -177,75 +177,84 @@
     },
     {
       heading: {
-        text: "Personal details"
+        html: "Personal details " + checkTag
       },
       content: {
         html: item2Html
-      }
+      },
+      expanded: true
     },
       {
       heading: {
-        text: "Bank details"
+        html: "Bank details " + checkTag
       },
       content: {
         html: item3Html
-      }
+      },
+      expanded: true
     },
       {
       heading: {
-        text: "Other benefits"
+        html: "Other benefits " + checkTag
       },
       content: {
         html: item4Html
-      }
+      },
+      expanded: true
     },
     {
       heading: {
-        text: "Jury service"
+        html: "Jury service " + checkTag
       },
       content: {
         html: item5Html
-      }
+      },
+      expanded: true
     },
         {
       heading: {
-        text: "Current employment "
+        html: "Current employment " + checkTag
       },
       content: {
         html: item6Html
-      }
+      },
+      expanded: true
     },
         {
       heading: {
-        text: "Previous employment"
+        html: "Previous employment " + checkTag
       },
       content: {
         html: item7Html
-      }
+      },
+      expanded: true
     },
         {
       heading: {
-        text: "Working or claiming benefits overseas" 
+        html: "Working or claiming benefits overseas "  + checkTag
       },
       content: {
         html: item8Html
-      }
+      },
+      expanded: true
     },
         {
       heading: {
-        text: "Current pensions"
+        html: "Current pensions " + checkTag
       },
       content: {
         html: item9Html
-      }
+      },
+      expanded: true
     },
         {
       heading: {
-        text: "Education or training"
+        html: "Education or training " + checkTag
       },
       content: {
         html: item10Html
-      }
+      },
+      expanded: true
     }
   ]
 }) }}
@@ -272,20 +281,8 @@
           {{ dwpTimeline({
             items: [
               {
-                heading: "Brought forward",
+                heading: "Push to JSAPS failed",
                 label: "label",
-                author: "by Andrew Server",
-                date: "on " + time | momentNowSubtract2
-              },
-              {
-                heading: "Main benefit replied",
-                label: "label",
-                date: "on " + time | momentNowSubtract2
-              },
-              {
-                heading: "Pushed to JSAPS",
-                label: "label",
-                author: "by Andrew Server",
                 date: "on " + time | momentNowSubtract5
               },
               {
