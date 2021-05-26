@@ -15,7 +15,7 @@
     "searchBar": false
   }) }}
 
-  {% include "../backdating/key-details.html" %}
+  {% include "../5-backdating/key-details.html" %}
 
 {% endblock %}
 
@@ -29,27 +29,26 @@
   <h2 class="govuk-heading-m">NI Contributions</h2>
   <section class="dwp-claim-section dwp-print-no-break">
     <dl class="app-check-your-answers app-check-your-answers--long">
-      {{ checkAnswersItem("First contribution condition", "Satisfied") }}
-      {{ checkAnswersItem("Second contribution condition", "Satisfied") }}
+      {{ checkAnswersItem("Waiting for the MBR", "") }}
     </dl>
   </section>
 
   <h2 class="govuk-heading-m govuk-!-margin-top-8">Customer statement</h2>
 
-
 {% set item1Html %}
+<!-- Claim start -->
 <!-- Claim start -->
 <section class="dwp-claim-section dwp-print-no-break">
   <dl class="app-check-your-answers app-check-your-answers--long">
-    {{ checkAnswersItem("Claim start date", "18/06/2020") }}
-    {{ checkAnswersItem("Were you available for work from 18/06/2020?", "Yes") }}
-    {{ checkAnswersItem("Were you searching for work from 18/06/2020?", "Yes") }}
-    {{ checkAnswersItem("Why did you not apply before today?", "I didn't realise I could claim straight after losing job") }}
-    {{ checkAnswersItem("Have you been in paid work since 18/06/2020?", "No") }}
-    {{ checkAnswersItem("Have you been unable to work because of illness since 18/06/2020?", "No") }}
-    {{ checkAnswersItem("Have you travelled outside of England, Wales or Scotland since 18/06/2020?", "10/08/2020 to 17/08/2020") }}
-    {{ checkAnswersItem("Have you been in full-time education since 18/06/2020?", "No") }}
-    {{ checkAnswersItem("Have you asked for advice about applying for NSJSA since 18/06/2020?", "No") }}
+    {{ checkAnswersItem("Claim start date", "15/04/2021") }}
+    {{ checkAnswersItem("Were you available for work from 15/04/2021?", "Yes") }}
+    {{ checkAnswersItem("Were you searching for work from 15/04/2021?", "Yes") }}
+    {{ checkAnswersItem("Why did you not apply before today?", "Furlough scheme") }}
+    {{ checkAnswersItem("Have you been in paid work since 18/06/2020?", "Yes") }}
+    {{ checkAnswersItem("Have you been unable to work because of illness since 15/04/2021?", "Yes, 16/04/2021 to 20/04/2021") }}
+    {{ checkAnswersItem("Have you travelled outside of England, Wales or Scotland since 15/04/2021?", "Yes, 16/04/2021 to 20/04/2021") }}
+    {{ checkAnswersItem("Have you been in full-time education since 15/04/2021?", "Yes") }}
+    {{ checkAnswersItem("Have you asked for advice about applying for NSJSA since 15/04/2021?", "Yes, Steve Smith on 15 April") }}
   </dl>
 </section>
 {% endset %}
@@ -58,13 +57,13 @@
 <!-- About you -->
 <section class="dwp-claim-section">
   <dl class="app-check-your-answers app-check-your-answers--long">
-    {{ checkAnswersItem("National Insurance number", "CX400126A") }}
-    {{ checkAnswersItem("Name", "Mr Simon Hamilton") }}
-    {{ checkAnswersItem("Date of birth", "05/06/1969") }}
-    {{ checkAnswersItem("Home address", "<span class='dwp-print-block'>31 All Saints Road</span> <span class='dwp-print-block'>Lytham St. Annes</span> <span class='dwp-print-block'>Lancashire</span> <span class='dwp-print-block'>FY8 1PL.</span>") }}
+    {{ checkAnswersItem("National Insurance number", "NH110171C") }}
+    {{ checkAnswersItem("Name", "Mr Makenzie Burnett") }}
+    {{ checkAnswersItem("Date of birth", "25/03/1978") }}
+    {{ checkAnswersItem("Home address", "<span class='dwp-print-block'>12 Scaresdale Avenue</span> <span class='dwp-print-block'>Blackpool</span> <span class='dwp-print-block'>Lancashire</span> <span class='dwp-print-block'>FY4 3HA.</span>") }}
     {{ checkAnswersItem("Do you want to add a different address for your post?", "No") }}
-    {{ checkAnswersItem("Telephone number", "01253 768542") }}
-    {{ checkAnswersItem("Email address", "r.green@example.com") }}
+    {{ checkAnswersItem("Telephone number", "07888 478812") }}
+    {{ checkAnswersItem("Email address", "m.burnett@example.com") }}
   </dl>
 </section>
 {% endset %}
@@ -73,9 +72,9 @@
 <!-- Payment information -->
 <section class="dwp-claim-section dwp-print-no-break">
   <dl class="app-check-your-answers app-check-your-answers--long">
-    {{ checkAnswersItem("Name of account holder", "Mr SJ Hamilton") }}
-    {{ checkAnswersItem("Sort code", "30 46 70") }}
-    {{ checkAnswersItem("Account number", "33757000") }}
+    {{ checkAnswersItem("Name of account holder", "Mr Makenzie Burnett") }}
+    {{ checkAnswersItem("Sort code", "16 20 16") }}
+    {{ checkAnswersItem("Account number", "11709856") }}
   </dl>
 </section>
 {% endset %}
@@ -104,6 +103,7 @@
   <dl class="app-check-your-answers app-check-your-answers--long">
     {{ checkAnswersItem("Are you in any form of work at the moment?", "No") }}
   </dl>
+ 
 </section>
 {% endset %}
 
@@ -116,10 +116,11 @@
   <section class="govuk-!-margin-top-6">
     <h3 class="govuk-heading-s">First previous employer</h3>
     <dl class="app-check-your-answers app-check-your-answers--long">
-      {{ checkAnswersItem("When did you work for this employer?", "03/07/2016 - 17/06/2020") }}
-      {{ checkAnswersItem("Why did this job end?", "Sacked") }}
-      {{ checkAnswersItem("What is the name of your previous employer?", "Counrtney Haulage Ltd.") }}
-      {{ checkAnswersItem("What is the address of your previous employer?", "<span class='dwp-print-block'>Unit 18 Quarry Lane</span> <span class='dwp-print-block'>Blackpool,</span> <span class='dwp-print-block'>Lancashire</span> FY8 7BW") }}
+      {{ checkAnswersItem("When did you work for this employer?", "01/07/2006 - 01/07/2020") }}
+      {{ checkAnswersItem("Why did this job end?", "Lack of work") }}
+      {{ checkAnswersItem("What is the name of your previous employer?", "Dobson's Plasterers") }}
+      {{ checkAnswersItem("What is the address of your previous employer?", "<span class='dwp-print-block'>24 Hartson Road</span> <span class='dwp-print-block'>Blackpool,</span> <span class='dwp-print-block'>Lancashire</span> FY6 3RF.") }}
+      {{ checkAnswersItem("What is the phone number of your previous employer (optional)?", "01253 785439") }}
       {{ checkAnswersItem("Do you expect to receive any more payments from this job?", "No") }}
       {{ checkAnswersItem("Were you self employed or a company director?", "No") }}
     </dl>
@@ -129,12 +130,12 @@
 
 
 {% set item8Html %}
-
 <!-- Working overseas -->
 <section class="dwp-claim-section dwp-print-no-break">
   <dl class="app-check-your-answers app-check-your-answers--long">
     {{ checkAnswersItem("Have you worked or claimed benefit outside the United Kingdom in the last 4 years?", "No") }}
   </dl>
+
 </section>
 {% endset %}
 
@@ -208,7 +209,7 @@
     },
         {
       heading: {
-        text: "Current employment"
+        text: "Current employment "
       },
       content: {
         html: item6Html
@@ -224,7 +225,7 @@
     },
         {
       heading: {
-        text: "Working or claiming benefits overseas"
+        text: "Working or claiming benefits overseas" 
       },
       content: {
         html: item8Html
@@ -258,7 +259,7 @@
             <h3 class="govuk-heading-m">Claim actions</h3>
             {{ govukButton({
               text: "Update claim status",
-              href: "backdating/claim-status"
+              href: "5-backdating/claim-status"
             }) }}
             
 
@@ -271,6 +272,12 @@
           {{ dwpTimeline({
             items: [
               {
+                heading: "Brought forward",
+                label: "label",
+                author: "by Andrew Server",
+                date: "on " + time | momentNowSubtract2
+              },
+              {
                 heading: "Main benefit replied",
                 label: "label",
                 date: "on " + time | momentNowSubtract2
@@ -279,12 +286,12 @@
                 heading: "Pushed to JSAPS",
                 label: "label",
                 author: "by Andrew Server",
-                date: "on " + time | momentNowSubtract4
+                date: "on " + time | momentNowSubtract5
               },
               {
                   heading: "ID Verified",
-                  date: "on " + time | momentNowSubtract4,
-                  author: "by Andrew Server"
+                  date: "on " + time | momentNowSubtract5,
+                  author: "by DWP Trust Hub"
               },
               {
                 heading: "Application submitted",
