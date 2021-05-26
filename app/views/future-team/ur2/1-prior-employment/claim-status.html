@@ -30,9 +30,8 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-!-margin-top-6">
           
-      <h1 class="govuk-heading-l">
+      <h1 class="govuk-heading-l govuk-!-margin-top-6">
         Update claim status
       </h1>
 
@@ -69,7 +68,9 @@
 
         </div>
 
-<a href="done.html" class="govuk-button">Continue</a> 
+        {{ govukButton({
+            text: "Confirm"
+        }) }}
 
       </form>
     </div>
