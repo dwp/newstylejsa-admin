@@ -165,11 +165,11 @@
 {% endset %}
 
 {{ govukAccordion({
-  id: "accordion-default",
+  id: "accordion-5",
   items: [
     {
       heading: {
-        html: "Application start date " + checkTag
+        text: "Application start date"
       },
       content: {
         html: item1Html
@@ -178,7 +178,7 @@
     },
     {
       heading: {
-        html: "Personal details " + checkTag
+        text: "Personal details"
       },
       content: {
         html: item2Html
@@ -187,7 +187,7 @@
     },
       {
       heading: {
-        html: "Bank details " + checkTag
+        text: "Bank details"
       },
       content: {
         html: item3Html
@@ -196,7 +196,7 @@
     },
       {
       heading: {
-        html: "Other benefits " + checkTag
+        text: "Other benefits"
       },
       content: {
         html: item4Html
@@ -205,7 +205,7 @@
     },
     {
       heading: {
-        html: "Jury service " + checkTag
+        text: "Jury service"
       },
       content: {
         html: item5Html
@@ -214,7 +214,7 @@
     },
         {
       heading: {
-        html: "Current employment " + checkTag
+        text: "Current employment"
       },
       content: {
         html: item6Html
@@ -223,7 +223,7 @@
     },
         {
       heading: {
-        html: "Previous employment " + checkTag
+        text: "Previous employment"
       },
       content: {
         html: item7Html
@@ -232,7 +232,7 @@
     },
         {
       heading: {
-        html: "Working or claiming benefits overseas "  + checkTag
+        text: "Working or claiming benefits overseas"
       },
       content: {
         html: item8Html
@@ -241,7 +241,7 @@
     },
         {
       heading: {
-        html: "Current pensions " + checkTag
+        text: "Current pensions"
       },
       content: {
         html: item9Html
@@ -250,7 +250,7 @@
     },
         {
       heading: {
-        html: "Education or training " + checkTag
+        text: "Education or training"
       },
       content: {
         html: item10Html
@@ -284,7 +284,8 @@
               {
                 heading: "Push to JSAPS failed",
                 label: "label",
-                date: "on " + time | momentNowSubtract5
+                date: "on " + time | momentNowSubtract5,
+                body: "Back dated claim"
               },
               {
                   heading: "ID Verified",

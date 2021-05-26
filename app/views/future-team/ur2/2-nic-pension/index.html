@@ -157,7 +157,7 @@
 {% endset %}
 
 {{ govukAccordion({
-  id: "accordion-default",
+  id: "accordion-2",
   items: [
     {
       heading: {
@@ -173,8 +173,7 @@
       },
       content: {
         html: item2Html
-      },
-      expanded: false
+      }
     },
       {
       heading: {
@@ -206,8 +205,7 @@
       },
       content: {
         html: item6Html
-      },
-      expanded: false
+      }
     },
         {
       heading: {
@@ -273,7 +271,7 @@
                 date: "on " + time | momentNowSubtract2
               },
               {
-                heading: "Pushed to JSAPS",
+                heading: "JSAPS push successful",
                 label: "label",
                 date: "on " + time | momentNowSubtract5
               },

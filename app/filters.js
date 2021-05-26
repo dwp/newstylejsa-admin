@@ -218,6 +218,18 @@ module.exports = function (env) {
     return moment(myDate).subtract(30, 'days').format(format);
   }
 
+  filters.momentNowAdd5 = function (date) {
+    const format = 'D' + ' ' + 'MMMM' + ' ' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).add(5, 'days').format(format);
+  }
+
+  filters.momentNowShortAdd5 = function (date) {
+    const format = 'DD' + '/' + 'MM' + '/' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).add(5, 'days').format(format);
+  }
+
 // Array methods
 
   filters.randomise = (array, limit) => {

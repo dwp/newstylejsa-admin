@@ -41,7 +41,7 @@
 <section class="dwp-claim-section dwp-print-no-break">
   <dl class="app-check-your-answers app-check-your-answers--long">
     {{ checkAnswersItem("Do you want your application to start today?", "Yes") }}
-    {{ checkAnswersItem("Claim start date", time | momentNowSubtract5) }}
+    {{ checkAnswersItem("Claim start date", time | momentNowShortSubtract5) }}
   </dl>
 </section>
 {% endset %}
@@ -94,21 +94,8 @@
 <!-- Current employment -->  
 <section class="dwp-claim-section">
   <dl class="app-check-your-answers app-check-your-answers--long">
-    {{ checkAnswersItem("Are you in any form of work at the moment?", "Yes") }}
+    {{ checkAnswersItem("Are you in any form of work at the moment?", "No") }}
   </dl>
-  <section class="govuk-!-margin-top-6">
-    <h3 class="govuk-heading-s">Current employer - First</h3>
-    <dl class="app-check-your-answers app-check-your-answers--long">
-      {{ checkAnswersItem("Is this paid work or voluntary work?", "Paid") }}
-      {{ checkAnswersItem("How often are you paid?", "Monthly") }}
-      {{ checkAnswersItem("What is your net pay?", "£300") }}
-      {{ checkAnswersItem("What is the name of your current employer?", "Lancashire Fire Brigade") }}
-      {{ checkAnswersItem("What is the address of your current employer?", "<span class='dwp-print-block'>St Andres Road North</span> <span class='dwp-print-block'>St Annes,</span> <span class='dwp-print-block'>FY4 3RE</span>") }}
-      {{ checkAnswersItem("What is the phone number of your current employer (optional)?", "01253 777560") }}
-      {{ checkAnswersItem("How many hours a week do you normally work on this job?", "5") }}
-      {{ checkAnswersItem("Are you self employed or a company director in this job?", "No") }}
-    </dl>
-  </section>
 </section>
 {% endset %}
 
@@ -121,7 +108,7 @@
   <section class="govuk-!-margin-top-6">
     <h3 class="govuk-heading-s">First previous employer</h3>
     <dl class="app-check-your-answers app-check-your-answers--long">
-      {{ checkAnswersItem("When did you work for this employer?", "01/07/2006 - 25/05/2021") }}
+      {{ checkAnswersItem("When did you work for this employer?", "01/07/2006 - " + time | momentNowShortAdd5) }}
       {{ checkAnswersItem("Why did this job end?", "Lack of work") }}
       {{ checkAnswersItem("What is the name of your previous employer?", "Dobson's Plasterers") }}
       {{ checkAnswersItem("What is the address of your previous employer?", "<span class='dwp-print-block'>24 Hartson Road</span> <span class='dwp-print-block'>Blackpool,</span> <span class='dwp-print-block'>Lancashire</span> FY6 3RF.") }}
@@ -168,7 +155,7 @@
 {% endset %}
 
 {{ govukAccordion({
-  id: "accordion-default",
+  id: "accordion-1",
   items: [
     {
       heading: {
