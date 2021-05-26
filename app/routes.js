@@ -29,7 +29,7 @@ module.exports = (app) => {
   router.use('/future-team/exceptions/current-work/', require('./views/future-team/exceptions/current-work/_routes')(app));
   router.use('/future-team/exceptions/3-abroad/', require('./views/future-team/exceptions/3-abroad/_routes')(app));
   router.use('/future-team/exceptions/4-backdating-b/', require('./views/future-team/exceptions/4-backdating-b/_routes')(app));
-  router.use('/future-team/exceptions/5-nic+pension/', require('./views/future-team/exceptions/5-nic+pension/_routes')(app));
+  router.use('/future-team/exceptions/5-nic-pension/', require('./views/future-team/exceptions/5-nic-pension/_routes')(app));
   router.use('/future-team/exceptions/6-esa/', require('./views/future-team/exceptions/6-esa/_routes')(app));
 
   router.use('/future-team/ur2/1-prior-employment/', require('./views/future-team/ur2/1-prior-employment/_routes')(app));
