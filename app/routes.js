@@ -27,7 +27,17 @@ module.exports = (app) => {
 
   router.use('/future-team/exceptions/backdating/', require('./views/future-team/exceptions/backdating/_routes')(app));
   router.use('/future-team/exceptions/current-work/', require('./views/future-team/exceptions/current-work/_routes')(app));
+  router.use('/future-team/exceptions/3-abroad/', require('./views/future-team/exceptions/3-abroad/_routes')(app));
+  router.use('/future-team/exceptions/4-backdating-b/', require('./views/future-team/exceptions/4-backdating-b/_routes')(app));
+  router.use('/future-team/exceptions/5-nic+pension/', require('./views/future-team/exceptions/5-nic+pension/_routes')(app));
+  router.use('/future-team/exceptions/6-esa/', require('./views/future-team/exceptions/6-esa/_routes')(app));
 
+  router.use('/future-team/ur2/1-prior-employment/', require('./views/future-team/ur2/1-prior-employment/_routes')(app));
+  router.use('/future-team/ur2/2-nic-pension/', require('./views/future-team/ur2/2-nic-pension/_routes')(app));
+  router.use('/future-team/ur2/3-abroad/', require('./views/future-team/ur2/3-abroad/_routes')(app));
+  router.use('/future-team/ur2/4-current-work/', require('./views/future-team/ur2/4-current-work/_routes')(app));
+  router.use('/future-team/ur2/5-backdating/', require('./views/future-team/ur2/5-backdating/_routes')(app));
+  router.use('/future-team/ur2/6-esa/', require('./views/future-team/ur2/6-esa/_routes')(app));
 
   // This moves work coach routing to work-coach directory
   router.use('/work-coach/', require('./views/work-coach/_routes')(app));
