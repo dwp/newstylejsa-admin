@@ -40,8 +40,15 @@
 <!-- Claim start -->
 <section class="dwp-claim-section dwp-print-no-break">
   <dl class="app-check-your-answers app-check-your-answers--long">
-    {{ checkAnswersItem("Do you want your application to start today?", "Yes") }}
-    {{ checkAnswersItem("Claim start date", time | momentNowSubtract5) }}
+    {{ checkAnswersItem("Claim start date", "15/04/2021") }}
+    {{ checkAnswersItem("Were you available for work from 15/04/2021?", "Yes") }}
+    {{ checkAnswersItem("Were you searching for work from 15/04/2021?", "Yes") }}
+    {{ checkAnswersItem("Why did you not apply before today?", "Furlough scheme") }}
+    {{ checkAnswersItem("Have you been in paid work since 18/06/2020?", "Yes") }}
+    {{ checkAnswersItem("Have you been unable to work because of illness since 15/04/2021?", "Yes, 16/04/2021 to 20/04/2021") }}
+    {{ checkAnswersItem("Have you travelled outside of England, Wales or Scotland since 15/04/2021?", "Yes, 16/04/2021 to 20/04/2021") }}
+    {{ checkAnswersItem("Have you been in full-time education since 15/04/2021?", "Yes") }}
+    {{ checkAnswersItem("Have you asked for advice about applying for NSJSA since 15/04/2021?", "Yes, Steve Smith on 15 April") }}
   </dl>
 </section>
 {% endset %}
@@ -146,7 +153,7 @@
 {% endset %}
 
 {{ govukAccordion({
-  id: "accordion-6",
+  id: "accordion-default",
   items: [
     {
       heading: {
