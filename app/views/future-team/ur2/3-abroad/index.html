@@ -40,8 +40,7 @@
 <!-- Claim start -->
 <section class="dwp-claim-section dwp-print-no-break">
   <dl class="app-check-your-answers app-check-your-answers--long">
-    {{ checkAnswersItem("Do you want your application to start today?", "Yes") }}
-    {{ checkAnswersItem("Claim start date", time | momentNowSubtract5) }}
+    {{ checkAnswersItem("Claim start date", "25/05/2021") }}
   </dl>
 </section>
 {% endset %}
@@ -156,7 +155,7 @@
 {% endset %}
 
 {{ govukAccordion({
-  id: "accordion-3",
+  id: "accordion-default",
   items: [
     {
       heading: {
@@ -271,12 +270,12 @@
                 date: "on " + time | momentNowSubtract2
               },
               {
-                heading: "MBR received",
+                heading: "Main benefit replied",
                 label: "label",
                 date: "on " + time | momentNowSubtract4
               },
               {
-                heading: "JSAPS push successful",
+                heading: "Pushed to JSAPS",
                 label: "label",
                 date: "on " + time | momentNowSubtract5
               },
