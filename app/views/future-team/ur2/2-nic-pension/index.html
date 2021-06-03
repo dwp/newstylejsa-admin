@@ -40,7 +40,7 @@
 <!-- Claim start -->
 <section class="dwp-claim-section dwp-print-no-break">
   <dl class="app-check-your-answers app-check-your-answers--long">
-    {{ checkAnswersItem("Claim start date", "25/05/2021") }}
+    {{ checkAnswersItem("Claim start date", time | momentNowShortSubtract5) }}
   </dl>
 </section>
 {% endset %}
@@ -156,7 +156,7 @@
 {% endset %}
 
 {{ govukAccordion({
-  id: "accordion-default",
+  id: "accordion-2",
   items: [
     {
       heading: {

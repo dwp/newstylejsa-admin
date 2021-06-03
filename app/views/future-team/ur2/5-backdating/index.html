@@ -40,15 +40,15 @@
 <!-- Claim start -->
 <section class="dwp-claim-section dwp-print-no-break">
   <dl class="app-check-your-answers app-check-your-answers--long">
-    {{ checkAnswersItem("Claim start date", "15/04/2021") }}
-    {{ checkAnswersItem("Were you available for work from 15/04/2021?", "Yes") }}
-    {{ checkAnswersItem("Were you searching for work from 15/04/2021?", "Yes") }}
+    {{ checkAnswersItem("Claim start date", time | momentNowShortSubtract30) }}
+    {{ checkAnswersItem("Were you available for work from " + time | momentNowShortSubtract30+ "?", "Yes") }}
+    {{ checkAnswersItem("Were you searching for work from " + time | momentNowShortSubtract30 + "?", "Yes") }}
     {{ checkAnswersItem("Why did you not apply before today?", "Furlough scheme") }}
     {{ checkAnswersItem("Have you been in paid work since 18/06/2020?", "Yes") }}
-    {{ checkAnswersItem("Have you been unable to work because of illness since 15/04/2021?", "Yes, 16/04/2021 to 20/04/2021") }}
-    {{ checkAnswersItem("Have you travelled outside of England, Wales or Scotland since 15/04/2021?", "Yes, 16/04/2021 to 20/04/2021") }}
-    {{ checkAnswersItem("Have you been in full-time education since 15/04/2021?", "Yes") }}
-    {{ checkAnswersItem("Have you asked for advice about applying for NSJSA since 15/04/2021?", "Yes, Steve Smith on 15 April") }}
+    {{ checkAnswersItem("Have you been unable to work because of illness since " + time | momentNowShortSubtract30 + "?", "Yes, " + time | momentNowShortSubtract30 + " to " + time | momentNowShortSubtract10) }}
+    {{ checkAnswersItem("Have you travelled outside of England, Wales or Scotland since " + time | momentNowShortSubtract30 + "?", "Yes, " + time | momentNowShortSubtract30 + " to " + time | momentNowShortSubtract10) }}
+    {{ checkAnswersItem("Have you been in full-time education since " + time | momentNowShortSubtract30 + "?", "Yes") }}
+    {{ checkAnswersItem("Have you asked for advice about applying for NSJSA since " + time | momentNowShortSubtract30 + "?", "Yes, Steve Smith on " + time | momentNowSubtract10) }}
   </dl>
 </section>
 {% endset %}
@@ -164,7 +164,7 @@
 {% endset %}
 
 {{ govukAccordion({
-  id: "accordion-default",
+  id: "accordion-5",
   items: [
     {
       heading: {
