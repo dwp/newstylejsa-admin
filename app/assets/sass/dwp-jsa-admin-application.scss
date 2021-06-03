@@ -138,3 +138,10 @@ $large: 1220px;
         text-align: right;
     }
 }
+
+.govuk-accordion__section-heading {
+    .govuk-tag {
+        float: left;
+        margin-right: 20px;
+    }
+}

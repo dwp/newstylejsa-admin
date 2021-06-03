@@ -1,0 +1,79 @@
+{% extends "layout/summary.html" %}
+
+{% block pageTitle %}
+  Select a status
+{% endblock %}
+
+{% block header %}
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false
+  }) }}
+  {% include "../v1/key-details.html" %}
+{% endblock %}
+
+{% block content %}
+
+{% set bfHtml %}
+{{ govukTextarea({
+  name: "more-detail",
+  id: "more-detail",
+  label: {
+    text: "Can you provide more detail?",
+    isPageHeading: false
+  }
+}) }}
+{% endset -%}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          
+      <h1 class="govuk-heading-l govuk-!-margin-top-6">
+        Update claim status
+      </h1>
+
+      <form action="claim-status" method="post">
+
+        <div class="govuk-form-group">
+
+            <fieldset class="govuk-fieldset" aria-describedby="claim-status-hint">
+
+                {{ govukRadios({
+                    idPrefix: 'status',
+                    name: 'claimStatus',
+                    items: [
+
+                        {
+                            value: "brought-forward",
+                            text: "Brought forward",
+                            conditional: {
+                              html: bfHtml
+                            }
+                        },
+                        {
+                            value: "id-verified",
+                            text: "Identity verified"
+                        },
+                        {
+                            value: "claim-closed",
+                            text: "Claim closed"
+                        }                     
+                    ]
+                })
+                }}
+            </fieldset>
+
+        </div>
+
+        {{ govukButton({
+            text: "Confirm"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
