@@ -139,9 +139,11 @@ $large: 1220px;
     }
 }
 
-// .govuk-accordion__section-heading {
-//     .govuk-tag {
-//         float: left;
-//         margin-right: 20px;
-//     }
-// }
+.dwp-claim-section {
+    &--check {
+        .govuk-tag {
+            float: left;
+            margin-right: 10px;
+        }
+    }
+}

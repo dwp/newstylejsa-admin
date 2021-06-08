@@ -1,0 +1,83 @@
+{% extends "layout/summary.html" %}
+
+{% block pageTitle %}
+  Select a workflow
+{% endblock %}
+
+{% block header %}
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          
+      <h1 class="govuk-heading-l govuk-!-margin-top-9">
+        <span class="govuk-caption-l">Claims for manual intervention</span>
+        Select a workflow
+      </h1>
+
+      <form action="workflow" method="post">
+
+        <div class="govuk-form-group">
+
+            <fieldset class="govuk-fieldset">
+
+                {{ govukRadios({
+                    idPrefix: 'workflow',
+                    name: 'workflow',
+                    items: [
+                        {
+                            value: "id-check-claims",
+                            text: "Identity check claims"
+                        },
+                        {
+                            value: "failed-push-claims",
+                            text: "Failed JSAPS push claims"
+                        },
+                        {
+                            value: "no-mbr-claims",
+                            text: "No MBR claims"
+                        },
+                        {
+                            value: "mbr-claims",
+                            text: "MBR check claims"
+                        },
+                        {
+                            value: "appt-claims",
+                            text: "Book appointment claims"
+                        },
+                        {
+                            value: "cc-claims",
+                            text: "Claimant commitment claims"
+                        },
+                        {
+                            value: "payment-claims",
+                            text: "Payment claims"
+                        }           
+                    ]
+                })
+                }}
+            </fieldset>
+
+        </div>
+
+        {{ govukButton({
+            text: "Confirm"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

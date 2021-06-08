@@ -87,7 +87,9 @@ const CLAIM_STATUSES = {
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Apply for New Style Jobseeker’s Allowance',
+  // serviceName: 'Apply for New Style Jobseeker’s Allowance',
+
+  serviceName: 'Manage New Style Jobseeker’s Allowance claims',
 
   // Benefit name
   benefitName: '',
