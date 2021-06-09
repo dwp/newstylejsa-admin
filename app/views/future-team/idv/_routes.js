@@ -5,7 +5,7 @@ module.exports = (app) => {
 
   // routing for service centre agent – claim status
   router.post('/workflow', function (req, res) {
-    res.redirect('v1');
+    res.redirect('v1/?claimStatus=ID not verified');
   });
 
   return router;

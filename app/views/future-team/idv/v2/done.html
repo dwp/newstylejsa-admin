@@ -1,7 +1,7 @@
 {% extends "layout/summary.html" %}
 
 {% block pageTitle %}
-Claim updated
+Claim brought forward
 {% endblock %}
 
 {% block beforeContent %}
@@ -30,7 +30,7 @@ Claim updated
 
       {{ govukButton({
         text: "Get next claim",
-        href: "../v3/?claimStatus=ID not verified"
+        href: "../v3/?claimStatus=brought forward"
       }) }}
 
       <p><a href="../workflow" class="govuk-link">Change work flow</a></p>

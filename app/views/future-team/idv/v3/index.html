@@ -31,9 +31,12 @@
 
 
   <section class="dwp-claim-section dwp-claim-section--check dwp-print-no-break">
+    {{ govukTag({
+      text: "check"
+    }) }}
     <h2 class="govuk-heading-m">Identity and trust</h2>
     <dl class="app-check-your-answers app-check-your-answers--long">
-      {{ checkAnswersItem("CIS check", "No mismatch") }}
+      {{ checkAnswersItem("CIS check", "Date of birth mismatch") }}
       {{ checkAnswersItem("Fraud check", "No suspicion of fraud") }}
     </dl>
   </section>
@@ -45,13 +48,13 @@
     }) }}
   <h2 class="govuk-heading-m govuk-!-margin-top-8">Personal details</h2>
   <dl class="app-check-your-answers app-check-your-answers--long">
-    {{ checkAnswersItem("National Insurance number", "ZA262568B") }}
-    {{ checkAnswersItem("Name", "Mr Petr Stankowski") }}
-    {{ checkAnswersItem("Date of birth", "07/02/1968") }}
-    {{ checkAnswersItem("Home address", "<span class='dwp-print-block'>21 Stonycroft Avenue</span> <span class='dwp-print-block'>Blackpool</span> <span class='dwp-print-block'>Lancashire</span> <span class='dwp-print-block'>FY4 2PF.</span>") }}
+    {{ checkAnswersItem("National Insurance number", "JA 41 66 36 C") }}
+    {{ checkAnswersItem("Name", "Mrs Rosalind Green") }}
+    {{ checkAnswersItem("Date of birth", "27/04/1955") }}
+    {{ checkAnswersItem("Home address", "<span class='dwp-print-block'>21 Langdale Road</span> <span class='dwp-print-block'>Blackpool</span> <span class='dwp-print-block'>Lancashire</span> <span class='dwp-print-block'>FY4 4RR.</span>") }}
     {{ checkAnswersItem("Do you want to add a different address for your post?", "No") }}
-    {{ checkAnswersItem("Telephone number", "01253 237876") }}
-    {{ checkAnswersItem("Email address", "p.stankowski@example.com") }}
+    {{ checkAnswersItem("Phone", "01253 767036") }}
+    {{ checkAnswersItem("Email address", "r.green@example.com") }}
   </dl>
 </section>
 
@@ -59,9 +62,9 @@
 <section class="dwp-claim-section dwp-print-no-break">
   <h2 class="govuk-heading-m govuk-!-margin-top-8">Bank details</h2>
   <dl class="app-check-your-answers app-check-your-answers--long">
-    {{ checkAnswersItem("Name of account holder", "Mr Petr Stankowski") }}
-    {{ checkAnswersItem("Sort code", "01 67 14") }}
-    {{ checkAnswersItem("Account number", "34675899") }}
+    {{ checkAnswersItem("Name of account holder", "Mrs R Green") }}
+    {{ checkAnswersItem("Sort code", "10 80 12") }}
+    {{ checkAnswersItem("Account number", "46778256") }}
   </dl>
 </section>
 
@@ -86,6 +89,13 @@
 
           {{ dwpTimeline({
             items: [
+              {
+                heading: "Brought forward",
+                label: "label",
+                author: "by Andrew Server",
+                date: "on " + time | momentNowSubtract1,
+                body: "failed to contact"
+              },
               {
                 heading: "ID not verified",
                 label: "label",

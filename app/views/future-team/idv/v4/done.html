@@ -28,11 +28,6 @@ Claim updated
         html: data['claimStatus'] | replace("-", " ") | capitalize
       }) }}
 
-      {{ govukButton({
-        text: "Get next claim",
-        href: "../v5/?claimStatus=ID not verified"
-      }) }}
-
       <p><a href="../workflow" class="govuk-link">Change work flow</a></p>
 
     </div>
