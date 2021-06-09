@@ -1,0 +1,110 @@
+{% extends "layout/summary.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}: Application for {{ data['service-short-name']}} Customer Statement | {{ currentClaimantData.claimant.title }} {{ currentClaimantData.claimant.firstName }} {{ currentClaimantData.claimant.lastName }}: {{ currentClaimantData.claimant.nino }}
+{% endblock %}
+
+{% block header %}
+  
+  {# Set serviceName in config.js. #}
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false
+  }) }}
+
+  {% include "./key-details.html" %}
+
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row govuk-!-margin-top-4 dwp-print-hide">
+  <div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-l govuk-!-margin-top-6">ID check claim</h1>
+
+
+  <section class="dwp-claim-section dwp-claim-section--check dwp-print-no-break">
+    <h2 class="govuk-heading-m">Identity and trust</h2>
+    <dl class="app-check-your-answers app-check-your-answers--long">
+      {{ checkAnswersItem("CIS check", "No mismatch") }}
+      {{ checkAnswersItem("Fraud check", "No suspicion of fraud") }}
+    </dl>
+  </section>
+
+<!-- About you -->
+<section class="dwp-claim-section dwp-claim-section--check">
+  {{ govukTag({
+      text: "check"
+    }) }}
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Personal details</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("National Insurance number", "ZA262568B") }}
+    {{ checkAnswersItem("Name", "Mr Petr Stankowski") }}
+    {{ checkAnswersItem("Date of birth", "07/02/1968") }}
+    {{ checkAnswersItem("Home address", "<span class='dwp-print-block'>21 Stonycroft Avenue</span> <span class='dwp-print-block'>Blackpool</span> <span class='dwp-print-block'>Lancashire</span> <span class='dwp-print-block'>FY4 2PF.</span>") }}
+    {{ checkAnswersItem("Do you want to add a different address for your post?", "No") }}
+    {{ checkAnswersItem("Telephone number", "01253 237876") }}
+    {{ checkAnswersItem("Email address", "p.stankowski@example.com") }}
+  </dl>
+</section>
+
+<!-- Payment information -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Bank details</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Name of account holder", "Mr Petr Stankowski") }}
+    {{ checkAnswersItem("Sort code", "01 67 14") }}
+    {{ checkAnswersItem("Account number", "34675899") }}
+  </dl>
+</section>
+
+
+  
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    
+    <aside class="app-related-items govuk-!-margin-top-9" role="complementary">
+
+            <h3 class="govuk-heading-m">Claim actions</h3>
+            {{ govukButton({
+              text: "Update claim status",
+              href: "claim-status"
+            }) }}
+            
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+            <h3 class="govuk-heading-m">Claim history</h3>
+
+          {{ dwpTimeline({
+            items: [
+              {
+                heading: "ID not verified",
+                label: "label",
+                author: "by DWP Trust Hub",
+                date: "on " + time | momentNowSubtract1
+              },
+              {
+                heading: "Application submitted",
+                date: "by claimant on " + time | momentNowSubtract1,
+                classes: "dwp-timeline-entry--closing"
+              }
+            ]
+          }) }}
+
+    </aside>
+
+  </div>
+
+</div>
+
+
+{% endblock %}

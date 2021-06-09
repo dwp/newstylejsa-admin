@@ -1,0 +1,83 @@
+{% extends "layout/summary.html" %}
+
+{% block pageTitle %}
+  Select a status
+{% endblock %}
+
+{% block header %}
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false
+  }) }}
+  {% include "./key-details.html" %}
+{% endblock %}
+
+{% block content %}
+
+{% set bfHtml %}
+{{ govukInput({
+  label: {
+    text: "What is the reason?"
+  },
+  id: "bf-reason",
+  name: "bf-reason"
+}) }}
+{% endset -%}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          
+      <h1 class="govuk-heading-l govuk-!-margin-top-6">
+        Update claim status
+      </h1>
+
+      <form action="claim-status" method="post">
+
+        <div class="govuk-form-group">
+
+            <fieldset class="govuk-fieldset">
+
+                {{ govukRadios({
+                    idPrefix: 'status',
+                    name: 'claimStatus',
+                    items: [
+                        {
+                            value: "id-verified",
+                            text: "ID verified",
+                            hint: {
+                              text: "You have verified the claimants ID, the claim will be pushed to JSAPS."
+                            }
+                        },
+                        {
+                            value: "brought-forward",
+                            text: "Brought forward, first attempt",
+                            conditional: {
+                              html: bfHtml
+                            }
+                        },
+                        {
+                            value: "suspected-fraud-claim",
+                            text: "Suspected fraud claim",
+                            hint: {
+                              text: "Refer this claim to the SCOLA team."
+                            }
+                        }                     
+                    ]
+                })
+                }}
+            </fieldset>
+
+        </div>
+
+        {{ govukButton({
+            text: "Confirm"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

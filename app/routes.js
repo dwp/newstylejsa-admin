@@ -43,7 +43,7 @@ module.exports = (app) => {
   router.use('/future-team/idv/', require('./views/future-team/idv/_routes')(app));
   router.use('/future-team/idv/v1/', require('./views/future-team/idv/v1/_routes')(app));
   router.use('/future-team/idv/v2/', require('./views/future-team/idv/v2/_routes')(app));
-
+  router.use('/future-team/idv/v3/', require('./views/future-team/idv/v3/_routes')(app));
 
   // This moves work coach routing to work-coach directory
   router.use('/work-coach/', require('./views/work-coach/_routes')(app));

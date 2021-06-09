@@ -1,0 +1,25 @@
+  {{ dwpKeyDetailsBar({
+    claimantName: "Petr Stankowski",
+    claimantNINO: "ZA262568B",
+    claimStatus: data['claimStatus'] | replace("-", " ") | capitalize,
+    items: [
+        {
+            title: "DOB",
+            value: "07/02/1968"
+        },
+        {
+            title: "Postcode",
+            value: "FY4 2PF"
+        },
+        {
+            title: "Phone",
+            value: "01253 237876"
+        },
+        {
+            title: "Claim submitted",
+            value: time | momentNowShortSubtract1
+        }
+    ],
+    showToggle: showToggle,
+    classes: "dwp-print-hide"
+  }) }}
