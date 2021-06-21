@@ -84,3 +84,28 @@
     position: static;
   }
 }
+
+
+.app-check-your-answers--tag {
+  @include govuk-media-query($from: desktop) {
+    // to make group of q&a line up horizontally (unless there is just one group)
+    // width: 100%;
+
+    // recommended for mostly long questions
+
+    .app-check-your-answers__question {
+      width: auto;
+    }
+    .app-check-your-answers__answer {
+      width: 50%;
+    }
+    
+
+    .has-tag {
+      .app-check-your-answers__question {
+        width: 50%;
+      }
+    }
+
+  }
+}

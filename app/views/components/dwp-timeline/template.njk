@@ -17,6 +17,10 @@
         {% if item.date %}
         <span class="dwp-timeline-date">{{ item.date }}</span>
         {% endif %}
+
+        {% if item.time %}
+        <span class="dwp-timeline-time">{{ item.time }}</span>
+        {% endif %}
       </p>
       
       {% if item.body %}

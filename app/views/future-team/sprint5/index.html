@@ -1,0 +1,47 @@
+{% extends "layout/base-no-search-bar.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l govuk-!-margin-top-9">
+      <span class="govuk-caption-l">Automation alpha</span>
+      Identity and fraud exception handling prototypes
+    </h1>
+    <p><a href="/future-team/sprint5/workflow">Select workflow</a> </p>
+
+    <h2 class="govuk-heading-m">1. Suspect fraud</h2>
+    <ol class="govuk-list">
+      <li>1a. <a href="/future-team/sprint5/1a/?claimStatus=ID not verified">Ian Johnson</a> for Bio check agent</li>
+      <li>1b. <a href="/future-team/sprint5/1b/?claimStatus=third fail">Ian Johnson</a> for SCOLA agent</li>
+    </ol>
+
+    <h2 class="govuk-heading-m">2. DOB mismatch</h2>
+    <ol class="govuk-list">
+      <li>2a. <a href="/future-team/sprint5/2a/?claimStatus=second fail">Karan Bhopal</a> – for Bio check agent</li>
+      <li>2b. <a href="/future-team/sprint5/2b/?claimStatus=third fail">Karan Bhopal</a> – for Greenock agent</li>
+    </ol>
+
+    <h2 class="govuk-heading-m">3. Strong fraud + UC</h2>
+    <ol class="govuk-list">
+      <li>3a. <a href="/future-team/sprint5/3a/?claimStatus=ID not verified">Petr Stankowski</a> – for Bio check agent</li>
+      <li>3b. <a href="/future-team/sprint5/3b/?claimStatus=Suspected fraud">Petr Stankowski</a> – for SCOLA agent</li>
+    </ol>
+
+    <h2 class="govuk-heading-m">4. NINO mismatch</h2>
+    <ol class="govuk-list">
+      <li>4a. <a href="/future-team/sprint5/4a/?claimStatus=ID not verified">Rosalind Green</a> – for Bio check agent</li>
+      <li>4b. <a href="/future-team/sprint5/4b/?claimStatus=ID not verified">Rosalind Green</a> – for SCOLA agent</li>
+    </ol>
+
+  </div>
+</div>
+
+{% endblock %}

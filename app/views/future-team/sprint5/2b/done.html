@@ -1,0 +1,53 @@
+{% extends "layout/summary.html" %}
+
+{% block pageTitle %}
+Claim brought forward
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block header %}
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false
+  }) }}
+  {% include "./key-details.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-4">
+
+      {% if data['claimStatus'] == "id-verified"%}
+        {% set html %}
+          {{ data['claimStatus'] | replace("-", " ") | capitalize }}
+        {% endset %}
+      {% else %}
+        {% set html %}
+          ID not verified – {{ data['claimStatus'] | replace("-", " ") }}
+        {% endset %}
+      {% endif %}
+
+      {{ govukPanel({
+        titleText: "The claim was updated",
+        html: html
+      }) }}
+
+      {{ govukButton({
+        text: "Get next claim",
+        href: "../4b/?claimStatus=ID not verified"
+      }) }}
+
+      <p><a href="../workflow" class="govuk-link">Change work flow</a></p>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

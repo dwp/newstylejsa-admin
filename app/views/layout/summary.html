@@ -18,6 +18,7 @@
 {% from "radios/macro.njk"        import govukRadios %}
 {% from "select/macro.njk"        import govukSelect %}
 {% from "skip-link/macro.njk"     import govukSkipLink %}
+{% from "summary-list/macro.njk"  import govukSummaryList %}
 {% from "table/macro.njk"         import govukTable %}
 {% from "tag/macro.njk"           import govukTag %}
 {% from "textarea/macro.njk"      import govukTextarea %}
@@ -26,7 +27,7 @@
 {% from "tabs/macro.njk"          import govukTabs %}
 
 {# Custom macros #}
-{% from "macros/macros.njk"                                 import checkAnswersItem %}
+{% from "macros/macros.njk"                                 import checkAnswersItem, dwpSummaryList %}
 {% from "components/dwp-header/macro.njk"                   import  dwpHeader %}
 {% from "components/dwp-timeline/macro.njk"                 import  dwpTimeline %}
 {% from "components/dwp-key-details-bar/macro.njk"          import  dwpKeyDetailsBar %}

@@ -1,0 +1,243 @@
+{% extends "layout/summary.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}: Application for {{ data['service-short-name']}} Customer Statement | {{ currentClaimantData.claimant.title }} {{ currentClaimantData.claimant.firstName }} {{ currentClaimantData.claimant.lastName }}: {{ currentClaimantData.claimant.nino }}
+{% endblock %}
+
+{% block header %}
+  
+  {# Set serviceName in config.js. #}
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false
+  }) }}
+
+  {% include "./key-details.html" %}
+
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+{% set matchTag %}
+{{ govukTag({
+  text: "match",
+  classes: "govuk-tag--grey"
+}) }}
+{% endset %}
+
+{% set misMatchTag %}
+{{ govukTag({
+  text: "mismatch",
+  classes: "govuk-tag--red"
+}) }}
+{% endset %}
+
+<div class="govuk-grid-row govuk-!-margin-top-4 dwp-print-hide">
+  <div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-l govuk-!-margin-top-6 govuk-visually-hidden">BIO check claim</h1>
+
+  <section class="dwp-claim-section dwp-print-no-break govuk-!-margin-top-6">
+    <h2 class="govuk-heading-m">Fraud check</h2>
+    <p>No suspicion of fraud</p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  </section>
+
+
+  <section class="dwp-claim-section dwp-print-no-break">
+    <h2 class="govuk-heading-m">Searchlight check</h2>
+    {{ dwpSummaryList({
+      rows: [
+        {
+          key: {
+            text: "National Insurance number"
+          },
+          value: {
+            text: "JA 41 66 36 C"
+          },
+          actions: {
+            items: [
+              {
+                classes: "govuk-tag--red",
+                text: "Mismatch"
+              }
+            ]
+          }
+        }, {
+          key: {
+            text: "Name"
+          },
+          value: {
+            text: "Mrs Rosalind Green"
+          },
+          actions: {
+            items: [
+              {
+                classes: "govuk-tag--grey",
+                text: "Match"
+              }
+            ]
+          }
+        }, {
+          key: {
+            text: "Date of birth"
+          },
+          value: {
+            text: "27/04/1955"
+          },
+          actions: {
+            items: [
+              {
+                classes: "govuk-tag--grey",
+                text: "Match"
+              }
+            ]
+          }
+        }, {
+          key: {
+            text: "Home address"
+          },
+          value: {
+            html: "
+              <span class='dwp-print-block'>21 Langdale Road</span>
+              <span class='dwp-print-block'>Blackpool</span>
+              <span class='dwp-print-block'>Lancashire</span>
+              <span class='dwp-print-block'>FY4 4RR.</span>
+            "
+          },
+          actions: {
+            items: [
+              {
+                classes: "govuk-tag--grey",
+                text: "Match"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+  </section>
+
+<!-- About you -->
+<section class="dwp-claim-section">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Contact details</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Phone", "01253 767036") }}
+    {{ checkAnswersItem("Email address", "r.green@example.com") }}
+  </dl>
+</section>
+
+<!-- Payment information -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Bank details</h2>
+  {{ dwpSummaryList({
+    rows: [
+      {
+        key: {
+          text: "Name of account holder"
+        },
+        value: {
+          text: "Mrs R Green"
+        },
+        actions: {
+          items: [
+            {
+              classes: "govuk-tag--grey",
+              text: "Match"
+            }
+          ]
+        }
+      }, {
+        key: {
+          text: "Sort code"
+        },
+        value: {
+          text: "10 80 12"
+        }
+      }, {
+        key: {
+          text: "Account number"
+        },
+        value: {
+          text: "46778256"
+        }
+      }
+    ]
+  }) }}
+</section>
+
+<!-- Benefit information -->
+<section class="dwp-claim-section dwp-print-no-break">
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Benefit interest</h2>
+    {{ dwpSummaryList({
+    rows: [
+      {
+        key: {
+          text: "UC"
+        },
+        value: {
+          text: "No"
+        }
+      }, {
+        key: {
+          text: "ESA"
+        },
+        value: {
+          text: "No"
+        }
+      }
+    ]
+  }) }}
+</section>
+  
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    
+    <aside class="app-related-items govuk-!-margin-top-9" role="complementary">
+
+            <h3 class="govuk-heading-m">Claim actions</h3>
+            {{ govukButton({
+              text: "Update claim status",
+              href: "claim-status"
+            }) }}
+
+            <p>BIO template not ready</p>
+            
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+            <h3 class="govuk-heading-m">Claim history</h3>
+
+          {{ dwpTimeline({
+            items: [
+              {
+                heading: "ID not verified",
+                label: "label",
+                author: "by DWP Trust Hub",
+                date: "on " + time | momentNowSubtract3,
+                time: "at 4:43pm"
+              },
+              {
+                heading: "Application submitted",
+                date: "by claimant on " + time | momentNowSubtract3,
+                time: "at 4:32pm",
+                classes: "dwp-timeline-entry--closing"
+              }
+            ]
+          }) }}
+
+    </aside>
+
+  </div>
+
+</div>
+
+
+{% endblock %}

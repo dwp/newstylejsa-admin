@@ -1,0 +1,111 @@
+{% extends "layout/summary.html" %}
+
+{% block pageTitle %}
+  Select a status
+{% endblock %}
+
+{% block header %}
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false
+  }) }}
+  {% include "./key-details.html" %}
+{% endblock %}
+
+{% block content %}
+
+{% set failHtml %}
+{{ govukCheckboxes({
+  idPrefix: "third-fail-contact",
+  name: "third-fail-contact",
+  fieldset: {
+    legend: {
+      text: "What did you do?",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  hint: {
+    text: "Select all that apply."
+  },
+  items: [
+    {
+      value: "sms",
+      text: "Sent an SMS"
+    },
+    {
+      value: "voicemail",
+      text: "Left a voicemail"
+    },
+    {
+      value: "email",
+      text: "Sent an email"
+    },
+    {
+      value: "letter",
+      text: "Sent a JSA 164 letter"
+    },
+    {
+      value: "scola",
+      text: "Asked advice from SCOLA"
+    }
+  ]
+}) }}
+{% endset -%}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+          
+      <h1 class="govuk-heading-l govuk-!-margin-top-6">
+        Update claim status
+      </h1>
+
+      <form action="claim-status" method="post">
+
+        <div class="govuk-form-group">
+
+            <fieldset class="govuk-fieldset">
+
+                {{ govukRadios({
+                    idPrefix: 'status',
+                    name: 'claimStatus',
+                    items: [
+                        {
+                            value: "id-verified",
+                            text: "ID verified (Bio check complete)",
+                            hint: {
+                              text: "The claim will be pushed to JSAPS."
+                            }
+                        },
+                        {
+                            value: "week-2-no-contact",
+                            text: "Week 2 no contact",
+                            conditional: {
+                              html: failHtml
+                            }
+                        },
+                        {
+                            value: "suspected-fraud-claim",
+                            text: "Suspected fraud claim",
+                            hint: {
+                              text: "Refer this claim to the SCOLA team."
+                            }
+                        }                     
+                    ]
+                })
+                }}
+            </fieldset>
+
+        </div>
+
+        {{ govukButton({
+            text: "Confirm"
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

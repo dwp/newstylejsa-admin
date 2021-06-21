@@ -28,7 +28,8 @@
   }
 
   .dwp-timeline-author,
-  .dwp-timeline-date {
+  .dwp-timeline-date,
+  .dwp-timeline-time {
     color: govuk-colour("grey-1");
     display: inline-block;
     @extend .govuk-body-s;

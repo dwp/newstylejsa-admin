@@ -39,12 +39,23 @@ module.exports = (app) => {
   router.use('/future-team/ur2/5-backdating/', require('./views/future-team/ur2/5-backdating/_routes')(app));
   router.use('/future-team/ur2/6-esa/', require('./views/future-team/ur2/6-esa/_routes')(app));
 
-  // IDV with agents
+  // Automation sprint 4 - IDV with agents
   router.use('/future-team/idv/', require('./views/future-team/idv/_routes')(app));
   router.use('/future-team/idv/v1/', require('./views/future-team/idv/v1/_routes')(app));
   router.use('/future-team/idv/v2/', require('./views/future-team/idv/v2/_routes')(app));
   router.use('/future-team/idv/v3/', require('./views/future-team/idv/v3/_routes')(app));
   router.use('/future-team/idv/v4/', require('./views/future-team/idv/v4/_routes')(app));
+
+  // Automation sprint 5 - IDV with agents
+  router.use('/future-team/sprint5/', require('./views/future-team/sprint5/_routes')(app));
+  router.use('/future-team/sprint5/1a/', require('./views/future-team/sprint5/1a/_routes')(app));
+  router.use('/future-team/sprint5/1b/', require('./views/future-team/sprint5/1b/_routes')(app));
+  router.use('/future-team/sprint5/2a/', require('./views/future-team/sprint5/2a/_routes')(app));
+  router.use('/future-team/sprint5/2b/', require('./views/future-team/sprint5/2b/_routes')(app));
+  router.use('/future-team/sprint5/3a/', require('./views/future-team/sprint5/3a/_routes')(app));
+  router.use('/future-team/sprint5/3b/', require('./views/future-team/sprint5/3b/_routes')(app));
+  router.use('/future-team/sprint5/4a/', require('./views/future-team/sprint5/4a/_routes')(app));
+  router.use('/future-team/sprint5/4b/', require('./views/future-team/sprint5/4b/_routes')(app));
 
   // This moves work coach routing to work-coach directory
   router.use('/work-coach/', require('./views/work-coach/_routes')(app));
