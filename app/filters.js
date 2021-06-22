@@ -218,6 +218,30 @@ module.exports = function (env) {
     return moment(myDate).subtract(30, 'days').format(format);
   }
 
+  filters.momentNowSubtract31 = function (date) {
+    const format = 'D' + ' ' + 'MMMM' + ' ' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(31, 'days').format(format);
+  }
+
+  filters.momentNowShortSubtract31 = function (date) {
+    const format = 'DD' + '/' + 'MM' + '/' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(31, 'days').format(format);
+  }
+
+  filters.momentNowSubtract32 = function (date) {
+    const format = 'D' + ' ' + 'MMMM' + ' ' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(32, 'days').format(format);
+  }
+
+  filters.momentNowShortSubtract32 = function (date) {
+    const format = 'DD' + '/' + 'MM' + '/' + 'YYYY';
+    const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();
+    return moment(myDate).subtract(32, 'days').format(format);
+  }
+
   filters.momentNowAdd5 = function (date) {
     const format = 'D' + ' ' + 'MMMM' + ' ' + 'YYYY';
     const myDate = typeof date !== 'undefined' ? new Date(date) : new Date();

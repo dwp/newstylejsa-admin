@@ -208,17 +208,24 @@
           {{ dwpTimeline({
             items: [
               {
+                heading: "Suspected fraud",
+                label: "label",
+                author: "by Jane Eyre",
+                date: "on " + time | momentNow,
+                time: "at 9:08am"
+              },
+              {
                 heading: "Second letter sent",
                 label: "label",
                 author: "by Celia Acaster",
-                date: "on " + time | momentNowSubtract1,
+                date: "on " + time | momentNowSubtract30,
                 time: "at 4:43pm"
               },
               {
                 heading: "Third fail",
                 label: "label",
                 author: "by John Snow",
-                date: "on " + time | momentNowSubtract2,
+                date: "on " + time | momentNowSubtract31,
                 time: "at 4:43pm",
                 body: "SMS and letter sent"
               },
@@ -226,7 +233,7 @@
                 heading: "Second fail",
                 label: "label",
                 author: "by Michelle Tony",
-                date: "on " + time | momentNowSubtract2,
+                date: "on " + time | momentNowSubtract31,
                 time: "at 12:38pm",
                 body: "SMS sent"
               },
@@ -234,7 +241,7 @@
                 heading: "First fail",
                 label: "label",
                 author: "by Andrew Server",
-                date: "on " + time | momentNowSubtract2,
+                date: "on " + time | momentNowSubtract31,
                 time: "at 10:04am",
                 body: "Voicemail left"
               },
@@ -242,12 +249,12 @@
                 heading: "ID not verified",
                 label: "label",
                 author: "by DWP Trust Hub",
-                date: "on " + time | momentNowSubtract3,
+                date: "on " + time | momentNowSubtract32,
                 time: "at 4:43pm"
               },
               {
                 heading: "Application submitted",
-                date: "by claimant on " + time | momentNowSubtract3,
+                date: "by claimant on " + time | momentNowSubtract32,
                 time: "at 4:32pm",
                 classes: "dwp-timeline-entry--closing"
               }
