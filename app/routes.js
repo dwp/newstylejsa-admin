@@ -50,6 +50,7 @@ module.exports = (app) => {
   router.use('/future-team/sprint5/', require('./views/future-team/sprint5/_routes')(app));
   router.use('/future-team/sprint5/1a/', require('./views/future-team/sprint5/1a/_routes')(app));
   router.use('/future-team/sprint5/1b/', require('./views/future-team/sprint5/1b/_routes')(app));
+  router.use('/future-team/sprint5/1c/', require('./views/future-team/sprint5/1c/_routes')(app));
   router.use('/future-team/sprint5/2a/', require('./views/future-team/sprint5/2a/_routes')(app));
   router.use('/future-team/sprint5/2b/', require('./views/future-team/sprint5/2b/_routes')(app));
   router.use('/future-team/sprint5/3a/', require('./views/future-team/sprint5/3a/_routes')(app));

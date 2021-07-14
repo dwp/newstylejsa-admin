@@ -1,0 +1,130 @@
+{% extends "layout/summary.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}: Application for {{ data['service-short-name']}} Customer Statement | {{ currentClaimantData.claimant.title }} {{ currentClaimantData.claimant.firstName }} {{ currentClaimantData.claimant.lastName }}: {{ currentClaimantData.claimant.nino }}
+{% endblock %}
+
+{% block header %}
+  
+  {# Set serviceName in config.js. #}
+  {{ dwpHeader({
+    "homepageUrl": "/",
+    "serviceName": serviceName,
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "searchBar": false
+  }) }}
+
+  {% include "./key-details.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+{% set matchTag %}
+{{ govukTag({
+  text: "match",
+  classes: "govuk-tag--grey"
+}) }}
+{% endset %}
+
+{% set misMatchTag %}
+{{ govukTag({
+  text: "mismatch",
+  classes: "govuk-tag--red"
+}) }}
+{% endset %}
+
+<div class="govuk-grid-row govuk-!-margin-top-4 dwp-print-hide">
+  <div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-l govuk-!-margin-top-6 govuk-visually-hidden">BIO check claim</h1>
+
+  <form method="post" action"bio-questions">
+
+  <h1 class="govuk-heading-l">Bio questions</h1>
+  <p>Claimant must answer 2 of 3 questions correctly to ensure a medium confidence level.</p>
+
+{{ govukRadios({
+  idPrefix: "bioQ1",
+  name: "bio-q1",
+  fieldset: {
+    legend: {
+      text: "1. What is your middle name?",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  hint: {
+    text: "Expected answer: Geoff"
+  },
+  items: [
+    {
+      value: "correct",
+      text: "Correct"
+    },
+    {
+      value: "incorrect",
+      text: "Incorrect"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  idPrefix: "bioQ2",
+  name: "bio-q2",
+  fieldset: {
+    legend: {
+      text: "2. What is your mobile telephone number?",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+    hint: {
+    text: "Expected answer: 07890 000999"
+  },
+  items: [
+    {
+      value: "correct",
+      text: "Correct"
+    },
+    {
+      value: "incorrect",
+      text: "Incorrect"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  idPrefix: "bioQ3",
+  name: "bio-q3",
+  fieldset: {
+    legend: {
+      text: "3. What is your previous address?",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+    hint: {
+    text: "Expected answer: 1 Madeupthe Road, Madeupistown, MD12 EUP"
+  },
+  items: [
+    {
+      value: "correct",
+      text: "Correct"
+    },
+    {
+      value: "incorrect",
+      text: "Incorrect"
+    }
+  ]
+}) }}
+
+            {{ govukButton({
+              text: "Submit"
+            }) }}
+  </form>
+
+  </div>
+
+</div>
+
+
+{% endblock %}
