@@ -145,15 +145,15 @@ module.exports = {
   outboundClaimantData: {
     claimant: {
       title: 'Mr',
-      firstName: 'Marvin',
-      lastName: 'Gordon',
+      firstName: 'John',
+      lastName: 'Doe',
       nino: 'QQ 12 34 56 D',
       dob: '24/03/1990',
       telephone: '0161 1234564',
       address: {
         line1: '85, Sample Lane',
         line2: 'Sampletown',
-        postcode: 'SA4W 7SH'
+        postcode: 'SA4 7SH'
       }
     },
     date: '17/09/2018',
