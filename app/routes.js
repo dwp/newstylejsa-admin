@@ -11,6 +11,8 @@ module.exports = (app) => {
 
   // This moves `contact-centre` routing to `contact-centre` directory
   router.use('/contact-centre', require('./views/contact-centre/_routes')(app));
+  // Routing for alt formats
+  router.use('/contact-centre', require('./views/features/alt-formats/contact-centre/_routes')(app));
 
   // routing for 1752-fraud
   router.use('/design-ideas/1752-fraud', require('./views/design-ideas/1752-fraud/_routes')(app));
@@ -66,7 +68,9 @@ module.exports = (app) => {
 
   // This moves `common` routing to `common` directory
   router.use('/common', require('./views/common/_routes')(app));
-  
+  // Common features
+  router.use('/common', require('./views/features/alt-formats/common/_routes')(app));
+
   // This moves `error` routing to `error` directory
   router.use('/error', require('./views/error/_routes')(app));
 

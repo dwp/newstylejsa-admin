@@ -89,7 +89,7 @@ module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
   // serviceName: 'Apply for New Style Jobseeker’s Allowance',
 
-  serviceName: 'Manage New Style Jobseeker’s Allowance claims',
+  serviceName: 'Apply for New Style Jobseeker’s Allowance',
 
   // Benefit name
   benefitName: '',

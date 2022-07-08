@@ -1,4 +1,4 @@
-{% extends "layout/base-no-search-bar.html" %}
+{% extends "layout/base-no-search-bar-live.html" %}
 
 {% block pageTitle %}
   {{ serviceName }}
@@ -9,14 +9,43 @@
 {% block content %}
   <h1 class="govuk-heading-xl govuk-!-margin-top-9">
     <h1 class="govuk-heading-l">
-      <span class="govuk-caption-l">Service centre prototypes</span>
+      <span class="govuk-caption-l">Agent prototypes</span>
       Apply for New Style Jobseeker&rsquo;s Allowance
   </h1>
 
+  <!-- <h2 class="govuk-heading-m"><strong class="govuk-tag govuk-tag--green govuk-!-font-size-27">Live</strong> Current live prototype</h2>
+  <span class="govuk-caption-m">View as</span>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="live/contact-centre">Contact Centre Agent:</a> <em>(nsjsa_assistance_user)</em></li>
+    <li><a href="">Contact Centre Manager:</a> <em>(nsjsa_admin)</em></li>
+    <li><a href="live/common/nino-search">Work Coach:</a> <em>(nsjsa_verification_user)</em></li>
+    <li><a href="live/service-centre">Service Centre:</a> <em>(nsjsa_decision_user)</em></li>
+  </ul>
+
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+
+  <h2 class="govuk-heading-m"><strong class="govuk-tag govuk-tag--red govuk-!-font-size-27">Test</strong> Features and ideas</h2>
+
   <h2 class="govuk-heading-m">2022</h2>
-  <span class="govuk-caption-m">June</span>
-  <p><a href="design-ideas/alt-formats">Alternative formats</a></p>
-  <p><a href="design-ideas/alt-formats/multiple">Alternative formats - multiple flags</a></p>
+
+  <details class="govuk-details" data-module="govuk-details" open>
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Alternative formats
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <span class="govuk-caption-m">View as</span>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="features/alt-formats/contact-centre">Contact Centre Agent:</a> <em>(nsjsa_assistance_user)</em></li>
+        <!-- <li><a href="">Contact Centre Manager:</a> <em>(nsjsa_admin)</em></li> -->
+        <li><a href="features/alt-formats/common/nino-search-workcoach">Work Coach:</a> <em>(nsjsa_verification_user)</em></li>
+        <li><a href="features/alt-formats/common/nino-search-servicecentre">Service Centre:</a> <em>(nsjsa_decision_user)</em></li>
+      </ul>
+    </div>
+  </details>
+
+
 
 
   <h2 class="govuk-heading-m">2021</h2>
