@@ -1,6 +1,19 @@
+<!-- Alternative formats -->
+<section class="dwp-claim-section">
+  <h2 class="govuk-heading-m govuk-!-margin-top-2">Alternative formats</h2>
+  <dl class="app-check-your-answers app-check-your-answers--long">
+    {{ checkAnswersItem("Do you need us to contact you in an alternative format?", "Yes", false) }}
+    {{ checkAnswersItem("What do you need in an alternative format?", "Letter and phone", false, "#") }}
+    {{ checkAnswersItem("What do you need instead of standard letters?", "Coloured paper and large print", false, "#") }}
+    {{ checkAnswersItem("What colour paper do you need?", "Pastel blue", false, "#") }}
+    {{ checkAnswersItem("What size font do you need?", "24", false) }}
+    {{ checkAnswersItem("What do you need instead of phone calls?", "Email, john.doe@example.com", false, "#") }}
+  </dl>
+</section>
+
 <!-- Claim start -->
 <section class="dwp-claim-section dwp-print-no-break">
-  <h2 class="govuk-heading-m govuk-!-margin-top-4">Claim start date</h2>
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Claim start date</h2>
   <dl class="app-check-your-answers app-check-your-answers--long">
     {{ checkAnswersItem("Your claim will start from", "25/02/2018") }}
   </dl>
@@ -24,18 +37,7 @@
   </dl>
 </section>
 
-<!-- Alternative formats -->
-<section class="dwp-claim-section">
-  <h2 class="govuk-heading-m govuk-!-margin-top-8">Alternative formats</h2>
-  <dl class="app-check-your-answers app-check-your-answers--long">
-    {{ checkAnswersItem("Do you need us to contact you in an alternative format?", "Yes", false) }}
-    {{ checkAnswersItem("What do you need in an alternative format?", "Letter and phone", false, "#") }}
-    {{ checkAnswersItem("What do you need instead of standard letters?", "Coloured paper and large print", false, "#") }}
-    {{ checkAnswersItem("What colour paper do you need?", "Pastel blue", false, "#") }}
-    {{ checkAnswersItem("What size font do you need?", "24", false) }}
-    {{ checkAnswersItem("What do you need instead of phone calls?", "Email, john.doe@example.com", false, "#") }}
-  </dl>
-</section>
+
 
 <!-- Payment information -->
 <section class="dwp-claim-section dwp-print-no-break">
