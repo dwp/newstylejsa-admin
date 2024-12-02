@@ -43,7 +43,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify-es": "^1.0.4",
     "gulp-util": "^3.0.7",
-    "marked": "2.0.1",
+    "marked": "4.0.10",
     "minimist": "1.2.5",
     "module-alias": "^2.1.0",
     "moment": "^2.22.2",
